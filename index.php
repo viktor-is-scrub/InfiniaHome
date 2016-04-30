@@ -11,14 +11,9 @@ include('inc/header.inc.php');
 ?>
 
 
-            <div class="container">
-                <div class="page-header">
-                    <h1>Welcome to Infinia!</h1>
-                </div>
-                <p class="lead">
-                    This website is still under construction, beautifying will begin
-                    shortly after.
-                </p>
+            <div id="page1">
+                <a id="about" class="smooth"></a>
+                
             </div>
 
 

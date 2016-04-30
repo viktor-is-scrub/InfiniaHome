@@ -67,7 +67,9 @@
 
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="#">About</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#use">Use</a></li>
                         </ul>
                     </div>
                 </div>
