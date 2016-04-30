@@ -27,6 +27,11 @@
             <!-- Bs JS -->
             <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
 
+            <!-- custom CSS & JS -->
+            <link rel="stylesheet" href="/assets/lsf/scrolling-nav.css">
+
+
+
             <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -52,24 +57,26 @@
                 }
             </style>
         </head>
-        <body>
-            <nav class="navbar navbar-fixed-top navbar-default">
+        <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+            <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
                 <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <div class="navbar-header page-scroll">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                             <span class="sr-only">Toggle navigation</span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/index.php">InfiniaPress</a>
+                        <a class="navbar-brand page-scroll" href="/index.php">InfiniaPress</a>
                     </div>
 
-                    <div class="collapse navbar-collapse">
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <li><a href="#use">Use</a></li>
+                            <li class="hidden"><a href="page-scroll"</li>
+                            <li><a class="page-scroll" href="#about">About</a></li>
+                            <li><a class="page-scroll" href="#use">Use</a></li>
+                            <li><a class="page-scroll" href="#contact">Contact</a></li>
+
                         </ul>
                     </div>
                 </div>
