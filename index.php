@@ -68,6 +68,14 @@ include('inc/header.inc.php');
 
         <section id="contact" class="contact-section">
             <div class="container">
+
+                <!-- Script handling contacts -->
+
+                <!-- Requires jQuery -->
+                <script type="text/javascript" src="/assets/lsf/contact.js">
+
+                </script>
+
                 <div class="row">
                     <div class="col-lg-12">
                         <h1>Contact the developers</h1>
@@ -94,6 +102,10 @@ include('inc/header.inc.php');
                                 <button type="submit">Send</button>
                             </div>
                         </form>
+
+                        <div id="formMessages">
+
+                        </div>
                     </div>
                 </div>
             </div>

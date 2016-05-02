@@ -29,6 +29,7 @@
 
             <!-- custom CSS & JS -->
             <link rel="stylesheet" href="/assets/lsf/scrolling-nav.css">
+            <link rel="stylesheet" href="/assets/lsf/contact.css">
 
 
 
@@ -76,7 +77,7 @@
                             <li><a class="page-scroll" href="#about">About</a></li>
                             <li><a class="page-scroll" href="#use">Use</a></li>
                             <li><a class="page-scroll" href="#contact">Contact</a></li>
-
+                        <?php // To add a nav link use a # for href. ?>
                         </ul>
                     </div>
                 </div>
