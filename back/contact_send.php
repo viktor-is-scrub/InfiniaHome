@@ -75,27 +75,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mail->addReplyTo($email);
     $mail->isHTML(true);
 
-    // TODO: Finish off this
+
 
     $mail->Subject = $conf['SMTP']['subject'].$email;
+    $mail->Body = $conf['SMTP']['body'];
+    $mail->AltBody = $conf['SMTP']['altbody'];
 
-    // Set the recipient email address.
-    // FIXME: Update this to your desired email address.
-    $recipient = "xiurobert@gmail.com";
-
-    // Set the email subject.
-    $subject = "New contact from $name";
-
-    // Build the email content.
-    $email_content = "Name: $name\n";
-    $email_content .= "Email: $email\n\n";
-    $email_content .= "Message:\n$message\n";
-
-    // Build the email headers.
-    $email_headers = "From: $name <$email>";
 
     // Send the email.
-    if (mail($recipient, $subject, $email_content, $email_headers)) {
+    if ($mail->send()) {
         // Set a 200 (okay) response code.
         http_response_code(200);
         echo "Thank You! Your message has been sent.";

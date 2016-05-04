@@ -19,17 +19,17 @@
             <meta name="description" content="InfiniaPress open-source Productivity suite">
 
             <!-- bs CSS -->
-            <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
             <!-- jQ -->
-            <script type="text/javascript" src="/assets/js/jquery-2.2.3.min.js"></script>
+            <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
 
             <!-- Bs JS -->
-            <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 
             <!-- custom CSS & JS -->
-            <link rel="stylesheet" href="/assets/lsf/scrolling-nav.css">
-            <link rel="stylesheet" href="/assets/lsf/contact.css">
+            <link rel="stylesheet" href="assets/lsf/scrolling-nav.css">
+            <link rel="stylesheet" href="assets/lsf/contact.css">
 
 
 
@@ -68,7 +68,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand page-scroll" href="/index.php">InfiniaPress</a>
+                        <a class="navbar-brand page-scroll" href="index.php">InfiniaPress</a>
                     </div>
 
                     <div class="collapse navbar-collapse navbar-ex1-collapse">

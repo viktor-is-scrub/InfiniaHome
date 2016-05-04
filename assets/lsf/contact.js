@@ -9,6 +9,7 @@ $(function() {
     var formMessages = $('#succ-err-msg');
 
     // TODO: The rest of the code will go here...
+
 });
 
 $(form).submit(function(event) {
