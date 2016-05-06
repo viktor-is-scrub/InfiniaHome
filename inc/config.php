@@ -5,7 +5,12 @@
  * Created on 5/2/2016 at 7:29 PM
  */
 
+
+// WARN: Do not touch anything before the <dT>
+//
 $conf = Array();
+
+// <dT>
 
 
 // SMTP Configuration for contact me sender
@@ -82,4 +87,26 @@ This is an automated message. Please do not reply
 
 BOD;
 
+
+
+
+/**
+ * TODO: Configuration for URLs
+ */
+
+
+
+// The Link for the signup
+
+
+$conf['URL']['signup'] = "signuplink.example.com";
+
+
+
+// Link for the Image
+
+// Should be in assets
+
+
+$conf['URL']['logo'] = "assets/imgres/infinia-logo.png";
 
