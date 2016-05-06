@@ -38,7 +38,7 @@ include('inc/header.inc.php');
 </span>
 <div id="top">
 <img src="http://stevie.heliohost.org:2082/cpsess6070349413/viewer/home1%2fsupercat%2fpublic_html/infiniaPress%28final1%29.png" width=40%>
-<br><b id="greeting">Good morning</b>
+<br><b id="greeting">Good morning</b><br>
 <script>
     var d = new Date()
     var time = d.getHours()
