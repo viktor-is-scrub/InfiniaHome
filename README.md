@@ -21,4 +21,7 @@ To install InfiniaHome on your server, you need
 - PHP Version 5.5+
 - Apache mod_rewrite
 - SMTP support for your system
+- .htaccess support
+
+
 
