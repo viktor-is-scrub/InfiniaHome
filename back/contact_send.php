@@ -10,6 +10,16 @@
 
 require '../inc/config.php';
 
+// Very simple config checker
+if ($conf['edited'] == false) {
+    if ($conf_checker == false) {
+        // Do nothing
+    } else {
+        die('Config is at default values! Please change the config file');
+    }
+
+}
+
 define(SMTPHOST, $conf['SMTP']['host']);
 define(SMTPUSER, $conf['SMTP']['username']);
 define(SMPTPASS, $conf['SMTP']['password']);

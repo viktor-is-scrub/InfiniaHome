@@ -10,7 +10,28 @@
 //
 $conf = Array();
 
+
+// Development. Disables the config checker for preview purposes
+$conf_checker = false;
+
 // <dT>
+
+
+
+// ONLY CHANGE IF YOU HAVE EDITED YOUR CONFIG
+/********************************************************
+ * WARNING WARNING WARNING WARNING
+ *
+ * ******************************************************
+ * I am not responsible if you change this and your config is completely untouched.
+ *
+ * ******************************************************
+ *
+ */
+// Change to true if your config has been edited
+$conf['edited'] = false;
+
+
 
 
 // SMTP Configuration for contact me sender
@@ -109,4 +130,6 @@ $conf['URL']['signup'] = "signuplink.example.com";
 
 
 $conf['URL']['logo'] = "assets/imgres/infinia-logo.png";
+
+
 

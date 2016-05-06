@@ -10,18 +10,16 @@ $(function() {
 
     // TODO: The rest of the code will go here...
 
-});
+    $(form).submit(function(event) {
+        // Stop auto-submit
+        event.preventDefault();
 
-$(form).submit(function(event) {
-   // Stop auto-submit
-    event.preventDefault();
+        // TODO
 
-    // TODO
+        var fdata = $(form).serialize();
+    });
 
     var fdata = $(form).serialize();
-});
-
-var fdata = $(form).serialize();
 
 
 
@@ -31,39 +29,43 @@ var fdata = $(form).serialize();
 
 
 // AJAX- begin
-$.ajax({
-    type: 'POST',
-    url: $(form).attr("action"),
-    data: fdata
-})
+    $.ajax({
+            type: 'POST',
+            url: $(form).attr("action"),
+            data: fdata
+        })
 
 
-.done(function(response) {
-    // Make sure that the formMessages div has the 'success' class.
-    $(formMessages).removeClass('error');
-    $(formMessages).addClass('success');
+        .done(function(response) {
+            // Make sure that the formMessages div has the 'success' class.
+            $(formMessages).removeClass('error');
+            $(formMessages).addClass('success');
 
-    // Set the message text.
-    $(formMessages).text(response);
+            // Set the message text.
+            $(formMessages).text(response);
 
-    // Clear the form.
-    $('#name').val('');
-    $('#email').val('');
-    $('#message').val('');
-})
+            // Clear the form.
+            $('#name').val('');
+            $('#email').val('');
+            $('#message').val('');
+        })
 
-.fail(function(data) {
-    // Make sure that the formMessages div has the 'error' class.
-    $(formMessages).removeClass('success');
-    $(formMessages).addClass('error');
+        .fail(function(data) {
+            // Make sure that the formMessages div has the 'error' class.
+            $(formMessages).removeClass('success');
+            $(formMessages).addClass('error');
 
-    // Set the message text.
-    if (data.responseText !== '') {
-        $(formMessages).text(data.responseText);
-    } else {
-        $(formMessages).text('Oops! An error occured and your message could not be sent.');
-    }
-});
+            // Set the message text.
+            if (data.responseText !== '') {
+                $(formMessages).text(data.responseText);
+            } else {
+                $(formMessages).text('Oops! An error occured and your message could not be sent.');
+            }
+        });
 
 
 // Ajax - done
+
+
+});
+

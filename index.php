@@ -12,6 +12,19 @@ include('inc/header.inc.php');
 
 // Do not touch
 require('inc/config.php');
+
+// Very simple config checker
+if ($conf['edited'] == false) {
+    if ($conf_checker == false) {
+        // Do nothing
+    } else {
+        die('Config is at default values! Please change the config file');
+    }
+
+}
+
+
+require('inc/lsf-functions.php');
 ?>
 
 
@@ -38,6 +51,7 @@ require('inc/config.php');
             <span id="navigation-bar">
     <p>
         [whatever you want in here. Shift your navigation bar here]
+        <!-- Place About, Contact, and what we discussed today-->
     </p>
 </span>
 <div id="top">
@@ -61,7 +75,7 @@ require('inc/config.php');
         SIMPLICITY  <br><i id="admini">is    power</i>
         <p id="adtext">Productivity apps for your work and personal life</p>
     </b>
-    <a href="http://signup.infiniapress.tk"><button id="signup">Sign up</button></a>
+    <a href="<?php echo $conf['URL']['signup'] ?>"><button id="signup">Sign up</button></a>
 </div>
 </section>
         <section id="contact" class="contact-section">
