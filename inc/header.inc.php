@@ -85,7 +85,7 @@
                 #admini{
                     font-size: 40px;
                 }
-                #intro{
+                #about{
                     background-image: url("http://stevie.heliohost.org:2082/cpsess6070349413/viewer/home1%2fsupercat%2fpublic_html/water_landscape.jpg")
                 }
                 #adtext{
