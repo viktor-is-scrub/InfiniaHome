@@ -51,14 +51,15 @@ include('inc/header.inc.php');
     }
 </script>
 </div>
-<div id="about">
+<section id="about">
+<div>
     <b id="ad">
         SIMPLICITY  <br><i id="admini">is    power</i>
         <p id="adtext">Productivity apps for your work and personal life</p>
     </b>
     <a href="http://signup.infiniapress.tk"><button id="signup">Sign up</button></a>
 </div>
-
+</section>
         <section id="contact" class="contact-section">
             <div class="container">
 
