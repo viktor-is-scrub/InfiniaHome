@@ -14,6 +14,9 @@ $conf = Array();
 // Development. Disables the config checker for preview purposes
 $conf_checker = false;
 
+
+
+
 // <dT>
 
 
@@ -35,8 +38,15 @@ $conf['edited'] = false;
 
 
 // SMTP Configuration for contact me sender
+/**
+ * The details for the SMTP config can be found in your web host's control panel
+ *
+ * cPanel: Email Accounts > some_email@example.com > configure mail client > read the SMTP information
+ */
 
 // The SMTP host. Your web host will provide this
+
+
 $conf['SMTP']['host'] = 'changeme';
 
 
