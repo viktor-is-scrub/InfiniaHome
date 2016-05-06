@@ -7,3 +7,9 @@ This page is with a one-page parallax animation, references:
 [CodePlanet](https://codeplanet.io/how-to-make-a-single-page-website/)
 [StartBootstrap](https://github.com/BlackrockDigital/startbootstrap-scrolling-nav)
 
+
+## Setup
+1. Edit `inc/config.php` to your desired values
+2. Upload to server
+3. Voila!
+
