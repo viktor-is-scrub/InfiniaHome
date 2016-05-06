@@ -87,7 +87,7 @@
                 #admini{
                     font-size: 40px;
                 }
-                #intro{
+                #about{
                     background-image: url("http://stevie.heliohost.org:2082/cpsess6070349413/viewer/home1%2fsupercat%2fpublic_html/water_landscape.jpg")
                 }
                 #adtext{
@@ -128,7 +128,6 @@
                         <ul class="nav navbar-nav">
                             <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
                             <li><a class="page-scroll" href="#about">About</a></li>
-                            <li><a class="page-scroll" href="#use">Use</a></li>
                             <li><a class="page-scroll" href="#contact">Contact</a></li>
                         <?php // To add a nav link use a # for href. ?>
                         </ul>
