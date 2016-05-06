@@ -55,7 +55,7 @@
                     margin-bottom: 60px;
                 }
                 .footer {
-                    position: absolute;
+                    position: fixed;
                     bottom: 0;
                     width: 100%;
                     /* Set the fixed height of the footer here */
