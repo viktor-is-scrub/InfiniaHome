@@ -1,7 +1,7 @@
 <?php
 /**
  * Using PhpStorm.
- * (c) 2016 xiurobert
+ * (c) 2016 xiurobert and Keane Wong
  * Created on 4/28/2016 at 7:51 PM
  */
 
@@ -31,40 +31,33 @@ include('inc/header.inc.php');
             </div>
             -->
 
-            <section id="intro" class="intro-section">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <h1>Welcome to InfiniaPress!</h1>
-                            <p>The open source productivity suite</p>
-                            <a class="btn btn-success page-scroll" href="#about">About Infinia</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        <section id="about" class="about-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>About Infinia</h1>
-                        <p>Please wait for the developers to populate this area</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="use" class="use-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>Use Infinia</h1>
-                        <p class="lead">There are many products bundled with Infinia</p>
-                        <p>Please wait for the developers to populate this area</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <span id="navigation-bar">
+    <p>
+        [whatever you want in here. Shift your navigation bar here]
+    </p>
+</span>
+<div id="top">
+<img src="http://stevie.heliohost.org:2082/cpsess6070349413/viewer/home1%2fsupercat%2fpublic_html/infiniaPress%28final1%29.png" width=40%>
+<br><b id="greeting">Good morning</b>
+<script>
+    var d = new Date()
+    var time = d.getHours()
+    if(time < 10) {
+        document.getElementById("greeting").innerHTML = "Good Morning"
+    }else if (time < 18) {
+        document.getElementById("greeting").innerHTML = "Good Afternoon"
+    }else{
+        document.getElementById("greeting").innerHTML = "Good Evening"
+    }
+</script>
+</div>
+<div id="intro">
+    <b id="ad">
+        SIMPLICITY  <br><i id="admini">is    power</i>
+        <p id="adtext">Productivity apps for your work and personal life</p>
+    </b>
+    <a href="http://signup.infiniapress.tk"><button id="signup">Sign up</button></a>
+</div>
 
         <section id="contact" class="contact-section">
             <div class="container">
