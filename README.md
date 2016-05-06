@@ -13,3 +13,12 @@ This page is with a one-page parallax animation, references:
 2. Upload to server
 3. Voila!
 
+
+### Requirements
+
+To install InfiniaHome on your server, you need
+
+- PHP Version 5.5+
+- Apache mod_rewrite
+- SMTP support for your system
+
