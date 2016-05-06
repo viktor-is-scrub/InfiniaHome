@@ -51,7 +51,7 @@ include('inc/header.inc.php');
     }
 </script>
 </div>
-<div id="intro" id="about">
+<div id="about">
     <b id="ad">
         SIMPLICITY  <br><i id="admini">is    power</i>
         <p id="adtext">Productivity apps for your work and personal life</p>
