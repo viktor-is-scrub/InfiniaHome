@@ -205,7 +205,7 @@ class ReCaptcha
     }
 }
 // your secret key
-$secret = "6LekVx8TAAAAAJIR3tdBa2ILPYnM1c5jE0h2o5RL";
+$secret = "changeme";
  
 // empty response
 $response = null;
