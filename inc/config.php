@@ -143,3 +143,18 @@ $conf['URL']['logo'] = "assets/imgres/infinia-logo.png";
 
 
 
+/**
+ * Configuration for others
+ */
+
+
+// ReCaptcha public key
+
+$conf['reCAPTCHA']['publickey'] = "changeme";
+
+// ReCaptcha private key
+
+$conf['reCAPTCHA']['privatekey'] = "changeme";
+
+
+
