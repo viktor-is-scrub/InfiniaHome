@@ -1,0 +1,5 @@
+If any username/server/password information has been leaked, please report the leak and delete the file
+IMMEDIATELY upon noticing. FAILURE TO DO SO IS AN OFFENCE UNDER THE PROTECTION FROM PERSONAL INTRUSION ACT
+ (H.R.2448)[https://www.congress.gov/bill/105th-congress/house-bill/2448] and may result in penalties under the
+ U.S. Law.
+
