@@ -112,7 +112,7 @@ require('inc/lsf-functions.php');
                             <div class="g-recaptcha" data-sitekey="6LekVx8TAAAAAFk9MAMMd0nTkyy9NJcQD87yhV2d"></div>
 <?php
 
-// TODO: Move these classes into the inc/
+
 
 // your secret key
 //$secret = "changeme";
