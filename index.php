@@ -133,6 +133,8 @@ if ($response != null && $response->success) {
   } else {
   }
 ?>
+
+                            <!--/form -->
                             <div class="field">
                                 <button type="submit">Send</button>
                             </div>

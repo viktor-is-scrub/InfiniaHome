@@ -150,11 +150,36 @@ $conf['URL']['logo'] = "assets/imgres/infinia-logo.png";
 
 // ReCaptcha public key
 
-$conf['reCAPTCHA']['publickey'] = "changeme";
+//$conf['reCAPTCHA']['publickey'] = "changeme";
 
 // ReCaptcha private key
 
 $conf['reCAPTCHA']['privatekey'] = "changeme";
+
+
+
+
+// DATABASE CONFIG
+
+
+// Database host
+$conf['db']['host'] = "host.somedbhost.com";
+
+
+// Database server port. usually 3306. Leave this if you don't know
+$conf['db']['port'] = 3306;
+
+// Name of your database. This database SHOULD ALREADY BE CREATED
+$conf['db']['name'] = "changeme";
+
+// username to access database
+
+$conf['db']['username'] = "changeme";
+
+
+// Password to access database
+
+$conf['db']['password'] = "changeme";
 
 
 
