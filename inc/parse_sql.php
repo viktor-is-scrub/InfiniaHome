@@ -214,8 +214,10 @@ function parse_sql($file) {
  * Inject the SQL into the database
  * Requires a working DB connection
  * @param $inp
+ * @param $db_conn mysqli
  */
 
-function inject_sql($inp) {
+function inject_sql($inp, $db_conn) {
+    // I can't do anything now
 
 }
