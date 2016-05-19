@@ -160,6 +160,9 @@ $conf['reCAPTCHA']['privatekey'] = "changeme";
 
 
 // DATABASE CONFIG
+/**
+ * This section is used to configure the login/signup database.
+ */
 
 
 // Database host

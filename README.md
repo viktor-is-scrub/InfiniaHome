@@ -11,7 +11,9 @@ This page is with a one-page parallax animation, references:
 ## Setup
 1. Edit `inc/config.php` to your desired values
 2. Upload to server
-3. Voila!
+3. Browse to yourinfinia.com/setup/
+4. Follow the instructions
+5. Viola!
 
 
 ### Requirements

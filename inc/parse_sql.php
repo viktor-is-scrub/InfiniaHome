@@ -7,6 +7,9 @@
 
 ini_set('memory_limit', '5120M');
 set_time_limit ( 0 );
+
+$query = "";
+
 /***************************************************************************
  *                             sql_parse.php
  *                              -------------------
@@ -198,26 +201,33 @@ function split_sql_file($sql, $delimiter)
 }
 
 
-/**
- * Parse SQL function I Wrote myself
- */
-function parse_sql($file) {
-    $query = @fread(@fopen($file, 'r'), @filesize($file)) or die ("Error in running PHP function!");
-    $query = remove_remarks($query);
-    $query = split_sql_file($query, ';');
-
-
-}
 
 /**
  *
  * Inject the SQL into the database
  * Requires a working DB connection
- * @param $inp
+ * @param $inp File
  * @param $db_conn mysqli
  */
 
-function inject_sql($inp, $db_conn) {
-    // I can't do anything now
+function inject_sql($file, $db_conn) {
+    // Open the file and parse it down
+    $query = @fread(@fopen($file, 'r'), @filesize($file)) or die ("Error in running PHP function!");
+    $query = remove_remarks($query);
+    $query = split_sql_file($query, ';');
+
+    // Do stuff with the query and inject it into server
+    // I shouldn't really say *inject*
+
+    $i = 1;
+    foreach ($query as $sql) {
+        echo $i++;
+
+        echo "
+        ";
+        $db_conn->query($sql) or die('Failed to perform action!!');
+
+    }
+
 
 }
