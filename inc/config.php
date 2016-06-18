@@ -27,6 +27,9 @@ $conf_checker = false;
  *
  * ******************************************************
  * I am not responsible if you change this and your config is completely untouched.
+ * If this section was changed and the rest of the script crashes your server it
+ * is ALL YOUR FAULT. This product comes WITHOUT WARRANTY and NO, we will NOT fix your
+ * server for you. (Just do a system wipe on the /var/www/)
  *
  * ******************************************************
  *

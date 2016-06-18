@@ -18,7 +18,23 @@ if ($db->connect_errno) {
      Please try again later!";
 
     exit(1);
+
+    /**
+     * WARNING: THE BELOW WILL BE LEFT AS UNSTYLED HTML BECAUSE I AM TOO LAZY TO WRITE
+     * THE CSS. PLEASE CONTACT OUR FRONTEND DEV FOR THE CSS. THESE ARE JUST THE BARE BONES
+     */
 }
 
+?>
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title>Signup &lsaquo; InfiniaPress</title>
+        </head>
 
+
+        <body>
+
+        </body>
+</html>
 

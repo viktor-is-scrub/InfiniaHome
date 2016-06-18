@@ -1,0 +1,3 @@
+# InfinaPress Robots File
+# Do not edit unless specifically given permission.
+User-Agent: *
