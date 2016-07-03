@@ -34,7 +34,11 @@ if ($db->connect_errno) {
 
 
         <body>
-
+            <form method="post">
+                <input type="text" name="Username" />
+                <input type="password" name="Password" />
+                <!-- Fancy styling needed please -->
+            </form>
         </body>
 </html>
 
