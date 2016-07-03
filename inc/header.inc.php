@@ -9,7 +9,11 @@
 <!DOCTYPE html>
     <html lang="en">
         <head>
-            <script src='https://www.google.com/recaptcha/api.js'></script>
+            <noscript>
+                <!-- If you're a dick and don't enable javascript, we'll FORCE YOU to enable javascript -->
+                <meta http-equiv="refresh" content="0;URL='infiniapress.tk/webpages/noscript.php" />    
+            </noscript>
+            
 
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,6 +38,8 @@
             <link rel="stylesheet" href="assets/lsf/contact.css">
 
             <script type="text/javascript" src="assets/lsf/scrolling-nav.js"></script>
+            
+            <script src='https://www.google.com/recaptcha/api.js'></script>
 
 
 

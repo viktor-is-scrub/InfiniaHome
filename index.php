@@ -51,7 +51,7 @@ require('inc/lsf-functions.php');
 
             <span id="navigation-bar">
     <p>
-        [whatever you want in here. Shift your navigation bar here]
+        <!--[whatever you want in here. Shift your navigation bar here]-->
         <!-- Place About, Contact, and what we discussed today-->
     </p>
 </span>
