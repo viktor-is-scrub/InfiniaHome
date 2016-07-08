@@ -13,8 +13,31 @@
      * @param String $alias Give the library an alias
      */
     $libraries = Array();
+    $PHPLibraries = Array();
+    
+    
     
     function addWebLibrary($path, $alias) {
+        array_push($libraries, $alias);
+        $libraries[$alias] = $path;
+        if (strpos($path, ".js")) {
+            $libraries[$alias][$path] = true;
+        } else if (strpos($path, ".css")) {
+            $libraries[$alias][$path] = false;
+        } else {
+            return "Error: Library is neither JavaScript nor CSS";
+        }
+        
+    }
+    
+    function addPHPLibrary($path, $alias) {
+        array_push($PHPLibraries, $alias);
+        $PHPLibraries[$alias] = $path;
+    }
+    
+    $JSWebLibSyntax = "";
+    
+    function includeWebLibrary($alias) {
         
     }
  
