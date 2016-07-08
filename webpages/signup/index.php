@@ -7,6 +7,7 @@
 
 
 require '../../inc/parse_sql.php';
+require '../../inc/config.php';
 
 
 $db = new mysqli($conf['db']['host'],
@@ -38,6 +39,7 @@ if ($db->connect_errno) {
                 <input type="text" name="Username" />
                 <input type="password" name="Password" />
                 <!-- Fancy styling needed please -->
+                <!-- please update whenever possible -->
             </form>
         </body>
 </html>
