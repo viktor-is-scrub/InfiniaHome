@@ -79,12 +79,15 @@ require('inc/lsf-functions.php');
     <a href="<?php echo $conf['URL']['signup'] ?>"><button id="signup">Sign up</button></a>
 </div>
 </section>
+<!--
         <section id="contact" class="contact-section">
             <div class="container">
 
                 <!-- Script handling contacts -->
 
                 <!-- Requires jQuery -->
+                
+                <!--
                 <script type="text/javascript" src="/assets/lsf/contact.js">
 
                 </script>
@@ -110,8 +113,10 @@ require('inc/lsf-functions.php');
 
                             </div>
                             <div class="g-recaptcha" data-sitekey="6LekVx8TAAAAAFk9MAMMd0nTkyy9NJcQD87yhV2d"></div>
+                            
+                            
 <?php
-
+/**
 
 
 // your secret key
@@ -132,9 +137,12 @@ if ($response != null && $response->success) {
     echo "Hi there" . $_POST["name"] . " (" . $_POST["email"] . "), thanks for submitting this request!";
   } else {
   }
+  
+  */
 ?>
 
                             <!--/form -->
+                            <!--
                             <div class="field">
                                 <button type="submit">Send</button>
                             </div>
@@ -147,6 +155,7 @@ if ($response != null && $response->success) {
                 </div>
             </div>
         </section>
+        -->
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
