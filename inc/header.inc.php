@@ -107,7 +107,7 @@
                 #admini{
                     font-size: 40px;
                 }
-                .welcome{
+                #welcome{
                     font-size: 40px;
                 }
                 #about{
