@@ -9,10 +9,13 @@
 -- This script assumes that the database and user for creation exists
 CREATE TABLE IF NOT EXISTS `users` (
   `id` INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY, -- Set a safe value for the int
-  `username` VARCHAR(25) NOT NULL,
-  `password ` VARCHAR(50) NOT NULL,
-  `email` VARCHAR(35) NOT NULL,
-  UNIQUE (`email`)
+  `username` VARCHAR(100) NOT NULL,
+  `fullname` VARCHAR(100) NOT NULL,
+  `password ` VARCHAR(100) NOT NULL,
+  `email` VARCHAR(100) NOT NULL,
+  `registered` enum('Y', 'N') NOT NULL DEFAULT 'N',
+  `resetcode` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`id`)
 
 ) ENGINE = MYISAM;
 
