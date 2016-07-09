@@ -51,7 +51,8 @@ require('inc/lsf-functions.php');
 <b id="welcome">Welcome to Infinia Press</b><br>
 <script>
     var viewPortWidth = $(window).width();
-    if (viewPortWidth > 800) {$('#signup').css("font-size", "20px")}
+    if (viewPortWidth > 800) {$("button").css("font-size", "20px")}
+    console.log(viewPortWidth)
     var d = new Date()
     var time = d.getHours()
     if(time < 10) {
