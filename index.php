@@ -51,7 +51,7 @@ require('inc/lsf-functions.php');
 <b id="welcome">Welcome to Infinia Press</b><br>
 <script>
     var viewPortWidth = $(window).width();
-    if (viewPortWidth > 800) {$("button").css('font-size', '30px')}
+    if (viewPortWidth > 800) {$('#signup').css("font-size", "20px")}
     var d = new Date()
     var time = d.getHours()
     if(time < 10) {
@@ -72,6 +72,7 @@ require('inc/lsf-functions.php');
     <a href="<?php echo $conf['URL']['signup'] ?>"><button id="signup">Sign up</button></a>
 </div>
 </section>
+<section id="apps"></section>
 <div class="se-pre-con">LOADING...</div>
 <script>$(window).load(function() {
 		// Animate loader off screen
