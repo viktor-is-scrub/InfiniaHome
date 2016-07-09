@@ -56,6 +56,17 @@
                     font-family: "arial";
                     text-align: center
                 }
+                .se-pre-con {
+        		position: fixed;
+        		left: 0px;
+        		top: 0px;
+        		width: 100%;
+        		height: 100%;
+        		z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
+        		background: white;
+        		font-size: 80px;
+        		text-align: center
+    		}
                 nav{
                     position: fixed;
                 }
@@ -86,7 +97,7 @@
                     left: 0;
                 }
                 #top{
-                    background-image: url("http://stevie.heliohost.org:2082/cpsess6070349413/viewer/home1%2fsupercat%2fpublic_html/landscape.jpg");
+                    background-image: url("http://digitalresult.com/wp-content/uploads/2016/01/sunset-hd-wallpapers-15.jpeg");
                 }
                 #ad{
                     color: white;
@@ -96,7 +107,7 @@
                     font-size: 40px;
                 }
                 #about{
-                    background-image: url("")
+                    background-image: url("assets/imgres/water-landscape.png")
                 }
                 #adtext{
                     font-family: "times new roman";
