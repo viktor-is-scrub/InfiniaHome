@@ -81,7 +81,7 @@
                     position: fixed;
                     background: #eaeaea;
                     width: 100%;
-                    height: 65px;
+                    height: 60px;
                     top: 0;
                     left: 0;
                 }
@@ -96,7 +96,7 @@
                     font-size: 40px;
                 }
                 #about{
-                    background-image: url("http://stevie.heliohost.org:2082/cpsess6070349413/viewer/home1%2fsupercat%2fpublic_html/water_landscape.jpg")
+                    background-image: url("")
                 }
                 #adtext{
                     font-family: "times new roman";
@@ -120,6 +120,7 @@
             </style>
         </head>
         <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+            <script>$(function(){if (viewPortWidth > 800) {$('button').css("font-size", "36px")}})</script>
             <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
                 <div class="container">
                     <div class="navbar-header page-scroll">
