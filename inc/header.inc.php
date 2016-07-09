@@ -102,11 +102,16 @@
                 #ad{
                     color: white;
                     font-size: 90px;
+                    line-height: 100px;
                 }
                 #admini{
                     font-size: 40px;
                 }
+                .welcome{
+                    font-size: 40px;
+                }
                 #about{
+                    background-size: cover;
                     background-image: url("assets/imgres/water-landscape.png")
                 }
                 #adtext{
