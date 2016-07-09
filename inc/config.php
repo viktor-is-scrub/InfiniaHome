@@ -40,7 +40,9 @@ $conf['edited'] = false;
 
 
 
-// SMTP Configuration for contact me sender
+
+
+// SMTP Configuration for signup confirmation
 /**
  * The details for the SMTP config can be found in your web host's control panel
  *
@@ -73,20 +75,9 @@ $conf['SMTP']['port'] = 25;
 // If it is none, the username and password will be ignored
 $conf['SMTP']['secure'] = false;
 
-
-
-// Recipients of email
-// Use array syntax here
-
-$conf['SMTP']['tosendto'] = Array(
-    'some_user@example.com',
-    'some_other@example.com'
-);
-
-
 // Subject of the Email
 
-$conf['SMTP']['subject'] = 'Contact from: ';
+$conf['SMTP']['subject'] = 'Confirm your account < InfiniaPress';
 
 // Body of the email
 // Uses embed HTML
@@ -96,28 +87,16 @@ $conf['SMTP']['subject'] = 'Contact from: ';
 // $email -> Email of the sender
 // $message -> Sender's message
 
-$conf['SMTP']['body'] = <<<SUB
-<p>This is an enquiry from $name</p>
-<p>Name: <b>$name</b></p>
-<p>Email: <b>$email</b></p>
-<p>Message: $message</p>
-<p>
-<i> This message is an automated message. Please do not reply to it</i>
-</p>
+// TODO: Makeover this crappy html
 
+$conf['SMTP']['body'] = <<<SUB
+EDIT THIS PLZ
 SUB;
 
 // Alternative body if HTML email cannot be sent
 
 $conf['SMTP']['altbody'] = <<<BOD
-Enquiry from $name\n
-Name: $name\n
-Email: $email\n
-Message: $message\n
-\n
-\n
-This is an automated message. Please do not reply
-
+EDIT THIS PLZ
 
 BOD;
 
@@ -141,23 +120,10 @@ $conf['URL']['signup'] = "signuplink.example.com";
 
 // Should be in assets
 
+// NOTE: This url is used in the CSS/HTML
+
 
 $conf['URL']['logo'] = "assets/imgres/infinia-logo.png";
-
-
-
-/**
- * Configuration for others
- */
-
-
-// ReCaptcha public key
-
-//$conf['reCAPTCHA']['publickey'] = "changeme";
-
-// ReCaptcha private key
-
-$conf['reCAPTCHA']['privatekey'] = "changeme";
 
 
 

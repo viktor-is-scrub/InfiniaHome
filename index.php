@@ -8,7 +8,7 @@
 include('inc/header.inc.php');
 // Do not touch
 require('inc/config.php');
-require('inc/reCAPTCHA_api.php');
+
 // Very simple config checker
 if ($conf['edited'] == false) {
     if ($conf_checker == false) {
@@ -79,71 +79,6 @@ require('inc/lsf-functions.php');
 		// Animate loader off screen
 		$(".se-pre-con").fadeOut("slow");
 	});</script>
-<!--
-        <section id="contact" class="contact-section">
-            <div class="container">
-                <!-- Script handling contacts -->
-
-                <!-- Requires jQuery -->
-                
-                <!--
-                <script type="text/javascript" src="/assets/lsf/contact.js">
-                </script>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>Contact the developers</h1>
-                        <form id="contact" method="post" action="back/contact_send.php">
-                            <div class="field">
-                                <label for="name">Name: </label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="field">
-                                <label for="email">Email: </label>
-                                <input type="text" id="email" name="email" required>
-                            </div>
-                            <div class="field">
-                                <label for="message">Message: </label>
-                                <textarea id="message" name="message" required></textarea>
-                            </div>
-                            <div class="g-recaptcha" data-sitekey="6LekVx8TAAAAAFk9MAMMd0nTkyy9NJcQD87yhV2d"></div>
-                            
-                            
-<?php
-/**
-// your secret key
-//$secret = "changeme";
- 
-// empty response
-$response = null;
- 
-// check secret key
-$reCaptcha = new ReCaptcha($conf['reCAPTCHA']['privatekey']);
-if ($_POST["g-recaptcha-response"]) {
-    $response = $reCaptcha->verifyResponse(
-        $_SERVER["REMOTE_ADDR"],
-        $_POST["g-recaptcha-response"]
-    );
-}
-if ($response != null && $response->success) {
-    echo "Hi there" . $_POST["name"] . " (" . $_POST["email"] . "), thanks for submitting this request!";
-  } else {
-  }
-  
-  */
-?>
-                            <!--/form -->
-                            <!--
-                            <div class="field">
-                                <button type="submit">Send</button>
-                            </div>
-                        </form>
-                        <div id="formMessages">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        -->
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
