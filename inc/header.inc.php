@@ -97,6 +97,7 @@
                     left: 0;
                 }
                 #top{
+                    background-size: cover;
                     background-image: url("http://digitalresult.com/wp-content/uploads/2016/01/sunset-hd-wallpapers-15.jpeg");
                 }
                 #ad{
