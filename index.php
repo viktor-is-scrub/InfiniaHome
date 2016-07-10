@@ -38,7 +38,11 @@ require('inc/lsf-functions.php');
                 Products bundled into InfiniaPress include: Hansom, etc.
             </div>
             -->
-
+<div class="se-pre-con"><br><br><br>LOADING...</div>
+<script>$(window).load(function() {
+		// Animate loader off screen
+		$(".se-pre-con").fadeOut("slow");
+	});</script>
             <span id="navigation-bar">
     <p>
         <!--[whatever you want in here. Shift your navigation bar here]-->
@@ -90,11 +94,7 @@ require('inc/lsf-functions.php');
 		<p>A beautiful timer for keeping track</p>
 	</div>
 </section>
-<div class="se-pre-con"><br><br><br>LOADING...</div>
-<script>$(window).load(function() {
-		// Animate loader off screen
-		$(".se-pre-con").fadeOut("slow");
-	});</script>
+
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
