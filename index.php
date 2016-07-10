@@ -8,7 +8,6 @@
 include('inc/header.inc.php');
 // Do not touch
 require('inc/config.php');
-
 // Very simple config checker
 if ($conf['edited'] == false) {
     if ($conf_checker == false) {
@@ -56,7 +55,7 @@ require('inc/lsf-functions.php');
 <script>
 $(document).ready(function(){
     var viewPortWidth = $(window).width();
-    if (viewPortWidth > 800) {$("button").css("font-size", "20px")}
+    if (viewPortWidth < 800) {$("button").css("font-size", "20px")}
     console.log(viewPortWidth)
     var d = new Date()
     var time = d.getHours()
@@ -89,7 +88,7 @@ $(document).ready(function(){
 	</div>
 	<div style="background-color:#ececec; padding:2% 0 2% 0; border-top:5px solid black; border-bottom: 5px solid black;">
 		<h1>HANSOM</h1>
-		<p>A powerful note=taking application for memory</p>
+		<p>A powerful note-taking application for memory</p>
 		<img src="assets/imgres/hansom_1.png" height="250px">
 	</div>
 	<div style="background-color:#ececec; padding:2% 0 2% 0; border-top:5px solid black; border-bottom: 5px solid black;">
