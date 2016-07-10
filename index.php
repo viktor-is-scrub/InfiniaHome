@@ -57,6 +57,7 @@ require('inc/lsf-functions.php');
 <b id="welcome">Welcome to Infinia Press</b><br>
 <script>
 $(document).ready(function(){
+    $("#greeting").fadeOut(0)
     var d = new Date()
     var time = d.getHours()
     if(time < 10) {
@@ -65,7 +66,8 @@ $(document).ready(function(){
         document.getElementById("greeting").innerHTML = "Good Afternoon"
     }else{
         document.getElementById("greeting").innerHTML = "Good Evening"
-    }	
+    }
+    $("#greeting").fadeIn("slow")	
 })
     
 </script>
