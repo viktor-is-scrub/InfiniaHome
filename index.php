@@ -54,6 +54,7 @@ require('inc/lsf-functions.php');
 <br><b id="greeting"></b><br>
 <b id="welcome">Welcome to Infinia Press</b><br>
 <script>
+$(document).ready(function(){
     var viewPortWidth = $(window).width();
     if (viewPortWidth > 800) {$("button").css("font-size", "20px")}
     console.log(viewPortWidth)
@@ -65,7 +66,9 @@ require('inc/lsf-functions.php');
         document.getElementById("greeting").innerHTML = "Good Afternoon"
     }else{
         document.getElementById("greeting").innerHTML = "Good Evening"
-    }
+    }	
+})
+    
 </script>
 </div>
 <section id="about">
