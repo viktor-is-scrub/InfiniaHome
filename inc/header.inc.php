@@ -91,7 +91,8 @@
        		    1px 1px 0 #000;
                     font-size: 80px;
                     color: white;
-                    opacity: 0.9
+                    opacity: 0.9;
+                    z-index: -1;
                 }
                 #navigation-bar{
                     position: fixed;
