@@ -82,7 +82,7 @@ require('inc/lsf-functions.php');
 	</div>
 	<div style="background-color:#ececec; padding:2% 0 2% 0; border-top:5px solid black; border-bottom: 5px solid black;">
 		<h1>HANSOM</h1>
-		<p>A powerful note=taking application for memory</p>
+		<p>A powerful note-taking application for memory</p>
 		<img src="assets/imgres/hansom_1.png" height="250px">
 	</div>
 	<div style="background-color:#ececec; padding:2% 0 2% 0; border-top:5px solid black; border-bottom: 5px solid black;">
