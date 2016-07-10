@@ -73,7 +73,22 @@ require('inc/lsf-functions.php');
     <a href="<?php echo $conf['URL']['signup'] ?>"><button id="signup">Sign up</button></a>
 </div>
 </section>
-<section id="apps"></section>
+<section id="apps">
+	<div style="background-color:#ececec; padding:2% 0 2% 0; border-top:5px solid black; border-bottom: 5px solid black;">
+		<h1>PASSENGER PIGEON</h1>
+		<p>An elegant chat app with file sharing capabilities</p>
+		<img src="assets/imgres/passenger_pigeon_1.png" height="250px">
+	</div>
+	<div style="background-color:#ececec; padding:2% 0 2% 0; border-top:5px solid black; border-bottom: 5px solid black;">
+		<h1>HANSOM</h1>
+		<p>A powerful note=taking application for memory</p>
+		<img src="assets/imgres/hansom_1.png" height="250px">
+	</div>
+	<div style="background-color:#ececec; padding:2% 0 2% 0; border-top:5px solid black; border-bottom: 5px solid black;">
+		<h1>TRACKTION</h1>
+		<p>A beautiful timer for keeping track</p>
+	</div>
+</section>
 <div class="se-pre-con">LOADING...</div>
 <script>$(window).load(function() {
 		// Animate loader off screen
