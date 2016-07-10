@@ -70,6 +70,7 @@ require('inc/lsf-functions.php');
         SIMPLICITY  <br><i id="admini">is    power</i><br>
         <b id="adtext">Productivity apps for your work and personal life</b>
     </b>
+    <br>
     <a href="<?php echo $conf['URL']['signup'] ?>"><button id="signup">Sign up</button></a>
 </div>
 </section>
