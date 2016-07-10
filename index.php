@@ -39,8 +39,11 @@ require('inc/lsf-functions.php');
             -->
 <div class="se-pre-con"><br><br><br>LOADING...</div>
 <script>$(window).load(function() {
-		// Animate loader off screen
 		$(".se-pre-con").fadeOut("slow");
+		var viewPortWidth = $(window).width();
+    		if (viewPortWidth < 800) {$("button").css("font-size", "20px")}
+    		console.log(viewPortWidth)
+		// Animate loader off screen
 	});</script>
             <span id="navigation-bar">
     <p>
@@ -54,9 +57,6 @@ require('inc/lsf-functions.php');
 <b id="welcome">Welcome to Infinia Press</b><br>
 <script>
 $(document).ready(function(){
-    var viewPortWidth = $(window).width();
-    if (viewPortWidth < 800) {$("button").css("font-size", "20px")}
-    console.log(viewPortWidth)
     var d = new Date()
     var time = d.getHours()
     if(time < 10) {
