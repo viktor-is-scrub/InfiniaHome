@@ -51,7 +51,7 @@ require('inc/lsf-functions.php');
 </span>
 <div id="top">
 <img src="assets/imgres/infinia-logo.png" width=40%>
-<br><b id="greeting">Good morning</b><br>
+<br><b id="greeting"></b><br>
 <b id="welcome">Welcome to Infinia Press</b><br>
 <script>
     var viewPortWidth = $(window).width();
