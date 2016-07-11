@@ -8,7 +8,6 @@
 include('inc/header.inc.php');
 // Do not touch
 require('inc/config.php');
-
 // Very simple config checker
 if ($conf['edited'] == false) {
     if ($conf_checker == false) {
@@ -38,7 +37,14 @@ require('inc/lsf-functions.php');
                 Products bundled into InfiniaPress include: Hansom, etc.
             </div>
             -->
-
+<div class="se-pre-con"><br><br><br>LOADING...</div>
+<script>$(window).load(function() {
+		$(".se-pre-con").fadeOut("slow");
+		var viewPortWidth = $(window).width();
+    		if (viewPortWidth < 800) {$("button").css("font-size", "20px")}
+    		console.log(viewPortWidth)
+		// Animate loader off screen
+	});</script>
             <span id="navigation-bar">
     <p>
         <!--[whatever you want in here. Shift your navigation bar here]-->
@@ -47,12 +53,11 @@ require('inc/lsf-functions.php');
 </span>
 <div id="top">
 <img src="assets/imgres/infinia-logo.png" width=40%>
-<br><b id="greeting">Good morning</b><br>
+<br><b id="greeting"></b><br>
 <b id="welcome">Welcome to Infinia Press</b><br>
 <script>
-    var viewPortWidth = $(window).width();
-    if (viewPortWidth > 800) {$("button").css("font-size", "20px")}
-    console.log(viewPortWidth)
+$(document).ready(function(){
+    $("#greeting").fadeOut(0)
     var d = new Date()
     var time = d.getHours()
     if(time < 10) {
@@ -62,6 +67,9 @@ require('inc/lsf-functions.php');
     }else{
         document.getElementById("greeting").innerHTML = "Good Evening"
     }
+    $("#greeting").fadeIn("slow")	
+})
+    
 </script>
 </div>
 <section id="about">
@@ -70,15 +78,27 @@ require('inc/lsf-functions.php');
         SIMPLICITY  <br><i id="admini">is    power</i><br>
         <b id="adtext">Productivity apps for your work and personal life</b>
     </b>
+    <br>
     <a href="<?php echo $conf['URL']['signup'] ?>"><button id="signup">Sign up</button></a>
 </div>
 </section>
-<section id="apps"></section>
-<div class="se-pre-con">LOADING...</div>
-<script>$(window).load(function() {
-		// Animate loader off screen
-		$(".se-pre-con").fadeOut("slow");
-	});</script>
+<section id="apps">
+	<div style="background-color:#ececec; padding:2% 0 2% 0; border-top:5px solid black; border-bottom: 5px solid black;">
+		<h1>PASSENGER PIGEON</h1>
+		<p>An elegant chat app with file sharing capabilities</p>
+		<img src="assets/imgres/passenger_pigeon_1.png" height="250px">
+	</div>
+	<div style="background-color:#ececec; padding:2% 0 2% 0; border-top:5px solid black; border-bottom: 5px solid black;">
+		<h1>HANSOM</h1>
+		<p>A powerful note-taking application for memory</p>
+		<img src="assets/imgres/hansom_1.png" height="250px">
+	</div>
+	//<div style="background-color:#ececec; padding:2% 0 2% 0; border-top:5px solid black; border-bottom: 5px solid black;">
+		//<h1>TRACKTION</h1>
+		//<p>A beautiful timer for keeping track</p>
+	//</div>
+</section>
+
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();

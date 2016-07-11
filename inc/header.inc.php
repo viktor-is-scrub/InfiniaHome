@@ -84,9 +84,15 @@
                     font-size: 20px;
                 }
                 #greeting{
+                text-shadow:
+     		    -1px -1px 0 #000,
+      		    1px -1px 0 #000,
+      		    -1px 1px 0 #000,
+       		    1px 1px 0 #000;
                     font-size: 80px;
                     color: white;
-                    opacity: 0.9
+                    opacity: 0.9;
+                    z-index: -1;
                 }
                 #navigation-bar{
                     position: fixed;
@@ -98,7 +104,7 @@
                 }
                 #top{
                     background-size: cover;
-                    background-image: url("../assets/imgres/sunset-bckground.jpeg");
+                    background-image: url("http://digitalresult.com/wp-content/uploads/2016/01/sunset-hd-wallpapers-15.jpeg");
                 }
                 #ad{
                     color: white;
@@ -109,11 +115,22 @@
                     font-size: 40px;
                 }
                 #welcome{
+                    color: white;
+                text-shadow:
+     		    -1px -1px 0 #000,
+      		    1px -1px 0 #000,
+      		    -1px 1px 0 #000,
+       		    1px 1px 0 #000;
                     font-size: 40px;
                 }
                 #about{
+                text-shadow:
+     		    -1px -1px 0 #000,
+      		    1px -1px 0 #000,
+      		    -1px 1px 0 #000,
+       		    1px 1px 0 #000;
                     background-size: cover;
-                    background-image: url("assets/imgres/water-landscape.png")
+                    background-image: url("assets/imgres/water-landscape.png");
                 }
                 #adtext{
                     font-family: "times new roman";
@@ -137,7 +154,6 @@
             </style>
         </head>
         <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-            <script>$(function(){if (viewPortWidth > 800) {$('button').css("font-size", "36px")}})</script>
             <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
                 <div class="container">
                     <div class="navbar-header page-scroll">
@@ -154,7 +170,7 @@
                         <ul class="nav navbar-nav">
                             <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
                             <li><a class="page-scroll" href="#about">About</a></li>
-                            <li><a class="page-scroll" href="#contact">Contact</a></li>
+                            <li><a class="page-scroll" href="#apps">Apps</a></li>
                         <?php // To add a nav link use a # for href. ?>
                         </ul>
                     </div>
