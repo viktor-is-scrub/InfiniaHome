@@ -72,6 +72,9 @@ class User {
      */
     public function signup($username, $password, $email, $fullname, $conn) {
         try {
+            $pword = password_hash($password, PASSWORD_DEFAULT);
+
+            // TODO:
             //return $signupquery;
         } catch (mysqli_sql_exception $e) {
             // Do nothing now

@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `id` INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY, -- Set a safe value for the int
   `username` VARCHAR(100) NOT NULL,
   `fullname` VARCHAR(100) NOT NULL,
-  `password ` VARCHAR(100) NOT NULL,
+  `password ` VARCHAR(255) NOT NULL, -- This will be a hashed salted value for the password
   `email` VARCHAR(100) NOT NULL,
   `registered` enum('Y', 'N') NOT NULL DEFAULT 'N',
   `resetcode` VARCHAR(100) NOT NULL,
