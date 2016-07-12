@@ -63,6 +63,7 @@ class User {
 
     /**
      * Signs up a user for InfiniaPress
+     * Source: http://www.codingcage.com/2015/09/login-registration-email-verification-forgot-password-php.html
      * @param $username string The username preferred
      * @param $password string The preferred password (WILL BE HASHED!!)
      * @param $email string The email address
@@ -70,19 +71,38 @@ class User {
      * @param $conn mysqli The MySQL database connection
      * @return mysqli_stmt $signupquery Return the query used for signup
      */
-    public function signup($username, $password, $email, $fullname, $conn) {
+    public function signup($username, $password, $email, $fullname, $code, $conn) {
         try {
+
+            // PASSWORD HASHING FUNCTION
+            // NOTE: Don't try anything fishy here...
             $pword = password_hash($password, PASSWORD_DEFAULT);
 
-            // TODO:
-            //return $signupquery;
+
+            $signupquery = $conn->prepare(
+                "INSERT INTO users(username,email,password,fullname,tokencode)
+                            VALUES(:user_name, :user_mail, :user_pass,:full_name, :active_code)"
+            );
+
+            $signupquery->bind_param(":user_name", $username);
+            $signupquery->bind_param(":user_mail", $email);
+            $signupquery->bind_param(":user_pass", $pword);
+            $signupquery->bind_param(":full_name", $fullname);
+            $signupquery->bind_param(":active_code", $code);
+            $signupquery->execute();
+            return $signupquery;
         } catch (mysqli_sql_exception $e) {
             // Do nothing now
+            echo "There was an error trying to sign you up! Please contact InfiniaPress staff";
         }
     }
     
     public function login($username, $password, $conn) {
-        
+        try {
+
+        } catch (mysqli_sql_exception $e) {
+            // Do nothing for now
+        }
     }
  }
 

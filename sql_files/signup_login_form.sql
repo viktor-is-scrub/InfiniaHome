@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password ` VARCHAR(255) NOT NULL, -- This will be a hashed salted value for the password
   `email` VARCHAR(100) NOT NULL,
   `registered` enum('Y', 'N') NOT NULL DEFAULT 'N',
-  `resetcode` VARCHAR(100) NOT NULL,
+  `tokencode` VARCHAR(100) NOT NULL, -- If code valid, will change the user status
   PRIMARY KEY (`id`)
 
 ) ENGINE = MYISAM;
