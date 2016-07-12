@@ -61,6 +61,7 @@ class User {
         return $lsid;
     }
 
+
     /**
      * Signs up a user for InfiniaPress
      * Source: http://www.codingcage.com/2015/09/login-registration-email-verification-forgot-password-php.html
@@ -76,7 +77,8 @@ class User {
 
             // PASSWORD HASHING FUNCTION
             // NOTE: Don't try anything fishy here...
-            $pword = password_hash($password, PASSWORD_DEFAULT);
+
+            $GLOBALS['hPword'] = password_hash($password, PASSWORD_DEFAULT);
 
 
             $signupquery = $conn->prepare(
@@ -96,9 +98,36 @@ class User {
             echo "There was an error trying to sign you up! Please contact InfiniaPress staff";
         }
     }
+
+    /**
+     * @param $username The username entered by the user
+     * @param $password The password entered by the user
+     * @param $conn mysqli Connection to the DB
+     */
     
     public function login($username, $password, $conn) {
         try {
+            $stmt = $conn->prepare("SELECT * FROM users WHERE username=:user_id");
+            $stmt->bind_param(":user_id", $username);
+            $stmt->execute();
+
+            // This complicated function is needed because goddamn MySQLI and not PDO :(
+            $result = $stmt->get_result(); // Allows the result to be worked with
+
+            if ($stmt->num_rows >= 1) {
+                while ($data = $result->fetch_assoc()) {
+                    // use $data[] and loop thru results
+                }
+            } else {
+                echo "No records found!";
+                exit(1);
+            }
+
+
+            if ($stmt->num_rows == 1) {
+
+            }
+
 
         } catch (mysqli_sql_exception $e) {
             // Do nothing for now
