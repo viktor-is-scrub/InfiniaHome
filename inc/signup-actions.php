@@ -95,7 +95,8 @@ class User {
             return $signupquery;
         } catch (mysqli_sql_exception $e) {
             // Do nothing now
-            echo "There was an error trying to sign you up! Please contact InfiniaPress staff";
+            header("Location: ../index.php?s=sys-error");
+            // We shall force Keane to make a beautiful error page. Yay
         }
     }
 
@@ -103,6 +104,7 @@ class User {
      * @param $username The username entered by the user
      * @param $password The password entered by the user
      * @param $conn mysqli Connection to the DB
+     * @return boolean Tell if the login was successful
      */
     
     public function login($username, $password, $conn) {
@@ -117,21 +119,73 @@ class User {
             if ($stmt->num_rows >= 1) {
                 while ($data = $result->fetch_assoc()) {
                     // use $data[] and loop thru results
+                    if ($data['registered'] = "Y") {
+                        // If the user is registered and confirmed
+
+
+                        if (password_verify($password, $data['password'])) {
+                            // Check the user's password against the hashed one
+
+                            $_SESSION['userSess'] = $data['id']; // Starts a session with the user's ID
+                            // This makes easier for other apps to verify the user has been logged in
+                            // :D
+                            return true;
+
+                        } else {
+                            header("Location: ../index.php?s=user-error");
+                            exit;
+
+                        }
+                    } else {
+                        header("Location: ../index.php?s=user-unconfirmed");
+                        exit;
+                    }
                 }
             } else {
-                echo "No records found!";
-                exit(1);
+                header("Location: ../index.php?s=user-error");
+                exit;
             }
 
 
-            if ($stmt->num_rows == 1) {
 
-            }
 
 
         } catch (mysqli_sql_exception $e) {
             // Do nothing for now
+            header("Location: ../index.php?s=sys-error");
         }
+    }
+
+    /**
+     * Check if the user is logged in. Honestly, do I have to PHPDoc everything?
+     * @return bool If the user is logged in or not.
+     */
+
+    public function isLoggedIn() {
+        if (isset($_SESSION['userSess'])) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    /**
+     * Self-explanatory. Redirects the user to a chosen URL
+     * @param $url The URL to send the user to
+     */
+    public function redirect($url) {
+        header("Location: $url");
+    }
+
+    /**
+     * Logs the damn user out. SO EZ!!! OMG WHY DID I PHPDOC THIS
+     */
+
+    public function logout() {
+        session_destroy();
+        $_SESSION['userSess'] = false;
+        
     }
  }
 
