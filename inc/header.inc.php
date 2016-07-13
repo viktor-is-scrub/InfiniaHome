@@ -151,6 +151,9 @@
                     background-color: red;
                     border-color: red;
                 }
+                .app:hover{
+                    background-color: #c7c7c7;
+                }
             </style>
         </head>
         <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
