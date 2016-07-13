@@ -151,6 +151,9 @@
                     background-color: red;
                     border-color: red;
                 }
+                #app{
+                    background-color:#ececec;
+                }
                 .app:hover{
                     background-color: #c7c7c7;
                 }
