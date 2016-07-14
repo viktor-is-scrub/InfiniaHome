@@ -10,6 +10,8 @@ require '../../inc/parse_sql.php';
 require '../../inc/config.php';
 
 
+
+
 $db = new mysqli($conf['db']['host'],
     $conf['db']['username'], $conf['db']['password'], $conf['db']['name'], $conf['db']['port']);
 

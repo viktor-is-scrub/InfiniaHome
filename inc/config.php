@@ -38,6 +38,21 @@ $conf_checker = false;
 $conf['edited'] = false;
 
 
+/**
+ * BASE DIRECTORY OF YOUR INFINIAPRESS INSTALLATION
+ *
+ * This is NOT YOUR DOCUMENT ROOT
+ *
+ * Example: /home/example/public_html/infiniapress
+ * This defines your infiniapress installation location
+ *
+ * WARNING: FAILURE TO DEFINE THIS MAY RESULT IN MANY DIFFERENT ERRORS
+ *
+ * TODO: This is a WIP
+ */
+//$basedir = "/home/yourusername/public_html";
+
+
 
 
 
@@ -104,26 +119,12 @@ BOD;
 
 
 /**
- * TODO: Configuration for URLs
+ * URL Configuration
  */
 
 
-
-// The Link for the signup
-
-
-$conf['URL']['signup'] = "signuplink.example.com";
-
-
-
-// Link for the Image
-
-// Should be in assets
-
-// NOTE: This url is used in the CSS/HTML
-
-
-$conf['URL']['logo'] = "assets/imgres/infinia-logo.png";
+// This is your base url for infiniapress
+$conf['baseurl'] = "infiniapress.org";
 
 
 

@@ -4,10 +4,12 @@
  * (c) 2016 xiurobert and Keane Wong
  * Created on 4/28/2016 at 7:51 PM
  */
+
+$wrkdir = __DIR__;
 // Indent for HTML: 12 spaces (3x TAB)
-include('inc/header.inc.php');
+include("$wrkdir/inc/header.inc.php");
 // Do not touch
-require('inc/config.php');
+require("$wrkdir/inc/config.php");
 // Very simple config checker
 if ($conf['edited'] == false) {
     if ($conf_checker == false) {
@@ -16,7 +18,7 @@ if ($conf['edited'] == false) {
         die('Config is at default values! Please change the config file');
     }
 }
-require('inc/lsf-functions.php');
+require("$wrkdir/inc/lsf-functions.php");
 ?>
 
 
@@ -79,7 +81,7 @@ $(document).ready(function(){
         <b id="adtext">Productivity apps for your work and personal life</b>
     </b>
     <br>
-    <a href="<?php echo $conf['URL']['signup'] ?>"><button id="signup">Sign up</button></a>
+    <a href="webpages/signup/index.php"><button id="signup">Sign up</button></a>
 </div>
 </section>
 <section id="apps">

@@ -73,6 +73,9 @@ class User {
      * @return mysqli_stmt $signupquery Return the query used for signup
      */
     public function signup($username, $password, $email, $fullname, $code, $conn) {
+        $currdir = __DIR__;
+
+
         try {
 
             // PASSWORD HASHING FUNCTION
@@ -95,7 +98,7 @@ class User {
             return $signupquery;
         } catch (mysqli_sql_exception $e) {
             // Do nothing now
-            header("Location: ../index.php?s=sys-error");
+            header("Location: $currdir/../index.php?s=sys-error");
             // We shall force Keane to make a beautiful error page. Yay
         }
     }
@@ -108,6 +111,7 @@ class User {
      */
     
     public function login($username, $password, $conn) {
+        $currdir = __DIR__;
         try {
             $stmt = $conn->prepare("SELECT * FROM users WHERE username=:user_id");
             $stmt->bind_param(":user_id", $username);
@@ -132,17 +136,17 @@ class User {
                             return true;
 
                         } else {
-                            header("Location: ../index.php?s=user-error");
+                            header("Location: $currdir/../index.php?s=user-error");
                             exit;
 
                         }
                     } else {
-                        header("Location: ../index.php?s=user-unconfirmed");
+                        header("Location: $currdir/../index.php?s=user-unconfirmed");
                         exit;
                     }
                 }
             } else {
-                header("Location: ../index.php?s=user-error");
+                header("Location: $currdir/../index.php?s=user-error");
                 exit;
             }
 
@@ -152,7 +156,7 @@ class User {
 
         } catch (mysqli_sql_exception $e) {
             // Do nothing for now
-            header("Location: ../index.php?s=sys-error");
+            header("Location: $currdir/../index.php?s=sys-error");
         }
     }
 
@@ -172,7 +176,7 @@ class User {
 
     /**
      * Self-explanatory. Redirects the user to a chosen URL
-     * @param $url The URL to send the user to
+     * @param $url string The URL to send the user to. THIS MUST BE RELATIVE TO THE FILE INCLUDED IN
      */
     public function redirect($url) {
         header("Location: $url");
@@ -186,6 +190,37 @@ class User {
         session_destroy();
         $_SESSION['userSess'] = false;
         
+    }
+
+    /**
+     * An email sending function using PHPMailer
+     * @param $username string The username to send the emails from
+     * @param $password string The password to the account to send emails
+     * @param $host string The Email server host
+     * @param $security mixed Whether to use security or not, and what type of security
+     * @param $port int The email server's port
+     * @param $to string The email recepient
+     * @param $subject string The subject of the email
+     * @param $message string The message of the Email in HtML
+     * @param $from string the sender of the email
+     */
+    public function send_mail($username, $password, $host, $security, $port, $to, $subject, $message, $from) {
+        require_once "class.phpmailer.php";
+        $m = new PHPMailer();
+        $m->SMTPDebug = false;
+
+        if ($security == false) {
+            $m->SMTPAuth = false;
+        } else if ($security == "tls" || $security == "ssl") {
+            $m->SMTPAuth = true;
+            $m->SMTPSecure = $security;
+        } else {
+            echo "Invalid Email details provided.";
+            exit;
+        }
+
+
+
     }
  }
 
