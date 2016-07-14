@@ -43,10 +43,10 @@ class User {
             echo "Warning: System error in trying to execute function!";
             exit("System error in trying to execute function!");
         } else {
-            $conn->query($pquery);
+            return $pquery;
         }
 
-        return $pquery;
+
 
     }
 
@@ -56,7 +56,7 @@ class User {
      * @return mixed $lsid (This may return a string)
      */
 
-    public function prevId($conn) {
+    public function lastinsId($conn) {
         $lsid = $conn->insert_id;
         return $lsid;
     }
@@ -203,10 +203,15 @@ class User {
      * @param $subject string The subject of the email
      * @param $message string The message of the Email in HtML
      * @param $from string the sender of the email
+     *
+     * @param $altmsg string Alternative message in case HTML one cannot be sent
      */
-    public function send_mail($username, $password, $host, $security, $port, $to, $subject, $message, $from) {
+    public function send_mail(
+        $username, $password, $host, $security, $port, $to, $subject, $message, $from, $altmsg
+    ) {
         require_once "class.phpmailer.php";
         $m = new PHPMailer();
+        $m->isSMTP();
         $m->SMTPDebug = false;
 
         if ($security == false) {
@@ -218,6 +223,23 @@ class User {
             echo "Invalid Email details provided.";
             exit;
         }
+
+        $m->Host = $host;
+        $m->Port = $port;
+
+        $m->Username = $username;
+        $m->Password = $password;
+
+        $m->addAddress($to);
+
+        $m->setFrom($from, "No reply < InfiniaPress");
+        $m->addReplyTo($from, "No reply < InfiniaPress");
+
+        $m->Subject = $subject;
+        $m->Body = $message;
+        $m->AltBody = $altmsg;
+
+        $m->send();
 
 
 

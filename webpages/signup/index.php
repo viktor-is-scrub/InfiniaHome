@@ -9,6 +9,8 @@
 require '../../inc/parse_sql.php';
 require '../../inc/config.php';
 
+require '../../inc/signup-actions.php';
+
 
 
 
@@ -24,6 +26,76 @@ if ($db->connect_errno) {
 
 }
 
+$usr = new User($db);
+
+if ($usr->isLoggedIn() != "") {
+    $usr->redirect(__DIR__."/../../userspace.php");
+
+}
+
+if (isset($_POST['signup-btn'])) {
+    // If the signup button was clicked
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
+    $email = trim($_POST['email']);
+    $fullname = trim($_POST['fullname']);
+
+    $code = hash("sha256", uniqid(rand()), true);
+
+    $stmt = $usr->queryDB("SELECT * FROM tbl_users WHERE userEmail=:email_id", $db);
+
+    $stmt->bind_param(":email_id", $email);
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+
+    if ($stmt->num_rows > 0) {
+        $msg = "
+        <div class='alert alert-error'>
+    <button class='close' data-dismiss='alert'>&times;</button>
+     <strong>Sorry!</strong>  The email you have specified already exists, please try another one!
+     </div>
+     ";
+    } else {
+        if ($usr->signup($username, $password, $email, $fullname, $code, $db)) {
+            $lsId = $usr->lastinsId($db);
+            $key = base64_encode($lsId);
+            $lsId = $key;
+
+            // Send the email
+            $message = $conf['SMTP']['body'];
+            $altmessage = $conf['SMTP']['altbody'];
+            $emailsubject = $conf['SMTP']['subject'];
+
+            $emailusername = $conf['SMTP']['username'];
+            $emailpwd = $conf['SMTP']['password'];
+            $port = $conf['SMTP']['port'];
+
+            $secure = $conf['SMTP']['secure'];
+
+            $usr->send_mail($emailusername, $pwd, $host, $secure, $port, $email, $subject, $message, $emailusername, $altmessage);
+
+            // Wow such long
+
+            $msg = "
+     <div class='alert alert-success'>
+      <button class='close' data-dismiss='alert'>&times;</button>
+      <strong>Success!</strong>  We've sent an email to $email.
+                    Please click on the confirmation link in the email to continue the creation of your account.
+       </div>
+     ";
+        } else {
+            echo "<div class='alert alert-error'>
+    <button class='close' data-dismiss='alert'>&times;</button>
+     <strong>Sorry!</strong>  The email you have specified already exists, please try another one!
+     </div>"
+        }
+    }
+
+}
+
+
+
 ?>
 <!DOCTYPE html>
     <html lang="en">
@@ -31,7 +103,7 @@ if ($db->connect_errno) {
             <title>Signup &lsaquo; InfiniaPress</title>
     <style>
         html{
-            font-family: "arial";
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
             color: white;
             text-align: center
         }
@@ -75,18 +147,22 @@ if ($db->connect_errno) {
     <h1 id='heading'>SIGN UP FOR INFINIA PRESS</h1>
     <div class="field">
         <label for="name">Username: </label>
-        <input type="text" id="name" name="name" id="box" required>
+        <input type="text" id="name" name="username" id="box" formmethod="post" required>
     </div>
     <div class="field">
         <label for="email">Email: </label>
-        <input type="text" id="email" name="email" id="box" required>
+        <input type="text" id="email" name="email" id="box" formmethod="post" required>
     </div>
     <div class="field">
         <label for="password">Password: </label>
-        <input type="password" id="password" name="password" id="box" required></input>
+        <input type="password" id="password" name="password" id="box" formmethod="post" required>
+    </div>
+    <div class="field">
+        <label for="fullname">Full name:</label>
+        <input type="text" id="fullname" name="fullname" id="box" formmethod="post" required>
     </div>
     <br>
-    <button id="signup">Sign up</button>
+    <button id="signup" name="signup-btn" type="submit">Sign up</button>
 </body>
 </html>
 
