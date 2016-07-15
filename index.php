@@ -95,10 +95,10 @@ $(document).ready(function(){
 		<p>A powerful note-taking application for memory</p>
 		<img src="assets/imgres/hansom_1.png" height="250px">
 	</div>
-	//<div style="padding:2% 0 2% 0; border-top:5px solid black; border-bottom: 5px solid black;" class="app">
-		//<h1>TRACKTION</h1>
-		//<p>A beautiful timer for keeping track</p>
-	//</div>
+	<div style="padding:2% 0 2% 0; border-top:5px solid black; border-bottom: 5px solid black;" class="app">
+		<h1>TRACKTION</h1>
+		<p>A beautiful timer for keeping track</p>
+	</div>
 </section>
 
     <!--Start of Tawk.to Script-->
