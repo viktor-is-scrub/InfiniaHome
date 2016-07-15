@@ -104,8 +104,8 @@ class User {
     }
 
     /**
-     * @param $username The username entered by the user
-     * @param $password The password entered by the user
+     * @param $username string The username or emailentered by the user
+     * @param $password string The password entered by the user
      * @param $conn mysqli Connection to the DB
      * @return boolean Tell if the login was successful
      */
@@ -113,8 +113,9 @@ class User {
     public function login($username, $password, $conn) {
         $currdir = __DIR__;
         try {
-            $stmt = $conn->prepare("SELECT * FROM users WHERE username=:user_id");
+            $stmt = $conn->prepare("SELECT * FROM users WHERE (username=:user_id OR email=:email )");
             $stmt->bind_param(":user_id", $username);
+            $stmt->bind_param(":email", $username);
             $stmt->execute();
 
             // This complicated function is needed because goddamn MySQLI and not PDO :(

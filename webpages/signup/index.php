@@ -9,7 +9,9 @@
 require '../../inc/parse_sql.php';
 require '../../inc/config.php';
 
-require '../../inc/signup-actions.php';
+require '../../inc/class.user.php';
+
+require '../../inc/lsf-functions.php';
 
 
 
@@ -29,7 +31,7 @@ if ($db->connect_errno) {
 $usr = new User($db);
 
 if ($usr->isLoggedIn() != "") {
-    $usr->redirect(__DIR__."/../../userspace.php");
+    $usr->redirect(__DIR__ . "/../../infinia.php");
 
 }
 
@@ -51,7 +53,7 @@ if (isset($_POST['signup-btn'])) {
 
     if ($stmt->num_rows > 0) {
         $msg = "
-        <div class='alert alert-error'>
+        <div class='alert alert-danger'>
     <button class='close' data-dismiss='alert'>&times;</button>
      <strong>Sorry!</strong>  The email you have specified already exists, please try another one!
      </div>
@@ -85,10 +87,10 @@ if (isset($_POST['signup-btn'])) {
        </div>
      ";
         } else {
-            echo "<div class='alert alert-error'>
+            $msg = "<div class='alert alert-danger'>
     <button class='close' data-dismiss='alert'>&times;</button>
      <strong>Sorry!</strong>  The email you have specified already exists, please try another one!
-     </div>"
+     </div>";
         }
     }
 
@@ -101,49 +103,55 @@ if (isset($_POST['signup-btn'])) {
     <html lang="en">
         <head>
             <title>Signup &lsaquo; InfiniaPress</title>
-    <style>
-        html{
-            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
-            color: white;
-            text-align: center
-        }
-        body{
-            background-color: #00ffec;
-        }
-        #heading{
-            font-family: "Times New Roman";
-            font-size: 90px;
-        }
-        #signup{
-            border-radius: 50%;
-            background-color: #00FF04;
-            border-color: #00FF04;
-            color: white;
-            font-size: 40px;
-            transition-duration: 0.4s;
-            width: 25%;
-            height: 80px;
-        }
-        #signup:hover{
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-            background-color: red;
-            border-color: red;
-        }
-        input, select {
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        }
-        label{
-            font-size: 35px;
-        }
-    </style>
-</head>
+            <style>
+                html{
+                    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+                    color: white;
+                    text-align: center
+                }
+                body{
+                    background-color: #00ffec;
+                }
+                #heading{
+                    font-family: "Times New Roman";
+                    font-size: 90px;
+                }
+                #signup{
+                    border-radius: 50%;
+                    background-color: #00FF04;
+                    border-color: #00FF04;
+                    color: white;
+                    font-size: 40px;
+                    transition-duration: 0.4s;
+                    width: 25%;
+                    height: 80px;
+                }
+                #signup:hover{
+                    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                    background-color: red;
+                    border-color: red;
+                }
+                input, select {
+                    padding: 12px 20px;
+                    margin: 8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    box-sizing: border-box;
+                }
+                label{
+                    font-size: 35px;
+                }
+            </style>
+            <?php throwNoJs(); ?>
+            <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+            <script type="text/javascript" src="../../assets/js/jquery-2.2.3.min.js"></script>
+            <script type="text/javascript" src="../../assets/js/bootstrap.min.js"></script>
+    </head>
 
 <body>
+
+    <?php if(isset($msg)){ echo $msg; } ?>
     <h1 id='heading'>SIGN UP FOR INFINIA PRESS</h1>
     <div class="field">
         <label for="name">Username: </label>

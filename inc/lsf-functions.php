@@ -19,3 +19,11 @@ function put_var($varname) {
         echo ${$varname};
     }
 }
+
+/**
+ * Throws a horrible noscript meta tag to redirect the user
+ */
+function throwNoJs() {
+    $nstxt = "<noscript><meta http-equiv='refresh' content='0; url=/webpages/noscript.php' /> </noscript>";
+    echo $nstxt;
+}
