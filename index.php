@@ -5,11 +5,11 @@
  * Created on 4/28/2016 at 7:51 PM
  */
 
-$wrkdir = __DIR__;
+
 // Indent for HTML: 12 spaces (3x TAB)
-include("$wrkdir/inc/header.inc.php");
+include("inc/header.inc.php");
 // Do not touch
-require("$wrkdir/inc/config.php");
+require("inc/config.php");
 // Very simple config checker
 if ($conf['edited'] == false) {
     if ($conf_checker == false) {
@@ -18,7 +18,7 @@ if ($conf['edited'] == false) {
         die('Config is at default values! Please change the config file');
     }
 }
-require("$wrkdir/inc/lsf-functions.php");
+require("inc/lsf-functions.php");
 ?>
 
 
