@@ -151,8 +151,9 @@
                     background-color: red;
                     border-color: red;
                 }
-                #app{
+                .app{
                     background-color:#ececec;
+					transition-duration: 0.5s;
                 }
                 .app:hover{
                     background-color: #c7c7c7;
