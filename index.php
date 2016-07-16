@@ -79,6 +79,7 @@ $(document).ready(function(){
     <b id="ad">
         SIMPLICITY  <br><i id="admini">is    power</i><br>
     </b>
+    <br>
 	<b id="adtext">Productivity apps for your work and personal life</b>
     <br>
     <a href="webpages/signup/index.php"><button id="signup">Sign up</button></a>
