@@ -69,7 +69,7 @@ $(document).ready(function(){
     }else{
         document.getElementById("greeting").innerHTML = "Good Evening"
     }
-    $("#greeting").fadeIn("slow")	
+    $("#greeting").fadeIn(1000)	
 })
     
 </script>
@@ -78,8 +78,8 @@ $(document).ready(function(){
 <div>
     <b id="ad">
         SIMPLICITY  <br><i id="admini">is    power</i><br>
-        <b id="adtext">Productivity apps for your work and personal life</b>
     </b>
+	<b id="adtext">Productivity apps for your work and personal life</b>
     <br>
     <a href="webpages/signup/index.php"><button id="signup">Sign up</button></a>
 </div>
