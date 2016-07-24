@@ -15,6 +15,9 @@
                 </p>
             </div>
         </footer>
+        <script type="text/javascript">
+          smoothScroll.init();
+        </script>
 
     </body>
 </html>

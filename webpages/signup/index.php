@@ -7,7 +7,7 @@
 
 
 require '../../inc/parse_sql.php';
-require '../../inc/config.php';
+require '../../InfiniaLegit.config.php';
 
 require '../../inc/class.user.php';
 
@@ -153,24 +153,27 @@ if (isset($_POST['signup-btn'])) {
 
     <?php if(isset($msg)){ echo $msg; } ?>
     <h1 id='heading'>SIGN UP FOR INFINIA PRESS</h1>
-    <div class="field">
-        <label for="name">Username: </label>
-        <input type="text" id="name" name="username" id="box" formmethod="post" required>
-    </div>
-    <div class="field">
-        <label for="email">Email: </label>
-        <input type="text" id="email" name="email" id="box" formmethod="post" required>
-    </div>
+    <form action="signup.php" method="post">
+      <div class="field">
+         <label for="name">Username: </label>
+          <input type="text" id="name" name="username" id="box" required>
+      </div>
+      <div class="field">
+         <label for="email">Email: </label>
+         <input type="text" id="email" name="email" id="box" required>
+      </div>
     <div class="field">
         <label for="password">Password: </label>
-        <input type="password" id="password" name="password" id="box" formmethod="post" required>
+        <input type="password" id="password" name="password" id="box" required>
     </div>
     <div class="field">
         <label for="fullname">Full name:</label>
-        <input type="text" id="fullname" name="fullname" id="box" formmethod="post" required>
+        <input type="text" id="fullname" name="fullname" id="box" required>
     </div>
     <br>
     <button id="signup" name="signup-btn" type="submit">Sign up</button>
+  </form>
+    
 </body>
 </html>
 

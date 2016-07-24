@@ -39,7 +39,10 @@
 
             <script type="text/javascript" src="assets/lsf/scrolling-nav.js"></script>
             
-            <script src='https://www.google.com/recaptcha/api.js'></script>
+            <!-- Smooth Scrolling JS from SmoothScrollJS -->
+						<script type="text/javascript" src="assets/js/smooth-scroll.min.js"></script>
+					
+					
 
 
 
@@ -175,9 +178,9 @@
 
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav">
-                            <li class="hidden"><a class="page-scroll" href="#page-top"></a></li>
-                            <li><a class="page-scroll" href="#about">About</a></li>
-                            <li><a class="page-scroll" href="#apps">Apps</a></li>
+                            <li class="hidden"><a data-scroll class="page-scroll" href="#page-top"></a></li>
+                            <li><a data-scroll class="page-scroll" href="#about">About</a></li>
+                            <li><a data-scroll class="page-scroll" href="#apps">Apps</a></li>
                         <?php // To add a nav link use a # for href. ?>
                         </ul>
                     </div>
