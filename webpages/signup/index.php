@@ -7,7 +7,11 @@
 
 
 require '../../inc/parse_sql.php';
-require '../../inc/InfiniaLegit.config.php';
+if (file_exists("../../InfiniaLegit.config.php")) {
+    require_once('../../InfiniaLegit.config.php');
+} else {
+    require_once '../../inc/config.php';
+};
 
 require '../../inc/class.user.php';
 
