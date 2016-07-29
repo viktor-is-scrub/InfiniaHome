@@ -155,28 +155,31 @@ if (isset($_POST['signup-btn'])) {
 
 <body>
 
-    <?php if(isset($msg)){ echo $msg; } ?>
     <h1 id='heading'>SIGN UP FOR INFINIA PRESS</h1>
-    <div class="field">
-        <label for="name">Username: </label>
-        <input type="text" id="name" name="username" id="box" formmethod="post" required>
-    </div>
-    <div class="field">
-        <label for="email">Email: </label>
-        <input type="text" id="email" name="email" id="box" formmethod="post" required>
-    </div>
-    <div class="field">
-        <label for="password">Password: </label>
-        <input type="password" id="password" name="password" id="box" formmethod="post" required>
-    </div>
-    <div class="field">
-        <label for="fullname">Full name:</label>
-        <input type="text" id="fullname" name="fullname" id="box" formmethod="post" required>
-    </div>
-    <br>
-    <button id="signup" name="signup-btn" type="submit">Sign up</button>
+
+    <?php if(isset($msg)){ echo $msg; } ?>
+    <form method="post">
+        <div class="field">
+            <label for="name">Username: </label>
+            <input type="text" id="name" name="username" id="box" formmethod="post" required>
+        </div>
+        <div class="field">
+            <label for="email">Email: </label>
+            <input type="text" id="email" name="email" id="box" formmethod="post" required>
+        </div>
+        <div class="field">
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password" id="box" formmethod="post" required>
+        </div>
+        <div class="field">
+            <label for="fullname">Full name:</label>
+            <input type="text" id="fullname" name="fullname" id="box" formmethod="post" required>
+        </div>
+        <br>
+        <button id="signup" name="signup-btn" type="submit">Sign up</button>
+    </form>
+
+
 </body>
 </html>
 
-<!-- Keane's OP Indentation Service by Keane (TM) -->
-<!-- note: the top was DEFINITELY SARCASTIC -->
