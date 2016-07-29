@@ -32,12 +32,13 @@ class User {
     }
 
     /**
+     * Statement preparation function
      * @param $query
      * @param $conn mysqli The database connect you want to use
      * @return mysqli_stmt $pquery The MySQL Statement executed
      */
     
-    public function queryDB($query, $conn) {
+    public function prepStmt($query, $conn) {
 
         $pquery = $conn->prepare($query);
         return $pquery;
