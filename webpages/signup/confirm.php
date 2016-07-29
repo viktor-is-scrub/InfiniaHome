@@ -29,7 +29,7 @@ if (isset($_GET['id']) && isset($_GET['code'])) {
     $statusReged = "Y";
     $statusnReged = "N";
 
-    $stmt = $u->queryDB("SELECT id,registered FROM users WHERE id=:uID AND tokencode=:code LIMIT 1", $db);
+    $stmt = $u->prepStmt("SELECT id,registered FROM users WHERE id=:uID AND tokencode=:code LIMIT 1", $db);
     $stmt->bind_param(":uID", $id);
     $stmt->bind_param(":code", $code);
 
@@ -39,7 +39,7 @@ if (isset($_GET['id']) && isset($_GET['code'])) {
     // MySQLi wins in row counting. xD
     if ($rowz->num_rows > 0) {
         if ($rowz['registered'] == $statusnReged) {
-            $stmt = $u->queryDB("UPDATE users SET registered=:status WHERE id=:uID", $db);
+            $stmt = $u->prepStmt("UPDATE users SET registered=:status WHERE id=:uID", $db);
 
             $stmt->bind_param(":status", $statusReged);
             $stmt->bind_param(":uID", $id);
