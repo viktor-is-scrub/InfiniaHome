@@ -7,7 +7,11 @@
 session_start();
 
 require_once '../inc/class.user.php';
-require_once '../inc/config.php';
+if (file_exists("../InfiniaLegit.config.php")) {
+    require_once('../InfiniaLegit.config.php');
+} else {
+    require_once '../inc/config.php';
+}
 
 $db = new mysqli(
     $conf['db']['host'], $conf['db']['username'], $conf['db']['password'], $conf['db']['name'], $conf['db']['port']
@@ -27,7 +31,7 @@ if (isset($_POST['login-btn'])) {
     $login_info = trim($_POST['username-email']);
     $password = trim($_POST['password']);
 
-    if ($u->login($login_info, $password)) {
+    if ($u->login($login_info, $password, $db)) {
         $u->redirect("../../infinia.php");
     }
 }

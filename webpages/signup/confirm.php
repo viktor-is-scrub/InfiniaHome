@@ -7,7 +7,11 @@
 
 require_once "../../inc/class.user.php";
 
-require_once "../../inc/config.php";
+if (file_exists("../../InfiniaLegit.config.php")) {
+    require_once('../../InfiniaLegit.config.php');
+} else {
+    require_once '../../inc/config.php';
+}
 
 $db = new mysqli($conf['db']['host'], $conf['db']['username'], $conf['db']['password']
 , $conf['db']['name'], $conf['db']['port']);

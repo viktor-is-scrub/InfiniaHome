@@ -167,7 +167,7 @@ class User {
      */
 
     public function isLoggedIn() {
-        if (isset($_SESSION['userSess'])) {
+        if (isset($_SESSION['userSess']) && $_SESSION['userSess']!="") {
             return true;
         } else {
             return false;

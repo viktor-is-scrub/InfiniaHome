@@ -7,7 +7,7 @@
 
 
 require '../../inc/parse_sql.php';
-require '../../inc/config.php';
+require '../../inc/InfiniaLegit.config.php';
 
 require '../../inc/class.user.php';
 
