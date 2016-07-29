@@ -3,3 +3,15 @@
 
 .idea/
 *.iml
+
+
+#### WARNING #####
+# Removal of these sections will result in you being denied access to this repository
+# Don't touch these
+##################
+
+# Stop people from getting our passwords
+InfiniaLegit.config.php
+
+# Do not allow webmail to be uploaded to git
+webmail/
