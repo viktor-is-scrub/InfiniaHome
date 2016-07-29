@@ -30,10 +30,16 @@ if (isset($_GET['id']) && isset($_GET['code'])) {
     $statusnReged = "N";
 
     $stmt = $u->prepStmt("SELECT id,registered FROM users WHERE id=:uID AND tokencode=:code LIMIT 1", $db);
-    $stmt->bind_param(":uID", $id);
-    $stmt->bind_param(":code", $code);
+    if ($stmt !== false) {
+        $stmt->bind_param(":uID", $id);
+        $stmt->bind_param(":code", $code);
+        $stmt->execute();
+    } else {
+        exit ("Server error. Please contact support@infiniapress.tk with this error code: IFAP-QRR-3");
+    }
 
-    $stmt->execute();
+
+
     $rowz = $stmt->get_result();
 
     // MySQLi wins in row counting. xD

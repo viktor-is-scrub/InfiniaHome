@@ -87,13 +87,14 @@ class User {
                             VALUES(:user_name, :user_mail, :user_pass,:full_name, :active_code)"
             );
 
-            $signupquery->bind_param(":user_name", $username);
-            $signupquery->bind_param(":user_mail", $email);
-            $signupquery->bind_param(":user_pass", $pword);
-            $signupquery->bind_param(":full_name", $fullname);
-            $signupquery->bind_param(":active_code", $code);
-            $signupquery->execute();
-            return $signupquery;
+            if ($signupquery !== false){
+                $signupquery->bind_param(":user_name", $username);
+                $signupquery->bind_param(":user_mail", $email);
+                $signupquery->bind_param(":user_pass", $pword);
+                $signupquery->bind_param(":full_name", $fullname);
+                $signupquery->bind_param(":active_code", $code);
+                $signupquery->execute();
+            } return $signupquery;
         } catch (mysqli_sql_exception $e) {
             // Do nothing now
             header("Location: $currdir/../index.php?s=sys-error");
@@ -112,9 +113,12 @@ class User {
         $currdir = __DIR__;
         try {
             $stmt = $conn->prepare("SELECT * FROM users WHERE (username=:user_id OR email=:email )");
-            $stmt->bind_param(":user_id", $username);
-            $stmt->bind_param(":email", $username);
-            $stmt->execute();
+            if ($stmt !== false) {
+                $stmt->bind_param(":user_id", $username);
+                $stmt->bind_param(":email", $username);
+                $stmt->execute();
+            }
+
 
             // This complicated function is needed because goddamn MySQLI and not PDO :(
             $result = $stmt->get_result(); // Allows the result to be worked with
