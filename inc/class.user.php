@@ -39,12 +39,9 @@ class User {
     
     public function queryDB($query, $conn) {
 
-        if (!$pquery = $conn->prepare($query)) {
-            echo "Warning: System error in trying to execute function!";
-            exit("System error in trying to execute function!");
-        } else {
-            return $pquery;
-        }
+        $pquery = $conn->prepare($query);
+        return $pquery;
+
 
 
 
