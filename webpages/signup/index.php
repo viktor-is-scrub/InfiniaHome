@@ -48,7 +48,7 @@ if (isset($_POST['signup-btn'])) {
 
     $code = hash("sha256", uniqid(rand()), true);
 
-    $stmt = $usr->prepStmt("SELECT * FROM tbl_users WHERE userEmail=:email_id", $db);
+    $stmt = $usr->prepStmt("SELECT * FROM users WHERE userEmail=:email_id", $db);
 
     $stmt->bind_param(":email_id", $email);
     $stmt->execute();
