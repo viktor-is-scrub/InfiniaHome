@@ -35,7 +35,7 @@ if (isset($_GET['id']) && isset($_GET['code'])) {
         $stmt->bind_param(":code", $code);
         $stmt->execute();
     } else {
-        exit ("Server error. Please contact support@infiniapress.tk with this error code: IFAP-QRR-3");
+        exit ("Server error. Please report this to the bug tracker with this error code: IFAP-QRR-3");
     }
 
 

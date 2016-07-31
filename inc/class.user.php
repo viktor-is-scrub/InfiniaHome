@@ -68,7 +68,7 @@ class User {
      * @param $email string The email address
      * @param $fullname string Full name of user
      * @param $conn mysqli The MySQL database connection
-     * @return mysqli_stmt $signupquery Return the query used for signup
+     * @return mixed $signupquery/false Returns either a mysqli_stmt or false
      */
     public function signup($username, $password, $email, $fullname, $code, $conn) {
         $currdir = __DIR__;
@@ -93,13 +93,22 @@ class User {
                 $signupquery->bind_param(":user_pass", $pword);
                 $signupquery->bind_param(":full_name", $fullname);
                 $signupquery->bind_param(":active_code", $code);
+
                 $signupquery->execute();
-            } return $signupquery;
+
+                return $signupquery;
+            } else {
+                exit("Server error. Please report this to the bug tracker with this error code: IFAP-QRR-3");
+
+            }
+
         } catch (mysqli_sql_exception $e) {
             // Do nothing now
             header("Location: $currdir/../index.php?s=sys-error");
             // We shall force Keane to make a beautiful error page. Yay
+            return false;
         }
+
     }
 
     /**
@@ -117,6 +126,8 @@ class User {
                 $stmt->bind_param(":user_id", $username);
                 $stmt->bind_param(":email", $username);
                 $stmt->execute();
+            } else {
+                exit ("Server error. Please report this to the bug tracker with this error code: IFAP-QRR-3");
             }
 
 
