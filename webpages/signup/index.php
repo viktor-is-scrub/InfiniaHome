@@ -48,9 +48,9 @@ if (isset($_POST['signup-btn'])) {
 
     $code = hash("sha256", uniqid(rand()), true);
 
-    $stmt = $usr->prepStmt("SELECT * FROM users WHERE userEmail=:email_id", $db);
+    $stmt = $usr->prepStmt("SELECT * FROM users WHERE userEmail=?", $db);
     if ($stmt !== false) {
-        $stmt->bind_param(":email_id", $email);
+        $stmt->bind_param("s", $email);
         $stmt->execute();
     } else {
         exit("Server error. Please report this to the bug tracker with this error code: IFAP-QRR-3");

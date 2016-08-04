@@ -41,6 +41,10 @@ class User {
     public function prepStmt($query, $conn) {
 
         $pquery = $conn->prepare($query);
+        // In case the query is false
+        if ($pquery == false) {
+            exit("Severe Warning: Signup servers have an error. Report this error code: IFAP-QRR-1");
+        }
         return $pquery;
 
 
@@ -84,16 +88,11 @@ class User {
 
             $signupquery = $conn->prepare(
                 "INSERT INTO users(username,email,password,fullname,tokencode)
-                            VALUES(:user_name, :user_mail, :user_pass,:full_name, :active_code)"
+                            VALUES(?, ?, ?, ?, ?)"
             );
 
             if ($signupquery !== false){
-                $signupquery->bind_param(":user_name", $username);
-                $signupquery->bind_param(":user_mail", $email);
-                $signupquery->bind_param(":user_pass", $pword);
-                $signupquery->bind_param(":full_name", $fullname);
-                $signupquery->bind_param(":active_code", $code);
-
+                $signupquery->bind_param("sssss", $username, $email, $GLOBALS['hPword'], $fullname, $code);
                 $signupquery->execute();
 
                 return $signupquery;

@@ -29,10 +29,9 @@ if (isset($_GET['id']) && isset($_GET['code'])) {
     $statusReged = "Y";
     $statusnReged = "N";
 
-    $stmt = $u->prepStmt("SELECT id,registered FROM users WHERE id=:uID AND tokencode=:code LIMIT 1", $db);
+    $stmt = $u->prepStmt("SELECT id,registered FROM users WHERE id=? AND tokencode=? LIMIT 1", $db);
     if ($stmt !== false) {
-        $stmt->bind_param(":uID", $id);
-        $stmt->bind_param(":code", $code);
+        $stmt->bind_param("is", $id, $code);
         $stmt->execute();
     } else {
         exit ("Server error. Please report this to the bug tracker with this error code: IFAP-QRR-3");
@@ -45,17 +44,26 @@ if (isset($_GET['id']) && isset($_GET['code'])) {
     // MySQLi wins in row counting. xD
     if ($rowz->num_rows > 0) {
         if ($rowz['registered'] == $statusnReged) {
-            $stmt = $u->prepStmt("UPDATE users SET registered=:status WHERE id=:uID", $db);
+            $stmt = $u->prepStmt("UPDATE users SET registered=? WHERE id=?", $db);
 
-            $stmt->bind_param(":status", $statusReged);
-            $stmt->bind_param(":uID", $id);
-            $stmt->execute();
-
-            $msg = "<div class='alert alert-success'>
+            $stmt->bind_param("si", $statusReged, $id);
+            if ($stmt->execute()) {
+                $msg = "<div class='alert alert-success'>
        <button class='close' data-dismiss='alert'>&times;</button>
        <strong>Thank you</strong>  Your account has now been activated. Click <a href='/webpages/login.php'>here</a> to login
           </div>
             ";
+            } else {
+                echo "
+                <div class='alert alert-danger'>
+                <button class='close' data-dismiss='alert'>&times;</button>
+                <strong>Error</strong> There was an error trying to connect to the signup servers
+            </div>
+                ";
+            }
+
+
+
         } else {
             $msg = "
             <div class='alert alert-danger'>
