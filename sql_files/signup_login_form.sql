@@ -4,6 +4,7 @@
 -- [!]
 -- Note that hacking this SQL file and adding injection code WON'T WORK!!
 -- We are ALWAYS checking this SQL file. No, seriously.
+-- Written by xiurobert & Hundotte
 -- ------------------------------------------------------------------
 
 -- This script assumes that the database and user for creation exists
