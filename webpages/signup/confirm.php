@@ -37,7 +37,7 @@ if (isset($_GET['id']) && isset($_GET['code'])) {
         $stmt->store_result();
       
       
-        $rowz = new Array();
+        $rowz = Array();
         // Bind the results into the array created above
         $stmt->bind_result($rowz['id'], $rowz['registered']);
     } else {
@@ -46,7 +46,7 @@ if (isset($_GET['id']) && isset($_GET['code'])) {
 
 
 
-    
+
 
     // MySQLi wins in row counting. xD
   

@@ -119,16 +119,33 @@ class User {
     
     public function login($username, $password, $conn) {
         $currdir = __DIR__;
+
+
+        // Function provided by nice people on stackoverflow for those
+        // who don't have mysqlnd.
+        // Thanks Stackoverflow
+        function get_result( $Statement ) {
+            $RESULT = array();
+            $Statement->store_result();
+            for ( $i = 0; $i < $Statement->num_rows; $i++ ) {
+                $Metadata = $Statement->result_metadata();
+                $PARAMS = array();
+                while ( $Field = $Metadata->fetch_field() ) {
+                    $PARAMS[] = &$RESULT[ $i ][ $Field->name ];
+                }
+                call_user_func_array( array( $Statement, 'bind_result' ), $PARAMS );
+                $Statement->fetch();
+            }
+            return $RESULT;
+        }
+
         try {
             $stmt = $conn->prepare("SELECT * FROM users WHERE (username=? OR email=?)");
             if ($stmt !== false) {
                 $stmt->bind_param("ss", $username, $username);
                 $stmt->execute();
-              
-              
-                // Create an array for the data
-                // TODO: Fix at home
-                //$data = 
+
+                $result = get_result($stmt);
                 $stmt->store_result();
             } else {
                 exit ("Server error. Please report this to the bug tracker with this error code: IFAP-QRR-3");
@@ -136,11 +153,12 @@ class User {
 
 
             // This complicated function is needed because goddamn MySQLI and not PDO :(
-            //$result = $stmt->get_result(); // Allows the result to be worked with
+            
 
             if ($stmt->num_rows >= 1) {
-                while ($data = $result->fetch_assoc()) {
-                    // use $data[] and loop thru results
+                // I'm pretty sure it works the same way if I had used the mysqlnd function.
+                while ($data = array_shift($result)) {
+                    // use $data[] and loop through results
                     if ($data['registered'] = "Y") {
                         // If the user is registered and confirmed
 
