@@ -1,5 +1,13 @@
 #!/bin/bash
 
+function pushcheck {
+  if [ "$1" = "--push" ];
+  then
+    echo -e "You have requested that I push your changes. I am now doing so...\n"
+    git push
+  fi
+}
+
 echo -e "Welcome to the InfiniaPress Commit Tool!\n"
 
 echo -e "This should make your life easier. You just simply have to type your commit message and it handles the rest\n"
@@ -24,7 +32,7 @@ echo "Your commit message is ${commmsg}. Is this correct? [Y/n]:"
 
 read yn
 case $yn in
-    [Yy]* ) echo -e "Ok, I am committing your files to git\n"; git commit -a -m "$commmsg"; break; exit;;
+    [Yy]* ) echo -e "Ok, I am committing your files to git\n"; git commit -a -m "$commmsg"; pushcheck; exit;;
     [Nn]* ) echo -e "Please enter your commit message again: "; read commmsg;;
     * ) echo "Please answer yes or no.";;
 esac
@@ -32,5 +40,6 @@ esac
 echo "Ok. I shall now commit your files to git"
 
 git commit -a -m "$commmsg"
+pushcheck
 
 exit
