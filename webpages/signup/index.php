@@ -52,12 +52,13 @@ if (isset($_POST['signup-btn'])) {
     if ($stmt !== false) {
         $stmt->bind_param("s", $email);
         $stmt->execute();
+        $stmt->store_result();
     } else {
         exit("Server error. Please report this to the bug tracker with this error code: IFAP-QRR-3");
     }
 
 
-    $result = $stmt->get_result();
+    
 
     if ($stmt->num_rows > 0) {
         $msg = "
