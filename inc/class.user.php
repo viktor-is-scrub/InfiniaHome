@@ -120,18 +120,23 @@ class User {
     public function login($username, $password, $conn) {
         $currdir = __DIR__;
         try {
-            $stmt = $conn->prepare("SELECT * FROM users WHERE (username=:user_id OR email=:email )");
+            $stmt = $conn->prepare("SELECT * FROM users WHERE (username=? OR email=?)");
             if ($stmt !== false) {
-                $stmt->bind_param(":user_id", $username);
-                $stmt->bind_param(":email", $username);
+                $stmt->bind_param("ss", $username, $username);
                 $stmt->execute();
+              
+              
+                // Create an array for the data
+                // TODO: Fix at home
+                //$data = 
+                $stmt->store_result();
             } else {
                 exit ("Server error. Please report this to the bug tracker with this error code: IFAP-QRR-3");
             }
 
 
             // This complicated function is needed because goddamn MySQLI and not PDO :(
-            $result = $stmt->get_result(); // Allows the result to be worked with
+            //$result = $stmt->get_result(); // Allows the result to be worked with
 
             if ($stmt->num_rows >= 1) {
                 while ($data = $result->fetch_assoc()) {
@@ -222,7 +227,7 @@ class User {
     public function send_mail(
         $username, $password, $host, $security, $port, $to, $subject, $message, $from, $altmsg
     ) {
-        require_once "class.phpmailer.php";
+        require_once "PHPMailerAutoload.php";
         $m = new PHPMailer();
         $m->isSMTP();
         $m->SMTPDebug = false;

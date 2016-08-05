@@ -33,6 +33,10 @@ if (isset($_GET['id']) && isset($_GET['code'])) {
     if ($stmt !== false) {
         $stmt->bind_param("is", $id, $code);
         $stmt->execute();
+        $stmt->store_result();
+        $rowz = new Array();
+      
+        $stmt->bind_result($rowz['id'], $rowz['registered']);
     } else {
         exit ("Server error. Please report this to the bug tracker with this error code: IFAP-QRR-3");
     }
