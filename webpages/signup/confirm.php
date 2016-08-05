@@ -46,7 +46,7 @@ if (isset($_GET['id']) && isset($_GET['code'])) {
 
 
 
-    //$rowz = $stmt->get_result();
+    
 
     // MySQLi wins in row counting. xD
   
