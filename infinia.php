@@ -43,5 +43,8 @@ if (!$u->isLoggedIn()) {
             <script src="assets/js/jquery-2.2.3.min.js"></script>
             <script src="assets/js/bootstrap.min.js"></script>
         </head>
+        <body>
+        Warning: This webpage has not been populated by Keane yet!
+        </body>
 
     </html>
