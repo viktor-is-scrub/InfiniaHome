@@ -33,9 +33,12 @@ if (isset($_GET['id']) && isset($_GET['code'])) {
     if ($stmt !== false) {
         $stmt->bind_param("is", $id, $code);
         $stmt->execute();
+        // Stores the result for row counting
         $stmt->store_result();
-        $rowz = new Array();
       
+      
+        $rowz = new Array();
+        // Bind the results into the array created above
         $stmt->bind_result($rowz['id'], $rowz['registered']);
     } else {
         exit ("Server error. Please report this to the bug tracker with this error code: IFAP-QRR-3");
@@ -43,9 +46,11 @@ if (isset($_GET['id']) && isset($_GET['code'])) {
 
 
 
-    $rowz = $stmt->get_result();
+    //$rowz = $stmt->get_result();
 
     // MySQLi wins in row counting. xD
+  
+    // CHeck if they were legitimate users
     if ($rowz->num_rows > 0) {
         if ($rowz['registered'] == $statusnReged) {
             $stmt = $u->prepStmt("UPDATE users SET registered=? WHERE id=?", $db);

@@ -7,7 +7,7 @@ function pushcheck {
     git push
   fi
 }
-
+echo -e "----------------------------------------------------------------\n"
 echo -e "Welcome to the InfiniaPress Commit Tool!\n"
 
 echo -e "This should make your life easier. You just simply have to type your commit message and it handles the rest\n"
