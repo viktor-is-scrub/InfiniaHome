@@ -13,6 +13,8 @@ if (file_exists("../InfiniaLegit.config.php")) {
     require_once '../inc/config.php';
 }
 
+require '../inc/lsf-functions.php';
+
 $db = new mysqli(
     $conf['db']['host'], $conf['db']['username'], $conf['db']['password'], $conf['db']['name'], $conf['db']['port']
 );
