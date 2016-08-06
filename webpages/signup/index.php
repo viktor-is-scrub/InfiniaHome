@@ -81,6 +81,7 @@ if (isset($_POST['signup-btn'])) {
             $emailusername = $conf['SMTP']['username'];
             $emailpwd = $conf['SMTP']['password'];
             $port = $conf['SMTP']['port'];
+            $host = $conf['SMTP']['host'];
 
             $secure = $conf['SMTP']['secure'];
 
