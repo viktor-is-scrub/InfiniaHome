@@ -85,7 +85,7 @@ if (isset($_POST['signup-btn'])) {
 
             $secure = $conf['SMTP']['secure'];
 
-            $usr->send_mail($emailusername, $pwd, $host, $secure, $port, $email, $subject, $message, $emailusername, $altmessage);
+            $usr->send_mail($emailusername, $emailpwd, $host, $secure, $port, $email, $emailsubject, $message, $emailusername, $altmessage);
 
             // Wow such long
 
