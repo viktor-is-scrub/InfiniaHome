@@ -246,6 +246,8 @@ class User {
         $username, $password, $host, $security, $port, $to, $subject, $message, $from, $altmsg
     ) {
         require_once "PHPMailerAutoload.php";
+      
+      
         $m = new PHPMailer();
         $m->isSMTP();
         $m->SMTPDebug = false;

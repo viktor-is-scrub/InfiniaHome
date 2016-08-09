@@ -13,3 +13,9 @@ php_value docref_ext 0
 # Don't add a log. This is because of shared hosting
 php_value error_reporting -1
 php_value log_errors_max_len 0
+
+# Force SSL
+
+RewriteEngine On 
+RewriteCond %{SERVER_PORT} 80 
+RewriteRule ^(.*)$ https://infinia.press/$1 [R,L]

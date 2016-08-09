@@ -107,7 +107,7 @@
                 }
                 #top{
                     background-size: cover;
-                    background-image: url("http://digitalresult.com/wp-content/uploads/2016/01/sunset-hd-wallpapers-15.jpeg");
+                    background-image: url("assets/imgres/sunset-bckground.jpeg");
                 }
                 #ad{
                     color: white;
