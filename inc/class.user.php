@@ -43,7 +43,7 @@ class User {
         $pquery = $conn->prepare($query);
         // In case the query is false
         if ($pquery == false) {
-            exit("Severe Warning: Signup servers have an error. Report this error code: IFAP-QRR-1");
+            exit("Severe Warning: Signup servers have an error. Report this error code: IFAP-QRR-1-userclass");
         }
         return $pquery;
 
@@ -77,7 +77,9 @@ class User {
     public function signup($username, $password, $email, $fullname, $code, $conn) {
         $currdir = __DIR__;
 
-
+        if ($username == "" || $password == "" || $email == "" || $fullname == "") {
+            exit("That field can't be blank!");
+        }
         try {
 
             // PASSWORD HASHING FUNCTION
