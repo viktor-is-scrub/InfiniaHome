@@ -62,7 +62,7 @@ $(document).ready(function(){
     $("#greeting").fadeOut(0)
     var d = new Date()
     var time = d.getHours()
-    if(time < 10) {
+    if(time < 12) {
         document.getElementById("greeting").innerHTML = "Good Morning"
     }else if (time < 18) {
         document.getElementById("greeting").innerHTML = "Good Afternoon"
