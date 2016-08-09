@@ -91,15 +91,18 @@ if (isset($_POST['login-btn'])) {
         </head>
         <body>
             <h1 id='heading'>SIGN IN TO INFINIA PRESS</h1>
-            <div class="field">
-                <label for="name">Username or email: </label>
-                <input type="text" name="username" id="box" formmethod="post" required>
-            </div>
-            <div class="field">
-                <label for="password">Password: </label>
-                <input type="password" name="password" id="box" formmethod="post" required>
-            </div>
-            <br>
-            <button id="signup" name="signup-btn" type="submit">Sign in</button>
+            <form id="login" method="post" >
+                <div class="field">
+                    <label for="name">Username or email: </label>
+                    <input type="text" name="username" id="box" formmethod="post" required>
+                </div>
+                <div class="field">
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="box" formmethod="post" required>
+                </div>
+                <br>
+                <button id="signup" name="signup-btn" type="submit">Sign in</button>
+            </form>
+
         </body>
     </html>
