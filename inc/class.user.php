@@ -75,7 +75,7 @@ class User {
      * @return mixed $signupquery/false Returns either a mysqli_stmt or false
      */
     public function signup($username, $password, $email, $fullname, $code, $conn) {
-        $currdir = __DIR__;
+        $APP_ROOT = getenv('INFINIA_ROOT');
 
         if ($username == "" || $password == "" || $email == "" || $fullname == "") {
             exit("That field can't be blank!");
@@ -105,7 +105,7 @@ class User {
 
         } catch (mysqli_sql_exception $e) {
             // Do nothing now
-            header("Location: $currdir/../index.php?s=sys-error");
+            header("Location: $APP_ROOT/index.php?s=sys-error");
             // We shall force Keane to make a beautiful error page. Yay
             return false;
         }
@@ -120,7 +120,7 @@ class User {
      */
     
     public function login($username, $password, $conn) {
-        $currdir = __DIR__;
+        $APP_ROOT = getenv('INFINIA_ROOT');
 
 
         // Function provided by nice people on stackoverflow for those
@@ -174,17 +174,17 @@ class User {
                             return true;
 
                         } else {
-                            header("Location: $currdir/../index.php?s=user-error");
+                            header("Location: $APP_ROOT/index.php?s=user-error");
                             exit;
 
                         }
                     } else {
-                        header("Location: $currdir/../index.php?s=user-unconfirmed");
+                        header("Location: $APP_ROOT/../index.php?s=user-unconfirmed");
                         exit;
                     }
                 }
             } else {
-                header("Location: $currdir/../index.php?s=user-error");
+                header("Location: $APP_ROOT/../index.php?s=user-error");
                 exit;
             }
 
@@ -194,7 +194,7 @@ class User {
 
         } catch (mysqli_sql_exception $e) {
             // Do nothing for now
-            header("Location: $currdir/../index.php?s=sys-error");
+            header("Location: $APP_ROOT/../index.php?s=sys-error");
         }
     }
 

@@ -1,3 +1,7 @@
+# Set App Root
+SetEnv INFINIA_ROOT /home/cabox/workspace
+# ^ This can be not private. LOL!
+
 ErrorDocument 404 /404.php
 
 php_flag display_startup_errors off
