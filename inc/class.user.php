@@ -105,7 +105,7 @@ class User {
 
         } catch (mysqli_sql_exception $e) {
             // Do nothing now
-            header("Location: $APP_ROOT/index.php?s=sys-error");
+            header("Location: index.php?s=sys-error");
             // We shall force Keane to make a beautiful error page. Yay
             return false;
         }
@@ -174,17 +174,17 @@ class User {
                             return true;
 
                         } else {
-                            header("Location: $APP_ROOT/index.php?s=user-error");
+                            header("Location: index.php?s=user-error");
                             exit;
 
                         }
                     } else {
-                        header("Location: $APP_ROOT/../index.php?s=user-unconfirmed");
+                        header("Location: index.php?s=user-unconfirmed");
                         exit;
                     }
                 }
             } else {
-                header("Location: $APP_ROOT/../index.php?s=user-error");
+                header("Location: index.php?s=user-error");
                 exit;
             }
 
@@ -194,7 +194,7 @@ class User {
 
         } catch (mysqli_sql_exception $e) {
             // Do nothing for now
-            header("Location: $APP_ROOT/../index.php?s=sys-error");
+            header("Location: /index.php?s=sys-error");
         }
     }
 
