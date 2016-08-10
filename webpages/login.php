@@ -26,7 +26,7 @@ if ($u->isLoggedIn() != "") {
 
 
 // Note to Keane: This is the name="login-btn" for the login button
-if (isset($_POST['login-btn'])) {
+if (isset($_POST['signup-btn'])) {
 
     // This can be both a username or email
     // Again name="username-email" etc.
