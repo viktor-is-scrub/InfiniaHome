@@ -50,7 +50,7 @@ if (isset($_POST['login-btn'])) {
                     text-align: center;
                 }
                 #heading{
-                    font-family: "Times New Roman";
+                    font-family: "Helvetica Neue";
                     font-size: 90px;
                 }
                 #signup{

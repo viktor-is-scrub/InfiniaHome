@@ -136,8 +136,9 @@
                     background-image: url("assets/imgres/water-landscape.png");
                 }
                 #adtext{
-                    font-family: "times new roman";
+                    font-family: "helvetica neue";
                     font-size: 25px;
+									  color: white;
                 }
                 #signup{
                     border-radius: 50%;

@@ -125,7 +125,7 @@ if (isset($_POST['signup-btn'])) {
                     background-color: #00ffec;
                 }
                 #heading{
-                    font-family: "Times New Roman";
+                    font-family: "Helvetica Neue";
                     font-size: 90px;
                 }
                 #signup{

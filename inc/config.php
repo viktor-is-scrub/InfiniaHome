@@ -124,8 +124,10 @@ BOD;
 
 
 // This is your base url for infiniapress
-$conf['baseurl'] = "infiniapress.org";
+$conf['baseurl'] = "yourinfinia.org";
 
+
+$conf['dev-email'] = "support@yourinfinia.org";
 
 
 

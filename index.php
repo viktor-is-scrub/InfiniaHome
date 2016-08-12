@@ -63,6 +63,8 @@ $parts = Array (
 <img src="assets/imgres/infinia-logo.png" width=40%>
 <br><b id="greeting"></b><br>
 <b id="welcome">Welcome to Infinia Press</b><br>
+	<br>
+	<br>
 <script>
 $(document).ready(function(){
     $("#greeting").fadeOut(0)
@@ -87,6 +89,8 @@ $(document).ready(function(){
     </b>
     <br>
 	<b id="adtext">Productivity apps for your work and personal life</b>
+	<br>
+	<br>
     <br>
     <a href="webpages/signup/index.php"><button id="signup">Sign up</button></a>
 </div>
