@@ -162,6 +162,8 @@ if (isset($_POST['signup-btn'])) {
     </head>
 
 <body>
+  <br>
+  <br>
 
     <h1 id='heading'>SIGN UP FOR INFINIA PRESS</h1>
 

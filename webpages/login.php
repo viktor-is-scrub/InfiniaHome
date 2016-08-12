@@ -26,12 +26,13 @@ if ($u->isLoggedIn() != "") {
 
 
 // Note to Keane: This is the name="login-btn" for the login button
-if (isset($_POST['signup-btn'])) {
+if (isset($_POST['login-btn'])) {
 
     // This can be both a username or email
     // Again name="username-email" etc.
     $login_info = trim($_POST['username-email']);
     $password = trim($_POST['password']);
+    
 
     if ($u->login($login_info, $password, $db)) {
         $u->redirect("../../infinia.php");
@@ -101,7 +102,7 @@ if (isset($_POST['signup-btn'])) {
                     <input type="password" name="password" id="box" formmethod="post" required>
                 </div>
                 <br>
-                <button id="signup" name="signup-btn" type="submit">Sign in</button>
+                <button id="signup" name="login-btn" type="submit">Sign in</button>
             </form>
 
         </body>

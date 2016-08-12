@@ -9,11 +9,6 @@
 <!DOCTYPE html>
     <html lang="en">
         <head>
-					  <VirtualHost *:80>
-					    ServerName www.example.com
- 						  Redirect "/" "https://www.example.com/"
-						</VirtualHost>
-
             <noscript>
                 <!-- If you're a dick and don't enable javascript, we'll FORCE YOU to enable javascript -->
                 <meta http-equiv="refresh" content="0;URL='infiniapress.tk/webpages/noscript.php" />    

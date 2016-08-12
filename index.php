@@ -19,6 +19,12 @@ if ($conf['edited'] == false) {
     }
 }
 require("inc/lsf-functions.php");
+// Pages that can be passed to index.php via GET
+$parts = Array (
+    "user-error",
+    "user-unconfirmed",
+	  "sys-error"
+);
 ?>
 
 

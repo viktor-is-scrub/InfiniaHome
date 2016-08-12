@@ -19,6 +19,5 @@ php_value error_reporting -1
 php_value log_errors_max_len 0
 
 # Force SSL (Does not seem to work on certain hosts)
-#RewriteEngine On
-#RewriteCond %{HTTPS} off
-#RewriteRule (.*) https://%{SERVER_NAME}/%$1 [R,L]
+
+
