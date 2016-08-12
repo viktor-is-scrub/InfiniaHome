@@ -2,7 +2,9 @@
 SetEnv INFINIA_ROOT /home/cabox/workspace
 # ^ This can be not private. LOL!
 
-ErrorDocument 404 /404.php
+ErrorDocument 404 /error.php?err=404
+ErrorDocument 500 /error.php?err=505
+ErrorDocument 403 /error.php?err=403
 
 php_flag display_startup_errors off
 php_flag display_errors off

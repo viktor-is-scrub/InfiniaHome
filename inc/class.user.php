@@ -72,7 +72,7 @@ class User {
      * @param $email string The email address
      * @param $fullname string Full name of user
      * @param $conn mysqli The MySQL database connection
-     * @return mixed $signupquery/false Returns either a mysqli_stmt or false
+     * @return mixed Stuff
      */
     public function signup($username, $password, $email, $fullname, $code, $conn) {
         $APP_ROOT = getenv('INFINIA_ROOT');
@@ -97,7 +97,12 @@ class User {
                 $signupquery->bind_param("sssss", $username, $email, $GLOBALS['hPword'], $fullname, $code);
                 $signupquery->execute();
 
-                return $signupquery;
+                //return Array(
+                //   "usr_signup_username" => $username,
+                //   "usr_signup_email" => $email,
+                //   "usr_signup_fullname" => $fullname,
+                //   "usr_signup_id" => $id
+                //);
             } else {
                 exit("Server error. Please report this to the bug tracker with this error code: IFAP-QRR-3");
 
@@ -126,7 +131,7 @@ class User {
         // Function provided by nice people on stackoverflow for those
         // who don't have mysqlnd.
         // Thanks Stackoverflow
-        function get_result( $Statement ) {
+        function get_result($Statement) {
             $RESULT = array();
             $Statement->store_result();
             for ( $i = 0; $i < $Statement->num_rows; $i++ ) {
@@ -245,11 +250,16 @@ class User {
      * @param $altmsg string Alternative message in case HTML one cannot be sent
      */
     public function send_mail(
-        $username, $password, $host, $security, $port, $to, $subject, $message, $from, $altmsg
-    ) {
+        $username, $password, $host, $security, $port, $to, $subject, $message, $from, $altmsg,
+      
+        $usr_signup_username, $usr_signup_email, $usr_signup_code, $usr_signup_id, $usr_signup_fullname
+    ) 
+    {
+      
+        
         require_once "PHPMailerAutoload.php";
       
-      
+        
         $m = new PHPMailer();
         $m->isSMTP();
         $m->SMTPDebug = false;

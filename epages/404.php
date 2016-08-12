@@ -1,10 +1,3 @@
-<?php
-/**
- * Using PhpStorm.
- * (c) 2016 xiurobert
- * Created on 4/28/2016 at 9:23 PM
- */
- ?>
 <!-- Default Ruby on Rails 404 -->
 <!DOCTYPE html>
 <html>
@@ -61,8 +54,7 @@
     <h1>The page you were looking for doesn't exist.</h1>
     <p>You may have mistyped the address or the page may have moved.</p>
 </div>
-<p>If you think you are seeing this in mistake, please email
-    <a href="http://www.google.com/recaptcha/mailhide/d?k=01LGcgHcyWkvgb1K164Gk6ww==&c=0h0GHno1bUbIAFMcWzg3Oz6AlYA6_YjXUrNOAf2bJ4k=">d...</a>@infiniapress.tk
+<p>If you think you are seeing this in mistake, please email <a href="mailto:<?php echo $conf['dev-email']; ?>"><?php echo $conf['dev-email']; ?></a>
 </p>
 
 </body>
