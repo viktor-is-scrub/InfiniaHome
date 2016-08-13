@@ -25,7 +25,7 @@ if ($u->isLoggedIn() != "") {
 }
 
 
-// Note to Keane: This is the name="login-btn" for the login button
+
 if (isset($_POST['signup-btn'])) {
 
     // This can be both a username or email
@@ -34,7 +34,7 @@ if (isset($_POST['signup-btn'])) {
     $password = trim($_POST['password']);
     
 
-    if ($u->login($login_info, $password, $db)) {
+    if ($u->login($login_info, $password)) {
         header("Location: /infinia.php");
     }
 }

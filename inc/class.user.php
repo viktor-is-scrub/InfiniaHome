@@ -22,12 +22,22 @@ class User {
      */
 
 
+    protected $conn;
+
+    protected $user_name;
+    protected $user_id;
+    protected $user_code;
+    protected $user_email;
+    protected $user_fullname;
+
 
     public function __construct($conn) {
 
         if ($conn->connect_errno) {
             echo "Could not connect to the signup handler. Please try again later!";
             exit("Signup handler error - IFAP-331 errcode.lightningsf.tk");
+        } else {
+            $this->conn = $conn;
         }
     }
 
@@ -38,9 +48,9 @@ class User {
      * @return mysqli_stmt $pquery The MySQL Statement executed
      */
     
-    public function prepStmt($query, $conn) {
+    public function prepStmt($query) {
 
-        $pquery = $conn->prepare($query);
+        $pquery = $this->conn->prepare($query);
         // In case the query is false
         if ($pquery == false) {
             exit("Severe Warning: Signup servers have an error. Report this error code: IFAP-QRR-1-userclass");
@@ -58,8 +68,8 @@ class User {
      * @return mixed $lsid (This may return a string)
      */
 
-    public function lastinsId($conn) {
-        $lsid = $conn->insert_id;
+    public function lastinsId() {
+        $lsid = $this->conn->insert_id;
         return $lsid;
     }
 
@@ -74,8 +84,11 @@ class User {
      * @param $conn mysqli The MySQL database connection
      * @return mixed Stuff
      */
-    public function signup($username, $password, $email, $fullname, $code, $conn) {
-        $APP_ROOT = getenv('INFINIA_ROOT');
+    public function signup($username, $password, $email, $fullname, $code) {
+
+        // Define userid as local variable
+        $userid = "";
+
 
         if ($username == "" || $password == "" || $email == "" || $fullname == "") {
             exit("That field can't be blank!");
@@ -88,7 +101,7 @@ class User {
             $GLOBALS['hPword'] = password_hash($password, PASSWORD_DEFAULT);
 
 
-            $signupquery = $conn->prepare(
+            $signupquery = $this->conn->prepare(
                 "INSERT INTO users(username,email,password,fullname,tokencode)
                             VALUES(?, ?, ?, ?, ?)"
             );
@@ -97,12 +110,45 @@ class User {
                 $signupquery->bind_param("sssss", $username, $email, $GLOBALS['hPword'], $fullname, $code);
                 $signupquery->execute();
 
+
+                // $this-> binds local variables to member variables (basically all those variables that
+                // don't exist in functions
+
+
                 //return Array(
                 //   "usr_signup_username" => $username,
                 //   "usr_signup_email" => $email,
                 //   "usr_signup_fullname" => $fullname,
                 //   "usr_signup_id" => $id
                 //);
+
+                $this->user_name = $username;
+                $this->user_email = $email;
+                $this->user_fullname = $fullname;
+                $this->user_code = $code;
+
+                $userid_query = $this->conn->prepare("SELECT id FROM users WHERE username = ? ");
+                if ($userid_query != false) {
+                    $userid_query->bind_param("s", $username);
+                    $userid_query->execute();
+
+                    $userid_query->store_result();
+
+                    if ($userid_query->num_rows = 1) {
+                        $userid_query->bind_result($userid);
+
+                        $this->user_id = $userid;
+
+                    } else {
+
+                        // If a value was entered into the database manually
+                        exit("Fatal server error. Please report this issue to the bug tracker with this error code: IFAP-DBACC-1");
+                    }
+                } else {
+                    exit("Server error. Please report this issue to the bug tracker with this error code: IFAP-QRR-4");
+                }
+
+                return $signupquery;
             } else {
                 exit("Server error. Please report this to the bug tracker with this error code: IFAP-QRR-3");
 
@@ -124,7 +170,7 @@ class User {
      * @return boolean Tell if the login was successful
      */
     
-    public function login($username, $password, $conn) {
+    public function login($username, $password) {
         $APP_ROOT = getenv('INFINIA_ROOT');
 
 
@@ -147,7 +193,7 @@ class User {
         }
 
         try {
-            $stmt = $conn->prepare("SELECT * FROM users WHERE (username=? OR email=?)");
+            $stmt = $this->conn->prepare("SELECT * FROM users WHERE (username=? OR email=?)");
             if ($stmt !== false) {
                 $stmt->bind_param("ss", $username, $username);
                 $stmt->execute();
@@ -246,18 +292,24 @@ class User {
      * @param $subject string The subject of the email
      * @param $message string The message of the Email in HtML
      * @param $from string the sender of the email
-     *
      * @param $altmsg string Alternative message in case HTML one cannot be sent
+     *
+     * @param $usr_name string The user's name generated by the signup() function
+     * @param $usr_fullname string The user's fullname ditto ditto
+     * @param $usr_email string ditto ditto email ditto
+     * @param $usr_code string ditto ditto signup confirmation code ditto ditto
+     * @param $usr_id int ditto ditto id generated by the db
      */
     public function send_mail(
         $username, $password, $host, $security, $port, $to, $subject, $message, $from, $altmsg,
-      
-        $usr_signup_username, $usr_signup_email, $usr_signup_code, $usr_signup_id, $usr_signup_fullname
+
+        $usr_name, $usr_fullname, $usr_email, $usr_code, $usr_id
     ) 
     {
       
-        
+        // Include necessary things
         require_once "PHPMailerAutoload.php";
+        require_once "lsf-functions.php";
       
         
         $m = new PHPMailer();
@@ -285,9 +337,29 @@ class User {
         $m->setFrom($from, "No reply < InfiniaPress");
         $m->addReplyTo($from, "No reply < InfiniaPress");
 
+
+        $msg = new TemplateFromString($message);
+        
+        $msg->set("user_name",$usr_name);
+        $msg->set("user_id", $usr_id);
+        $msg->set("user_code", $usr_code);
+        $msg->set("user_fullname", $usr_fullname);
+        $msg->set("user_email", $usr_email);
+        
+        
+        $alt_msg = new TemplateFromString($altmsg);
+        
+        $alt_msg->set("user_name", $usr_name);
+        $alt_msg->set("user_id", $usr_id);
+        $alt_msg->set("user_code", $usr_code);
+        $alt_msg->set("user_fullname", $usr_fullname);
+        $alt_msg->set("user_email", $usr_email);
+
+
+        
         $m->Subject = $subject;
-        $m->Body = $message;
-        $m->AltBody = $altmsg;
+        $m->Body = $msg->output();
+        $m->AltBody = $alt_msg->output();
 
         $m->send();
 

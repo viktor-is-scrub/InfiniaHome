@@ -15,8 +15,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password` VARCHAR(255) NOT NULL, -- This will be a hashed salted value for the password
   `email` VARCHAR(100) NOT NULL,
   `registered` ENUM('Y', 'N') NOT NULL DEFAULT 'N',
-  `tokencode` VARCHAR(100) NOT NULL -- If code valid, will change the user status
-  `banned` ENUM('Y', 'N') NOT NULL DEFAULT 'N' COMMENT  'Banned status for people like Lucas'
+  `tokencode` VARCHAR(100) NOT NULL, -- If code valid, will change the user status
+  `banned` ENUM('Y', 'N') NOT NULL DEFAULT 'N' COMMENT  'Banned status for bad people'
 
 ) ENGINE = InnoDB;
 

@@ -23,15 +23,6 @@ require '../../inc/lsf-functions.php';
 $db = new mysqli($conf['db']['host'],
     $conf['db']['username'], $conf['db']['password'], $conf['db']['name'], $conf['db']['port']);
 
-if ($db->connect_errno) {
-    echo "Oops, an error occurred
-     while trying to connect to the signup servers and your request could not be processed!
-     Please try again later!";
-
-    exit(1);
-
-}
-
 $usr = new User($db);
 
 if ($usr->isLoggedIn() != "") {
@@ -48,7 +39,7 @@ if (isset($_POST['signup-btn'])) {
 
     $code = hash("sha256", uniqid(rand()), true);
 
-    $stmt = $usr->prepStmt("SELECT * FROM users WHERE email=?", $db);
+    $stmt = $usr->prepStmt("SELECT * FROM users WHERE email=?");
     if ($stmt !== false) {
         $stmt->bind_param("s", $email);
         $stmt->execute();
@@ -68,8 +59,8 @@ if (isset($_POST['signup-btn'])) {
      </div>
      ";
     } else {
-        if ($usr->signup($username, $password, $email, $fullname, $code, $db)) {
-            $lsId = $usr->lastinsId($db);
+        if ($usr->signup($username, $password, $email, $fullname, $code)) {
+            $lsId = $usr->lastinsId();
             $key = base64_encode($lsId);
             $lsId = $key;
 
