@@ -134,11 +134,9 @@ class User {
 
                     $userid_query->store_result();
 
-                    if ($userid_query->num_rows = 1) {
+                    if ($userid_query->num_rows == 1) {
                         $userid_query->bind_result($userid);
-
                         $this->user_id = $userid;
-
                     } else {
 
                         // If a value was entered into the database manually
@@ -314,7 +312,8 @@ class User {
         
         $m = new PHPMailer();
         $m->isSMTP();
-        $m->SMTPDebug = false;
+        $m->SMTPDebug = true;
+        $m->Debugoutput = 'html';
 
         if ($security == false) {
             $m->SMTPAuth = false;
