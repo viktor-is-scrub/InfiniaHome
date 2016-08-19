@@ -20,7 +20,7 @@ if (!$u->isLoggedIn()) {
 
 
 } else {
-    $u->redirect("webpages/login.php");
+    $u->redirect("/webpages/login.php");
 }
 
 ?>

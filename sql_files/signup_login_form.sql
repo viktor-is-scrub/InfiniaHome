@@ -16,7 +16,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` VARCHAR(100) NOT NULL,
   `registered` ENUM('Y', 'N') NOT NULL DEFAULT 'N',
   `tokencode` VARCHAR(100) NOT NULL, -- If code valid, will change the user status
-  `banned` ENUM('Y', 'N') NOT NULL DEFAULT 'N' COMMENT  'Banned status for bad people'
+  `banned` ENUM('Y', 'N') NOT NULL DEFAULT 'N' COMMENT  'Banned status for bad people',
+  `bannedReason` VARCHAR( 255 ) NOT NULL COMMENT  'The reason why a user is banned'
 
 ) ENGINE = InnoDB;
 

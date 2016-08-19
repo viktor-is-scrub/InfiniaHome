@@ -19,7 +19,7 @@ $db = new mysqli($conf['db']['host'], $conf['db']['username'], $conf['db']['pass
 $u = new User($db);
 
 if (empty($_GET['id']) && empty($_GET['id'])) {
-    $u->redirect("../../index.php?s=broken-confirmation-link");
+    $u->redirect("/error.php?s=broken-confirmation-link");
 }
 
 if (isset($_GET['id']) && isset($_GET['code'])) {
