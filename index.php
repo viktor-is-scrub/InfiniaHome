@@ -96,20 +96,24 @@ $(document).ready(function(){
 </div>
 </section>
 <section id="apps">
-	<div style="padding:2% 0 2% 0; border-top:5px solid black; border-bottom: 5px solid black;" class="app">
-		<h1>PASSENGER PIGEON</h1>
-		<p>An elegant chat app with file sharing capabilities</p>
-		<img src="assets/imgres/passenger_pigeon_1.png" height="250px">
-	</div>
-	<div style="padding:2% 0 2% 0; border-top:5px solid black; border-bottom: 5px solid black;" class="app">
-		<h1>HANSOM</h1>
-		<p>A powerful note-taking application for memory</p>
-		<img src="assets/imgres/hansom_1.png" height="250px">
-	</div>
-	<div style="padding:2% 0 2% 0; border-top:5px solid black; border-bottom: 5px solid black;" class="app">
-		<h1>TRACKTION</h1>
-		<p>A beautiful timer for keeping track</p>
-	</div>
+	<ul class="collapsible" data-collapsible="accordion">
+		<li>
+			<div class="collapsible-header"><h1>PASSENGER PIGEON</h1><img src="assets/imgres/passenger_pigeon_1.png" height="250px"></div>
+      <div class="collapsible-body"><p>An elegant chat app with file sharing capabilities (keane obviously sucks)</p></div>
+		</li>
+	</ul>
+	<ul class="collapsible" data-collapsible="accordion" style="margin:0px;">
+		<li>
+			<div class="collapsible-header"><h1>HANSOM</h1><img src="assets/imgres/hansom_1.png" height="250px"></div>
+      <div class="collapsible-body"><p>A powerful note-taking application for memory (lol cant even fix a stupid obnoxious spacing)</p></div>
+		</li>
+	</ul>
+	<ul class="collapsible" data-collapsible="accordion">
+		<li>
+			<div class="collapsible-header"><h1>TRACKTION</h1></div>
+      <div class="collapsible-body"><p>A beautiful timer for keeping track (we need more description)</p></div>
+		</li>
+	</ul>
 </section>
 
     <!--Start of Tawk.to Script-->

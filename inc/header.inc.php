@@ -26,7 +26,7 @@
 
             <!-- bs CSS -->
             <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
+         
             <!-- jQ -->
             <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
 
@@ -36,13 +36,18 @@
             <!-- custom CSS & JS -->
             <link rel="stylesheet" href="assets/lsf/scrolling-nav.css">
             <link rel="stylesheet" href="assets/lsf/contact.css">
+						<link rel="stylesheet" href="assets/css/infinia.css">
 
             <script type="text/javascript" src="assets/lsf/scrolling-nav.js"></script>
             
             <!-- Smooth Scrolling JS from SmoothScrollJS -->
 						<script type="text/javascript" src="assets/js/smooth-scroll.min.js"></script>
 					
-					
+					  					  <!-- Compiled and minified CSS -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+            <!-- Compiled and minified JavaScript -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 
 
 
@@ -52,117 +57,7 @@
             <![endif]-->
 
 
-            <style>
-                html {
-                    position: relative;
-                    min-height: 100%;
-                    font-family: "arial";
-                    text-align: center
-                }
-                .se-pre-con {
-        		position: fixed;
-        		left: 0px;
-        		top: 0px;
-        		width: 100%;
-        		height: 100%;
-        		z-index: 999999999999999999999999999999999999999999999999999999999999999999999999999999999999;
-        		background: white;
-        		font-size: 80px;
-        		text-align: center
-    		}
-                nav{
-                    position: fixed;
-                }
-                body {
-                    /* Margin bottom by footer height */
-                    margin-top: 70px;
-                    margin-bottom: 60px;
-                }
-                .footer {
-                    position: absolute;
-                    width: 100%;
-                    /* Set the fixed height of the footer here */
-                    height: 60px;
-                    background-color: #f5f5f5;
-                    font-size: 20px;
-                }
-                #greeting{
-                text-shadow:
-     		    -1px -1px 0 #000,
-      		    1px -1px 0 #000,
-      		    -1px 1px 0 #000,
-       		    1px 1px 0 #000;
-                    font-size: 80px;
-                    color: white;
-                    opacity: 0.9;
-                    z-index: -1;
-                }
-                #navigation-bar{
-                    position: fixed;
-                    background: #eaeaea;
-                    width: 100%;
-                    height: 60px;
-                    top: 0;
-                    left: 0;
-                }
-                #top{
-                    background-size: cover;
-                    background-image: url("assets/imgres/sunset-bckground.jpeg");
-                }
-                #ad{
-                    color: white;
-                    font-size: 90px;
-                    line-height: 100px;
-                }
-                #admini{
-                    font-size: 40px;
-                }
-                #welcome{
-                    color: white;
-                text-shadow:
-     		    -1px -1px 0 #000,
-      		    1px -1px 0 #000,
-      		    -1px 1px 0 #000,
-       		    1px 1px 0 #000;
-                    font-size: 40px;
-                }
-                #about{
-                text-shadow:
-     		    -1px -1px 0 #000,
-      		    1px -1px 0 #000,
-      		    -1px 1px 0 #000,
-       		    1px 1px 0 #000;
-                    background-size: cover;
-                    background-image: url("assets/imgres/water-landscape.png");
-                }
-                #adtext{
-                    font-family: "helvetica neue";
-                    font-size: 25px;
-									  color: white;
-                }
-                #signup{
-                    border-radius: 50%;
-                    background-color: #00FF04;
-                    border-color: #00FF04;
-                    color: white;
-                    font-size: 40px;
-                    transition-duration: 0.4s;
-                    width: 25%;
-                    height: 80px;
-                }
-                #signup:hover{
-                    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-                    background-color: red;
-                    border-color: red;
-                }
-                .app{
-                    background-color:#ececec;
-					transition-duration: 0.5s;
-                }
-                .app:hover{
-                    background-color: #c7c7c7;
-                }
-            </style>
+            
         </head>
         <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
             <nav class="navbar navbar-fixed-top navbar-default" role="navigation">

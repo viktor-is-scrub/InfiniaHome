@@ -8,6 +8,7 @@ if (file_exists('InfiniaLegit.config.php')) {
   require 'inc/config.php';
 }
 
+
 // Pages that can be passed to index.php via GET
 $parts = Array(
     "user-error",
@@ -24,6 +25,25 @@ $parts = Array(
 if (isset($_GET['err']) && in_array($_GET['err'], $parts)) {
   
   require('epages/'.$_GET['err'].'.php');
+	
+	if (isset($_GET['err'] == "user-denied-from-services") && isset($_GET['user'])) {
+	  $db = new mysqli($conf['db']['host'], $conf['db']['username'], $conf['db']['password'], $conf['db']['name'], $conf['db']['port']);
+		if ($db->connect_errno) {
+			require('epages/sys-error.php');
+			exit();
+		}
+		$deniedreason = "";
+		
+		$stmt = $db->prepare("SELECT bannedReason FROM `users` WHERE user = ?");
+		$stmt->bind_param("s", $_GET['user']);
+		if ($stmt->execute()) {
+			$stmt->bind_result($deniedreason);
+			require('epages/'.$_GET['err']);
+		} else {
+			require('epages/sys-error.php');
+			exit()
+		}
+	}
 
 } else if (isset($_GET['err'])) {
   echo "Hmm... you think there\'s a problem????";
