@@ -1,7 +1,7 @@
 <?php
 /**
  * Using PhpStorm.
- * (c) 2016 xiurobert
+ * (c) 2016 Hundotte
  * Created on 5/19/2016 at 5:54 PM
  */
 
@@ -26,7 +26,7 @@ $db = new mysqli($conf['db']['host'],
 $usr = new User($db);
 
 if ($usr->isLoggedIn() != "") {
-    $usr->redirect(__DIR__ . "/../../infinia.php");
+    $usr->redirect("/infinia.php");
 
 }
 

@@ -262,8 +262,8 @@ class User {
 
 
     /**
-     * Self-explanatory. Redirects the user to a chosen URL
-     * @param $url string The URL to send the user to. THIS MUST BE RELATIVE TO THE FILE INCLUDED IN
+     * Self-explanatory. Redirects the user to a chosen URL. "/" represents the web root
+     * @param $url string The URL to send the user to. / REPRESENTS THE WEB ROOT
      */
     public function redirect($url) {
         header("Location: $url");
@@ -312,8 +312,8 @@ class User {
         
         $m = new PHPMailer();
         $m->isSMTP();
-        $m->SMTPDebug = true;
-        $m->Debugoutput = 'html';
+        $m->SMTPDebug = false;
+        //$m->Debugoutput = 'html';
 
         if ($security == false) {
             $m->SMTPAuth = false;

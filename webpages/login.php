@@ -21,7 +21,7 @@ $db = new mysqli(
 $u = new User($db);
 
 if ($u->isLoggedIn() != "") {
-    $u->redirect("../infinia.php");
+    $u->redirect("/infinia.php");
 }
 
 
@@ -35,7 +35,7 @@ if (isset($_POST['signup-btn'])) {
     
 
     if ($u->login($login_info, $password)) {
-        header("Location: /infinia.php");
+        $u->redirect("/infinia.php");
     }
 }
 
