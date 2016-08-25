@@ -108,7 +108,7 @@ $(document).ready(function(){
       <div class="collapsible-body"><p>A powerful note-taking application for memory (lol cant even fix a stupid obnoxious spacing)</p></div>
 		</li>
 	</ul>
-	<ul class="collapsible" data-collapsible="accordion">
+	<ul class="collapsible" data-collapsible="accordion" >
 		<li>
 			<div class="collapsible-header"><h1>TRACKTION</h1></div>
       <div class="collapsible-body"><p>A beautiful timer for keeping track (we need more description)</p></div>
