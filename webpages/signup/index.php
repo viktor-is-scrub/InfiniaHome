@@ -77,18 +77,22 @@ if (isset($_POST['signup-btn'])) {
             $secure = $conf['SMTP']['secure'];
 
             // Login, Password, SMTP Host, SMTP Security Option, SMTP Port, SMTP to, Subject, message, from, altmsg
-
             $usr->send_mail($emailusername, $emailpwd, $host, $secure, $port, $email, $emailsubject, $message, $emailusername, $altmessage);
+/* ** Temporarily stop custom email sending **
 
-            // Wow such long
-
-            $msg = "
+            if (!$usr->send_mail($emailusername, $emailpwd, $host, $secure, $port, $email, $emailsubject, $message, $emailusername, $altmessage)) {
+                $usr->redirect("/error.php?err=sys-error");
+            } else {
+                $msg = "
      <div class='alert alert-success'>
-      <button class='close' data-dismiss='alert'>&times;</button>
-      <strong>Success!</strong>  We've sent an email to $email.
-                    Please click on the confirmation link in the email to continue the creation of your account.
+       <button class='close' data-dismiss='alert'>&times;</button>
+       <strong>Success!</strong>  We've sent an email to $email.
+       Please click on the confirmation link in the email to continue the creation of your account.
        </div>
      ";
+            }
+
+*/          
         } else {
             $msg = "<div class='alert alert-danger'>
     <button class='close' data-dismiss='alert'>&times;</button>
