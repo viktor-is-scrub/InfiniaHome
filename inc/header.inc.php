@@ -25,29 +25,31 @@
             <meta name="description" content="InfiniaPress open-source Productivity suite">
 
             <!-- bs CSS -->
-            <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
          
             <!-- jQ -->
-            <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
+            <script type="text/javascript" src="/assets/js/jquery-2.2.3.min.js"></script>
 
             <!-- Bs JS -->
-            <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
 
-            <!-- custom CSS & JS -->
-            <link rel="stylesheet" href="assets/lsf/scrolling-nav.css">
-            <link rel="stylesheet" href="assets/lsf/contact.css">
-						<link rel="stylesheet" href="assets/css/infinia.css">
+            <!-- custom CSS & JS. -->
+            <link rel="stylesheet" href="/assets/css/scss/infinia.css">
 
-            <script type="text/javascript" src="assets/lsf/scrolling-nav.js"></script>
-            
             <!-- Smooth Scrolling JS from SmoothScrollJS -->
-						<script type="text/javascript" src="assets/js/smooth-scroll.min.js"></script>
+            <script type="text/javascript" src="/assets/js/smooth-scroll.min.js"></script>
 					
-					  					  <!-- Compiled and minified CSS -->
+            <!-- Materialized CSS -->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+            <!-- Font awesome from Font Awesome -->
+            <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
 
             <!-- Compiled and minified JavaScript -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+            <!-- Custom font -->
+            <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 
 
 
@@ -60,7 +62,7 @@
             
         </head>
         <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-            <nav class="navbar navbar-fixed-top navbar-default" role="navigation">
+            <nav class="navbar navbar-static-top navbar-inverse" role="navigation">
                 <div class="container">
                     <div class="navbar-header page-scroll">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -77,8 +79,8 @@
                             <li class="hidden"><a data-scroll class="page-scroll" href="#page-top"></a></li>
                             <li><a data-scroll class="page-scroll" href="#about">About</a></li>
                             <li><a data-scroll class="page-scroll" href="#apps">Apps</a></li>
-                            <li><a href="webpages/signup/index.php">Sign up</a></li>
-                            <li><a href="webpages/login.php">Log in</a></li>
+                            <li><a href="/webpages/signup/index.php">Sign up</a></li>
+                            <li><a href="/webpages/login.php">Log in</a></li>
                         <?php // To add a nav link use a # for href. ?>
                         </ul>
                     </div>

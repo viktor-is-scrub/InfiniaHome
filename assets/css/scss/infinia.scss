@@ -1,0 +1,16 @@
+// The Infinia CSS File
+// Sass is great for generating minified stuff
+
+$font: 'PT Sans', sans-serif;
+
+body {
+  font: 100% $font;
+}
+
+#apps {
+  ul {
+    .collapsible {
+
+    }
+  }
+}

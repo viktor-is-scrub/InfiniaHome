@@ -28,95 +28,43 @@ $parts = Array (
 ?>
 
 
-            <!--<script src="/assets/lsf/scrollhax.js" type="text/javascript"></script>-->
-            <!--
-            <div id="page1">
-                <a id="about" class="smooth"></a>
-                InfiniaPress is an open-source, web-based productivity suite
-            </div>
-            <div id="page2">
-                <a id="contact" class="smooth"></a>
-                Fill in the form to contact us
-                <form  id="contact" action="contact.php" method="POST">
-                </form>
-            </div>
-            <div id="page3">
-                <a id="use" class="smooth"></a>
-                Products bundled into InfiniaPress include: Hansom, etc.
-            </div>
-            -->
-<div class="se-pre-con"><br><br><br>LOADING...</div>
+<div class="se-pre-con"><br><br><br>Loading<i class="fa fa-spinner" aria-hidden="true"></i></div>
 <script>$(window).load(function() {
 		$(".se-pre-con").fadeOut("slow");
 		var viewPortWidth = $(window).width();
     		if (viewPortWidth < 800) {$("button").css("font-size", "20px")}
     		console.log(viewPortWidth)
 		// Animate loader off screen
-	});</script>
-            <span id="navigation-bar">
-    <p>
-        <!--[whatever you want in here. Shift your navigation bar here]-->
-        <!-- Place About, Contact, and what we discussed today-->
-    </p>
-</span>
-<div id="top">
-<img src="assets/imgres/infinia-logo.png" width=40%>
-<br><b id="greeting"></b><br>
-<b id="welcome">Welcome to Infinia Press</b><br>
-	<br>
-	<br>
-<script>
-$(document).ready(function(){
-    $("#greeting").fadeOut(0)
-    var d = new Date()
-    var time = d.getHours()
-    if(time < 12) {
-        document.getElementById("greeting").innerHTML = "Good Morning"
-    }else if (time < 18) {
-        document.getElementById("greeting").innerHTML = "Good Afternoon"
-    }else{
-        document.getElementById("greeting").innerHTML = "Good Evening"
-    }
-    $("#greeting").fadeIn(1000)	
-})
-    
+	});
 </script>
-</div>
+<!-- We are redoing our UI. The old UI is available in /old-ui.html-->
+
 <section id="about">
-<div>
-    <b id="ad">
-        SIMPLICITY  <br><i id="admini">is    power</i><br>
-    </b>
-    <br>
-	<b id="adtext">Productivity apps for your work and personal life</b>
-	<br>
-	<br>
-    <br>
-    <a href="webpages/signup/index.php"><button id="signup">Sign up</button></a>
-</div>
-</section>
-<section id="apps">
-	<ul class="collapsible" data-collapsible="accordion">
-		<li>
-			<div class="collapsible-header"><h1>PASSENGER PIGEON</h1><img src="assets/imgres/passenger_pigeon_1.png" height="250px"></div>
-      <div class="collapsible-body"><p>An elegant chat app with file sharing capabilities (keane obviously sucks)</p></div>
-		</li>
-	</ul>
-	<ul class="collapsible" data-collapsible="accordion" style="margin:0px;">
-		<li>
-			<div class="collapsible-header"><h1>HANSOM</h1><img src="assets/imgres/hansom_1.png" height="250px"></div>
-      <div class="collapsible-body"><p>A powerful note-taking application for memory (lol cant even fix a stupid obnoxious spacing)</p></div>
-		</li>
-	</ul>
-	<ul class="collapsible" data-collapsible="accordion">
-		<li>
-			<div class="collapsible-header"><h1>TRACKTION</h1></div>
-      <div class="collapsible-body"><p>A beautiful timer for keeping track (we need more description)</p></div>
-		</li>
-	</ul>
+    <div>
+        <b id="ad">SIMPLICITY IS POWER</b>
+        <br/>
+        <b id="adtext">The simplest productivity suite ever</b>
+    </div>
 </section>
 
-    <!--Start of Tawk.to Script-->
+<section id="apps">
+    <ul class="collapsible" data-collapsible="accordion">
+        <li>
+            <div class="collapsible-header"><h1>PASSENGER PIGEON</h1><img src="assets/imgres/passenger_pigeon_1.png" height="250px"></div>
+            <div class="collapsible-body"><p>An elegant chat app with file sharing capabilities</p></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><h1>HANSOM</h1><img src="assets/imgres/hansom_1.png" height="250px"></div>
+            <div class="collapsible-body"><p>A powerful note-taking application for memory (lol cant even fix a stupid obnoxious spacing)</p></div>
+        </li>
+        <li>
+            <div class="collapsible-header"><h1>TRACKTION</h1></div>
+            <div class="collapsible-body"><p>The timer that fixes everything</p></div>
+        </li>
+    </ul>
+</section>
+
+<!--Start of Tawk.to Script-->
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
