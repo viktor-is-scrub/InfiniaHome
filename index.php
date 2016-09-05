@@ -29,7 +29,8 @@ $parts = Array (
 
 
 <div class="se-pre-con"><br><br><br>Loading<i class="fa fa-spinner" aria-hidden="true"></i></div>
-<script>$(window).load(function() {
+<script>
+    $(window).load(function() {
 		$(".se-pre-con").fadeOut("slow");
 		var viewPortWidth = $(window).width();
     		if (viewPortWidth < 800) {$("button").css("font-size", "20px")}
@@ -37,8 +38,6 @@ $parts = Array (
 		// Animate loader off screen
 	});
 </script>
-<!-- We are redoing our UI. The old UI is available in /old-ui.html-->
-
 <section id="about">
     <div>
         <b id="ad">SIMPLICITY IS POWER</b>
