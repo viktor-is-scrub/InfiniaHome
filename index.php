@@ -54,7 +54,7 @@ $parts = Array (
         </li>
         <li>
             <div class="collapsible-header"><h1>HANSOM</h1><img src="assets/imgres/hansom_1.png" height="250px"></div>
-            <div class="collapsible-body"><p>A powerful note-taking application for memory (lol cant even fix a stupid obnoxious spacing)</p></div>
+            <div class="collapsible-body"><p>A powerful note-taking application for memory</p></div>
         </li>
         <li>
             <div class="collapsible-header"><h1>TRACKTION</h1></div>
