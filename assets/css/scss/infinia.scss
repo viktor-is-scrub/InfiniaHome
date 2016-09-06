@@ -6,7 +6,7 @@ $alignment: center;
 
 body {
   font: 100% $font;
-  text-align: 100% $alignment;
+  text-align: $alignment;
 }
 
 #apps {
