@@ -2,9 +2,11 @@
 // Sass is great for generating minified stuff
 
 $font: 'PT Sans', sans-serif;
+$alignment: center;
 
 body {
   font: 100% $font;
+  text-align: 100% $alignment;
 }
 
 #apps {
