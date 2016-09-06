@@ -20,3 +20,19 @@ body {
 
   }
 }
+
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: #222222;
+  z-index: 1000;
+
+}
+
+#loader {
+  /* Make the loader visible */
+  z-index: 1001;
+  font-size: 175%;
+}

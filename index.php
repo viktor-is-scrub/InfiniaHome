@@ -27,17 +27,15 @@ $parts = Array (
 );
 ?>
 
+<div id="loader-wrapper">
+    <div class="loader">Loading<i class="fa fa-spinner" aria-hidden="true"></i></div>
+    <script>
+        $(window).load(function() {
+            $("#loader-wrapper").fadeOut("slow");
+        });
+    </script>
+</div>
 
-<div class="se-pre-con"><br><br><br>Loading<i class="fa fa-spinner" aria-hidden="true"></i></div>
-<script>
-    $(window).load(function() {
-		$(".se-pre-con").fadeOut("slow");
-		var viewPortWidth = $(window).width();
-    		if (viewPortWidth < 800) {$("button").css("font-size", "20px")}
-    		console.log(viewPortWidth)
-		// Animate loader off screen
-	});
-</script>
 <section id="about">
     <div class="ad">
         <b id="ad">SIMPLICITY IS POWER</b>
