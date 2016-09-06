@@ -39,7 +39,7 @@ $parts = Array (
 	});
 </script>
 <section id="about">
-    <div>
+    <div class="ad">
         <b id="ad">SIMPLICITY IS POWER</b>
         <b id="adtext">Meet the most powerful productivity suite ever</b>
     </div>
