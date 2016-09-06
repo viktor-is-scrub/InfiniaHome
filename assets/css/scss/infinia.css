@@ -1,5 +1,10 @@
 body {
-  font: 100% "PT Sans", sans-serif;
+  font: 100% "PT Sans", sans-serif; }
+
+.se-pre-con {
+  text-align: center; }
+
+#apps ul li div {
   text-align: center; }
 
 /*# sourceMappingURL=infinia.css.map */
