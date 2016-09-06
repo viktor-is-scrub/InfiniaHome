@@ -41,24 +41,23 @@ $parts = Array (
 <section id="about">
     <div>
         <b id="ad">SIMPLICITY IS POWER</b>
-        <br/>
-        <b id="adtext">The simplest productivity suite ever</b>
+        <b id="adtext">Meet the most powerful productivity suite ever</b>
     </div>
 </section>
 
 <section id="apps">
     <ul class="collapsible" data-collapsible="accordion">
         <li>
-            <div class="collapsible-header"><h1>PASSENGER PIGEON</h1><img src="assets/imgres/passenger_pigeon_1.png" height="250px"></div>
-            <div class="collapsible-body"><p>An elegant chat app with file sharing capabilities</p></div>
+            <div class="collapsible-header center"><h1>PASSENGER PIGEON</h1><img src="assets/imgres/passenger_pigeon_1.png" height="250px"></div>
+            <div class="collapsible-body center"><p>An elegant chat app with file sharing capabilities</p></div>
         </li>
         <li>
-            <div class="collapsible-header"><h1>HANSOM</h1><img src="assets/imgres/hansom_1.png" height="250px"></div>
-            <div class="collapsible-body"><p>A powerful note-taking application for memory</p></div>
+            <div class="collapsible-header center"><h1>HANSOM</h1><img src="assets/imgres/hansom_1.png" height="250px"></div>
+            <div class="collapsible-body center"><p>A powerful note-taking application for memory</p></div>
         </li>
         <li>
-            <div class="collapsible-header"><h1>TRACKTION</h1></div>
-            <div class="collapsible-body"><p>The timer that fixes everything</p></div>
+            <div class="collapsible-header center"><h1>TRACKTION</h1></div>
+            <div class="collapsible-body center"><p>The timer that fixes everything</p></div>
         </li>
     </ul>
 </section>

@@ -7,19 +7,15 @@ $alignment: center;
 body {
   font: 100% $font-stack;
 
-
 }
 
-.se-pre-con {
+.se-pre-con .center {
   text-align: $alignment;
 }
 
-#apps {
-  ul {
-    li {
-      div {
-        text-align: $alignment;
-      }
-    }
+#about {
+  #ad {
+    font-size: 200%;
+    margin: 150% 150% 150% 150%
   }
 }

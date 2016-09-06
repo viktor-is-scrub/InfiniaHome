@@ -1,10 +1,11 @@
 body {
   font: 100% "PT Sans", sans-serif; }
 
-.se-pre-con {
+.se-pre-con .center {
   text-align: center; }
 
-#apps ul li div {
-  text-align: center; }
+#about #ad {
+  font-size: 200%;
+  margin: 150% 150% 150% 150%; }
 
 /*# sourceMappingURL=infinia.css.map */
