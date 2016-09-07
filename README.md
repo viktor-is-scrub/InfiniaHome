@@ -32,11 +32,16 @@ To install InfiniaHome on your server, you need
 We provide many languages for you to code your own Infinia App and integrate it. To get started, check out one of our
 `infinia-api-[lang]` repositories, or stick with `infinia-api-json`.
 
-### References
-Thanks to
-[CodePlanet](https://codeplanet.io/how-to-make-a-single-page-website/)
-[StartBootstrap](https://github.com/BlackrockDigital/startbootstrap-scrolling-nav)
-(one page parallax animations)
+### Test credentials
+
+Test database credentials have been provided in the file `test_mysql_credentials.json`.
+We have provided these credentials because we have secured our mysql servers
+and limited the hosts. **Do not use these credentials in production**.
+You may change the credentials for your own testing system.
+Please note that these credentials should NOT be changed on the git repository.
+
+#### Questions regarding [the official website](https://infinia.press)?
+Click [here](http://derpz.tk/support) to get support.
 
 
 

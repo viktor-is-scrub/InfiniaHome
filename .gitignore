@@ -15,8 +15,6 @@ InfiniaLegit.config.php
 
 # Do not allow webmail to be uploaded to git
 webmail/
-
+# Ban composer from putting trash on GitHub
 /vendor/
-
-/composer.lock
 

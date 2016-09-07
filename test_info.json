@@ -1,0 +1,16 @@
+{
+  "host": "localhost",
+  "port": 3306,
+  "username": "infinialocaltest",
+  "password": "infinialocaltest",
+  "database": "infinia_users",
+
+  "test_username": "test",
+  "test_password": "test1234",
+  "test_email": "test-email@derpz.tk",
+  "test_name": "Test User",
+
+
+  "test_smtp_host": ""
+
+}
