@@ -12,11 +12,7 @@ include("inc/header.inc.php");
 require("inc/config.php");
 // Very simple config checker
 if ($conf['edited'] == false) {
-    if ($conf_checker == false) {
-        // Do nothing
-    } else {
-        die('Config is at default values! Please change the config file');
-    }
+    die('Config is at default values! Please change the config file');
 }
 require("inc/lsf-functions.php");
 // Pages that can be passed to index.php via GET
@@ -36,14 +32,15 @@ $parts = Array (
     </script>
 </div>
 
-<section id="about">
-    <div class="ad">
-        <b id="ad">SIMPLICITY IS POWER</b>
-        <b id="adtext">Meet the most powerful productivity suite ever</b>
+<section id="about" data-scroll>
+    <div class="ad center">
+        <h1><b id="ad">SIMPLICITY IS POWER</b></h1>
+        <p>Prepare to be blown away</p>
+
     </div>
 </section>
 
-<section id="apps">
+<section id="apps" data-scroll>
     <ul class="collapsible" data-collapsible="accordion">
         <li>
             <div class="collapsible-header center"><h1>PASSENGER PIGEON</h1><img src="assets/imgres/passenger_pigeon_1.png" height="250px"></div>

@@ -1,13 +1,3 @@
-body {
-  font: 100% "PT Sans", sans-serif; }
-
-.se-pre-con .center {
-  text-align: center; }
-
-#about .ad {
-  font-size: 200%;
-  margin: 150% 150% 150% 150%; }
-
 #loader-wrapper {
   position: fixed;
   top: 0;
@@ -19,6 +9,29 @@ body {
 #loader {
   /* Make the loader visible */
   z-index: 1001;
-  font-size: 175%; }
+  font-size: 175%;
+  text-align: center; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font: 100% "Myriad Pro", "PT Sans", sans-serif; }
+
+.se-pre-con, .center {
+  text-align: center; }
+
+.collapsible-header h1 {
+  font-size: 120%; }
+.collapsible-header img {
+  width: 170px;
+  height: auto; }
+
+#about {
+  height: 100%; }
+  #about #ad {
+    font-size: 150%; }
+  #about h1 {
+    font-size: 147%; }
 
 /*# sourceMappingURL=infinia.css.map */

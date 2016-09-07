@@ -1,0 +1,22 @@
+{
+    "name": "infinia-press/infinia-home",
+    "description": "The InfiniaPress Home Page",
+    "type": "project",
+    "require": {
+        "phpunit/dbunit": ">=1.2",
+        "phpunit/phpunit": "5.5.*"
+    },
+    "license": "MIT License",
+    "authors": [
+        {
+            "name": "xiurobert",
+            "email": "me@derpz.tk"
+        },
+        {
+            "name": "Keane Wong",
+            "email": "hundotte@tdat.tk"
+        }
+
+    ],
+    "minimum-stability": "dev"
+}

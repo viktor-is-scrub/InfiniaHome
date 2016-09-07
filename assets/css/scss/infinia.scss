@@ -1,38 +1,50 @@
 // The Infinia CSS File
-// Sass is great for generating minified stuff
+// (C) InfiniaPress Dev Team
+// Licensed under the MIT License
 
-$font-stack: 'PT Sans', sans-serif;
+@import 'loader';
+@import 'functions';
+
+// Try to import Myriad Pro. Most OSes have it
+$font-stack: 'Myriad Pro', 'PT Sans', sans-serif;
 $alignment: center;
 
-body {
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   font: 100% $font-stack;
 
 }
 
-.se-pre-con .center {
+.se-pre-con, .center {
   text-align: $alignment;
 }
 
-#about {
-  .ad {
-    font-size: 200%;
-    margin: 150% 150% 150% 150%
 
+.collapsible-header {
+  h1 {
+    font-size: 120%;
+  }
+
+  img {
+    width: 170px;
+    height: auto;
   }
 }
 
-#loader-wrapper {
-  position: fixed;
-  top: 0;
-  width: 51%;
+
+
+#about {
+
   height: 100%;
-  background: #222222;
-  z-index: 1000;
 
+  #ad {
+    font-size: 150%;
+  }
+
+  h1 {
+    font-size: 147%;
+  }
 }
 
-#loader {
-  /* Make the loader visible */
-  z-index: 1001;
-  font-size: 175%;
-}

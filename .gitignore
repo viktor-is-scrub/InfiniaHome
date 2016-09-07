@@ -15,3 +15,8 @@ InfiniaLegit.config.php
 
 # Do not allow webmail to be uploaded to git
 webmail/
+
+/vendor/
+
+/composer.lock
+
