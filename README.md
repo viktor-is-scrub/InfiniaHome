@@ -21,6 +21,8 @@ To install InfiniaHome on your server, you need
 - .htaccess support
 - `mysqli` or `pdo_mysql` extension for php (we will not support mysql, so don't report that in the bugtracker)
 
+[Setup instructions](docs/setup.md)
+
 
 ## Connecting InfiniaApps 
 
