@@ -1,16 +1,30 @@
 {
-  "host": "localhost",
-  "port": 3306,
-  "username": "infinialocaltest",
-  "password": "infinialocaltest",
-  "database": "infinia_users",
 
-  "test_username": "test",
-  "test_password": "test1234",
-  "test_email": "test-email@derpz.tk",
-  "test_name": "Test User",
+  "database": {
+    "host": "localhost",
+    "port": 3306,
+    "username": "infinialocaltest",
+    "password": "infinialocaltest",
+    "database_name": "infinia_users"
+  },
+
+  "dummy_user": {
+    "username": "test",
+    "password": "test1234",
+    "email": "test-email@derpz.tk",
+    "name": "Test User"
+  },
+
+  "smtp_test": {
+    "host": "localhost",
+    "port": 25,
+    "username": "test@test.test",
+    "password": "1234",
+    "encryption": "tls"
+  }
 
 
-  "test_smtp_host": ""
+
+
 
 }
