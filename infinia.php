@@ -6,9 +6,10 @@ require_once 'inc/class.user.php';
 if (file_exists("InfiniaLegit.config.php")) {
     require_once('InfiniaLegit.config.php');
 } else {
-    require_once 'inc/config.php';
+    require_once 'inc/InfiniaAutoloader.php';
 }
 
+$c = new \InfiniaPress\Includes\Configuration\Config();
 
 
 // Check if user is logged in
@@ -31,7 +32,7 @@ if (!$u->isLoggedIn()) {
             <meta http-equiv="x-ua-compatible" content="ie-edge">
             <meta name="viewport" content="width=device-width, intial-scale=1">
 
-            <title><?php echo $pgTitle ?></title>
+            <title><?php echo $c->getSITEVar("pgTitle") ?></title>
 
             <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 

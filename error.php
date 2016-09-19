@@ -5,7 +5,7 @@ if (file_exists('InfiniaLegit.config.php')) {
   require 'InfiniaLegit.config.php';
   
 } else {
-  require 'inc/config.php';
+  require 'inc/InfiniaAutoloader.php';
 }
 
 
@@ -13,12 +13,12 @@ if (file_exists('InfiniaLegit.config.php')) {
 $parts = Array(
     "user-error",
     "user-unconfirmed",
-	  "sys-error",
+    "sys-error",
     "404",
     "500",
     "403",
     "bug",
-		"user-denied-from-services"
+	"user-denied-from-services"
 );
 
 
@@ -26,7 +26,7 @@ if (isset($_GET['err']) && in_array($_GET['err'], $parts)) {
   
   require('epages/'.$_GET['err'].'.php');
 	
-	if (isset($_GET['err'] == "user-denied-from-services") && isset($_GET['user'])) {
+	if ($_GET['err'] == "user-denied-from-services" && isset($_GET['user'])) {
 	  $db = new mysqli($conf['db']['host'], $conf['db']['username'], $conf['db']['password'], $conf['db']['name'], $conf['db']['port']);
 		if ($db->connect_errno) {
 			require('epages/sys-error.php');
@@ -41,7 +41,7 @@ if (isset($_GET['err']) && in_array($_GET['err'], $parts)) {
 			require('epages/'.$_GET['err']);
 		} else {
 			require('epages/sys-error.php');
-			exit()
+			exit();
 		}
 	}
 
