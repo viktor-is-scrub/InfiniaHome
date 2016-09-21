@@ -5,7 +5,7 @@
  * Created on 7/15/2016 at 7:54 PM
  */
 
-require_once "../../inc/class.user.php";
+require_once "../../inc/infinia_class.user.php";
 
 if (file_exists("../../InfiniaLegit.config.php")) {
     require_once('../../InfiniaLegit.config.php');

@@ -4,8 +4,9 @@
  * (c) 2016 xiurobert
  * Created on 9/7/2016 at 8:58 AM
  */
+namespace InfiniaPress\Tests\SignupTest;
 
-require '../inc/class.user.php';
+require '../inc/infinia_class.user.php';
 
 use PHPUnit\Framework\TestCase;
 

@@ -10,7 +10,6 @@
  * The old config.php is now deprecated
  */
 
-namespace InfiniaPress\Includes\Configuration;
 
 
 class Config

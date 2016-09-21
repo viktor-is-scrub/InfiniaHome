@@ -6,16 +6,13 @@
  */
 
 
-require '../../inc/parse_sql.php';
 if (file_exists("../../InfiniaLegit.config.php")) {
     require_once('../../InfiniaLegit.config.php');
 } else {
-    require_once '../../inc/config.php';
+    require_once '../../inc/InfiniaAutoloader.php';
 };
 
-require '../../inc/class.user.php';
 
-require '../../inc/lsf-functions.php';
 
 
 

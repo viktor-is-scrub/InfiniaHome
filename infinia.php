@@ -2,14 +2,14 @@
 
 // Userspace
 
-require_once 'inc/class.user.php';
+require_once 'inc/infinia_class.user.php';
 if (file_exists("InfiniaLegit.config.php")) {
     require_once('InfiniaLegit.config.php');
 } else {
     require_once 'inc/InfiniaAutoloader.php';
 }
 
-$c = new \InfiniaPress\Includes\Configuration\Config();
+$c = new Config();
 
 
 // Check if user is logged in
@@ -21,7 +21,7 @@ if (!$u->isLoggedIn()) {
 
 
 } else {
-    $u->redirect("/webpages/login.php");
+    $u->redirect("webpages/login.php");
 }
 
 ?>

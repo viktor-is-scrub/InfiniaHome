@@ -12,7 +12,7 @@ include("inc/header.inc.php");
 if (file_exists("InfiniaLegit.config.php")) {
     require("InfiniaLegit.config.php");
 } else {
-    require("inc/config.php");
+    require("inc/InfiniaAutoloader.php");
 }
 
 // Very simple config checker

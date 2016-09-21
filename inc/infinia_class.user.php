@@ -307,7 +307,7 @@ class User {
       
         // Include necessary things
         require_once "PHPMailerAutoload.php";
-        require_once "lsf-functions.php";
+        require_once "InfiniaAutoloader.php";
       
         
         $m = new PHPMailer();
