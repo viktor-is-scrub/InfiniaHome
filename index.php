@@ -8,7 +8,10 @@
 
 // Indent for HTML: 12 spaces (3x TAB)
 include("inc/header.inc.php");
+<<<<<<< HEAD
 
+=======
+>>>>>>> 152d7428381a0aa5c31f79c4402b5a73eda0b93f
 
 if (file_exists("InfiniaLegit.config.php")) {
     require("InfiniaLegit.config.php");
@@ -16,20 +19,30 @@ if (file_exists("InfiniaLegit.config.php")) {
     require("inc/InfiniaAutoloader.php");
 }
 
+<<<<<<< HEAD
 // Do not touch
 require("InfiniaLegit.config.php");
 
 // Very simple config checker
 if ($conf['edited'] == false) {
+=======
 
-    if (isset($_GET) && $_GET['o'] == "no_conf_check") {
-        // Do nothing
-    } else {
-        die('Config is at default values! Please change the config file');
-    }
+// Do not touch
+require("InfiniaLegit.config.php");
+>>>>>>> 152d7428381a0aa5c31f79c4402b5a73eda0b93f
 
+
+// Very simple config checker
+if ($conf['edited'] == false) {
+    die('Config is at default values! Please change the config file');
 }
-
+require("inc/lsf-functions.php");
+// Pages that can be passed to index.php via GET
+$parts = Array (
+    "user-error",
+    "user-unconfirmed",
+	"sys-error"
+);
 ?>
 
 <div id="loader-wrapper">
