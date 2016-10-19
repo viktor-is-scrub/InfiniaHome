@@ -8,7 +8,7 @@
 
 // Indent for HTML: 12 spaces (3x TAB)
 include("inc/header.inc.php");
-<<<<<<< Updated upstream
+
 
 if (file_exists("InfiniaLegit.config.php")) {
     require("InfiniaLegit.config.php");
@@ -16,10 +16,9 @@ if (file_exists("InfiniaLegit.config.php")) {
     require("inc/InfiniaAutoloader.php");
 }
 
-=======
 // Do not touch
 require("InfiniaLegit.config.php");
->>>>>>> Stashed changes
+
 // Very simple config checker
 if ($conf['edited'] == false) {
 

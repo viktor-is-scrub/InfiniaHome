@@ -7,7 +7,6 @@
 
 require 'InfiniaAutoloader.php';
 
-$c = new \InfiniaPress\Includes\Configuration\Config();
 
 
 
@@ -17,9 +16,9 @@ $c = new \InfiniaPress\Includes\Configuration\Config();
         <head>
             <noscript>
                 <!-- If you're a dick and don't enable javascript, we'll FORCE YOU to enable javascript -->
-                <meta http-equiv="refresh" content="0;URL='infiniapress.tk/webpages/noscript.php" />    
+                <meta http-equiv="refresh" content="0;URL='infiniapress.tk/webpages/noscript.php" />
             </noscript>
-            
+
 
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,7 +31,7 @@ $c = new \InfiniaPress\Includes\Configuration\Config();
 
             <!-- bs CSS -->
             <link rel="stylesheet" href="<?php echo $c->getSITEVar("base"); ?>/assets/css/bootstrap.min.css">
-         
+
             <!-- jQ -->
             <script type="text/javascript" src="<?php echo $c->getSITEVar("base"); ?>/assets/js/jquery-2.2.3.min.js"></script>
 
@@ -44,7 +43,7 @@ $c = new \InfiniaPress\Includes\Configuration\Config();
 
             <!-- Smooth Scrolling JS from SmoothScrollJS -->
             <script type="text/javascript" src="<?php echo $c->getSITEVar("base"); ?>/assets/js/smooth-scroll.min.js"></script>
-					
+
             <!-- Materialized CSS -->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 
@@ -65,7 +64,7 @@ $c = new \InfiniaPress\Includes\Configuration\Config();
             <![endif]-->
 
 
-            
+
         </head>
         <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
             <nav class="navbar navbar-static-top navbar-inverse" role="navigation">
