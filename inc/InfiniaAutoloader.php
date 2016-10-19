@@ -22,6 +22,7 @@ function Infinia_load_class($classname) {
 
     if (is_readable($filename)) {
         require $filename;
+        require "config.php";
     }
 
 

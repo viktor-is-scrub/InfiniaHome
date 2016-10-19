@@ -8,6 +8,7 @@
 
 // Indent for HTML: 12 spaces (3x TAB)
 include("inc/header.inc.php");
+include("inc/InfiniaAutoloader.php");
 
 
 

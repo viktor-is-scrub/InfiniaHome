@@ -30,7 +30,7 @@ $html_base_dir = basename("../index.php");
  *
  */
 // Change to true if your config has been edited
-$conf['edited'] = false;
+$conf['edited'] = true;
 
 
 
