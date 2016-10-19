@@ -8,8 +8,6 @@
 require 'InfiniaAutoloader.php';
 
 
-
-
 ?>
 <!DOCTYPE html>
     <html lang="en">
@@ -30,25 +28,25 @@ require 'InfiniaAutoloader.php';
             <meta name="description" content="InfiniaPress open-source Productivity suite">
 
             <!-- bs CSS -->
-            <link rel="stylesheet" href="<?php echo $c->getSITEVar("base"); ?>/assets/css/bootstrap.min.css">
+            <link rel="stylesheet" href="<?php echo $html_base_dir; ?>/assets/css/bootstrap.min.css">
 
             <!-- jQ -->
-            <script type="text/javascript" src="<?php echo $c->getSITEVar("base"); ?>/assets/js/jquery-2.2.3.min.js"></script>
+            <script type="text/javascript" src="<?php echo $html_base_dir; ?>/assets/js/jquery-2.2.3.min.js"></script>
 
             <!-- Bs JS -->
-            <script type="text/javascript" src="<?php echo $c->getSITEVar("base"); ?>/assets/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="<?php echo $html_base_dir; ?>/assets/js/bootstrap.min.js"></script>
 
             <!-- custom CSS & JS. -->
-            <link rel="stylesheet" href="<?php echo $c->getSITEVar("base"); ?>/assets/css/scss/infinia.css">
+            <link rel="stylesheet" href="<?php echo $html_base_dir; ?>/assets/css/scss/infinia.css">
 
             <!-- Smooth Scrolling JS from SmoothScrollJS -->
-            <script type="text/javascript" src="<?php echo $c->getSITEVar("base"); ?>/assets/js/smooth-scroll.min.js"></script>
+            <script type="text/javascript" src="<?php echo $html_base_dir; ?>/assets/js/smooth-scroll.min.js"></script>
 
             <!-- Materialized CSS -->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 
             <!-- Font awesome from Font Awesome -->
-            <link rel="stylesheet" href="<?php echo $c->getSITEVar("base"); ?>/assets/css/font-awesome.min.css">
+            <link rel="stylesheet" href="<?php echo $html_base_dir; ?>/assets/css/font-awesome.min.css">
 
             <!-- Compiled and minified JavaScript -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
