@@ -8,28 +8,7 @@
 
 // Indent for HTML: 12 spaces (3x TAB)
 include("inc/header.inc.php");
-<<<<<<< HEAD
 
-=======
->>>>>>> 152d7428381a0aa5c31f79c4402b5a73eda0b93f
-
-if (file_exists("InfiniaLegit.config.php")) {
-    require("InfiniaLegit.config.php");
-} else {
-    require("inc/InfiniaAutoloader.php");
-}
-
-<<<<<<< HEAD
-// Do not touch
-require("InfiniaLegit.config.php");
-
-// Very simple config checker
-if ($conf['edited'] == false) {
-=======
-
-// Do not touch
-require("InfiniaLegit.config.php");
->>>>>>> 152d7428381a0aa5c31f79c4402b5a73eda0b93f
 
 
 // Very simple config checker
@@ -41,7 +20,7 @@ require("inc/lsf-functions.php");
 $parts = Array (
     "user-error",
     "user-unconfirmed",
-	"sys-error"
+    "sys-error"
 );
 ?>
 
@@ -80,17 +59,17 @@ $parts = Array (
 </section>
 
 <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
+<script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/577f4551074866632d96d55b/default';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/577f4551074866632d96d55b/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
     })();
-    </script>
+</script>
 <!--End of Tawk.to Script-->
 
 
