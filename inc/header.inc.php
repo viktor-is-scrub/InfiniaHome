@@ -84,7 +84,6 @@ require 'InfiniaAutoloader.php';
                             <li><a data-scroll class="page-scroll" href="#apps">Apps</a></li>
                             <li><a href="/webpages/signup/index.php">Sign up</a></li>
                             <li><a href="/webpages/login.php">Log in</a></li>
-                        <?php // To add a nav link use a # for href. ?>
                         </ul>
                     </div>
                 </div>

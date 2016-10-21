@@ -17,14 +17,10 @@ if (file_exists(dirname(__FILE__)."/InfiniaLegit.config.php")) {
 }
 
 
-
-
-
-// Very simple config checker
 if ($conf['edited'] == false) {
     die('Config is at default values! Please change the config file');
 }
-require("inc/lsf-functions.php");
+
 // Pages that can be passed to index.php via GET
 $pgs = Array (
     "user-error",
