@@ -1,21 +1,12 @@
 <?php
 /**
  * Using PhpStorm.
- * (c) 2016 Hundotte
+ * (c) 2016 xiurobert & Hundotte
  * Created on 5/19/2016 at 5:54 PM
  */
 
 
-if (file_exists("../../InfiniaLegit.config.php")) {
-    require_once('../../InfiniaLegit.config.php');
-} else {
-    require_once '../../inc/InfiniaAutoloader.php';
-};
-
-
-
-
-
+require_once dirname(__FILE__)."/../../inc/InfiniaAutoloader.php";
 
 $db = new mysqli($conf['db']['host'],
     $conf['db']['username'], $conf['db']['password'], $conf['db']['name'], $conf['db']['port']);
@@ -36,7 +27,7 @@ if (isset($_POST['signup-btn'])) {
 
     $code = hash("sha256", uniqid(rand()), true);
 
-    $stmt = $usr->prepStmt("SELECT * FROM users WHERE email=?");
+    $stmt = $usr->prepStmt("SELECT * FROM infinia_users WHERE email=?");
     if ($stmt !== false) {
         $stmt->bind_param("s", $email);
         $stmt->execute();

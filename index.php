@@ -7,8 +7,8 @@
 
 
 // Indent for HTML: 12 spaces (3x TAB)
-include("inc/header.inc.php");
-include("inc/InfiniaAutoloader.php");
+include(dirname(__FILE__)."/inc/header.inc.php");
+include(dirname(__FILE__)."/inc/InfiniaAutoloader.php");
 
 
 
@@ -18,7 +18,7 @@ if ($conf['edited'] == false) {
 }
 require("inc/lsf-functions.php");
 // Pages that can be passed to index.php via GET
-$parts = Array (
+$pgs = Array (
     "user-error",
     "user-unconfirmed",
     "sys-error"
@@ -75,4 +75,4 @@ $parts = Array (
 
 
 
-<?php include('inc/footer.inc.php') ?>
+<?php include(dirname(__FILE__).'/inc/footer.inc.php'); ?>

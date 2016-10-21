@@ -6,8 +6,6 @@
 -- administration service or InfiniaPress may break
 -- Do so ONLY if you know what you are doing
 --
--- Reason:
--- There are template syntax used in here.
 -- ------------------------------------------------------------------
 -- Written by xiurobert & Hundotte
 -- License: MIT (See LICENSE in root folder)
@@ -15,7 +13,7 @@
 -- ------------------------------------------------------------------
 
 -- Setup users table
-CREATE TABLE IF NOT EXISTS `{#table_prefix}_users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `id` INT(10) NOT NULL AUTO_INCREMENT PRIMARY KEY, -- Set a safe value for the int
   `username` VARCHAR(100) NOT NULL,
   `fullname` VARCHAR(100) NOT NULL,

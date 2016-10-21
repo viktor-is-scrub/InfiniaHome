@@ -9,7 +9,7 @@
 
 //
 $conf = Array();
-$html_base_dir = basename("../index.php");
+$html_base_dir = basename(dirname(__FILE__)."/../index.php");
 
 
 

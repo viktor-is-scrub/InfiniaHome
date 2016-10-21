@@ -29,7 +29,7 @@ if (isset($_GET['id']) && isset($_GET['code'])) {
     $statusReged = "Y";
     $statusnReged = "N";
 
-    $stmt = $u->prepStmt("SELECT id,registered FROM users WHERE id=? AND tokencode=? LIMIT 1", $db);
+    $stmt = $u->prepStmt("SELECT id,registered FROM infina_users WHERE id=? AND tokencode=? LIMIT 1", $db);
     if ($stmt !== false) {
         $stmt->bind_param("is", $id, $code);
         $stmt->execute();
@@ -53,7 +53,7 @@ if (isset($_GET['id']) && isset($_GET['code'])) {
     // CHeck if they were legitimate users
     if ($rowz->num_rows > 0) {
         if ($rowz['registered'] == $statusnReged) {
-            $stmt = $u->prepStmt("UPDATE users SET registered=? WHERE id=?", $db);
+            $stmt = $u->prepStmt("UPDATE infinia_users SET registered=? WHERE id=?", $db);
 
             $stmt->bind_param("si", $statusReged, $id);
             if ($stmt->execute()) {

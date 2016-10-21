@@ -11,7 +11,7 @@
  *
  * @package InfiniaPress
  * @author xiurobert <me@derpz.tk>
- * @link https://github.com/InfiniaPress/InfiniaHome InfiniaPress Home page project | Github
+ * @link https://github.com/InfiniaPress/InfiniaHome InfiniaPress Home Page Project | Github
  */
 
 function Infinia_load_class($classname) {
@@ -22,7 +22,11 @@ function Infinia_load_class($classname) {
 
     if (is_readable($filename)) {
         require $filename;
-        require "config.php";
+        if (file_exists(dirname(__FILE__)."/../InfiniaLegit.config.php")) {
+            require dirname(__FILE__)."/../InfiniaLegit.config.php";
+        } else {
+            require dirname(__FILE__)."/config.php";
+        }
     }
 
 
