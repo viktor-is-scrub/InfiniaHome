@@ -42,7 +42,6 @@ $pgs = Array (
     <div class="ad center">
         <h1><b id="ad">SIMPLICITY IS POWER</b></h1>
         <p>Prepare to be blown away</p>
-
     </div>
 </section>
 
