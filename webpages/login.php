@@ -6,11 +6,12 @@
  */
 session_start();
 
-require_once '../inc/infinia_class.user.php';
-if (file_exists("../InfiniaLegit.config.php")) {
-    require_once('../InfiniaLegit.config.php');
+
+require_once dirname(__FILE__).'/../inc/InfiniaAutoloader.php';
+if (file_exists(dirname(__FILE__)."/../InfiniaLegit.config.php")) {
+    require_once(dirname(__FILE__).'/../InfiniaLegit.config.php');
 } else {
-    require_once '../inc/InfiniaAutoloader.php';
+    require_once(dirname(__FILE__)."/../inc/config.php ")
 }
 
 

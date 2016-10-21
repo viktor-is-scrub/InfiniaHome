@@ -8,6 +8,12 @@
 
 require_once dirname(__FILE__)."/../../inc/InfiniaAutoloader.php";
 
+if (file_exists(dirname(__FILE__)."/InfiniaLegit.config.php")) {
+    require_once(dirname(__FILE__)."/../../InfiniaLegit.config.php");
+} else {
+    require_once(dirname(__FILE__)."/../../inc/config.php");
+}
+
 $db = new mysqli($conf['db']['host'],
     $conf['db']['username'], $conf['db']['password'], $conf['db']['name'], $conf['db']['port']);
 

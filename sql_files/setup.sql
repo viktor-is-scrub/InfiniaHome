@@ -21,8 +21,8 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` VARCHAR(100) NOT NULL,
   `registered` ENUM('Y', 'N') NOT NULL DEFAULT 'N',
   `tokencode` VARCHAR(100) NOT NULL, -- If code valid, will change the user status
-  `banned` ENUM('Y', 'N') NOT NULL DEFAULT 'N' COMMENT  'User status', -- TODO: Refactor to `status`
-  `bannedReason` VARCHAR( 255 ) NOT NULL COMMENT  'The reason why a user is banned' -- TODO
+  `status` ENUM('Y', 'N') NOT NULL DEFAULT 'N' COMMENT  'User status', 
+  `statusReason` VARCHAR( 255 ) NOT NULL COMMENT  'Explanation for user status'
 
 ) ENGINE = InnoDB;
 

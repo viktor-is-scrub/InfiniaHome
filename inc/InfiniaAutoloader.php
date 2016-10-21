@@ -22,11 +22,6 @@ function Infinia_load_class($classname) {
 
     if (is_readable($filename)) {
         require $filename;
-        if (file_exists(dirname(__FILE__)."/../InfiniaLegit.config.php")) {
-            require dirname(__FILE__)."/../InfiniaLegit.config.php";
-        } else {
-            require dirname(__FILE__)."/config.php";
-        }
     }
 
 

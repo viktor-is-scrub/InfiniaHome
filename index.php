@@ -7,8 +7,16 @@
 
 
 // Indent for HTML: 12 spaces (3x TAB)
-include(dirname(__FILE__)."/inc/header.inc.php");
-include(dirname(__FILE__)."/inc/InfiniaAutoloader.php");
+require_once(dirname(__FILE__)."/inc/header.inc.php");
+require_once(dirname(__FILE__)."/inc/InfiniaAutoloader.php");
+
+if (file_exists(dirname(__FILE__)."/InfiniaLegit.config.php")) {
+    require_once(dirname(__FILE__)."/InfiniaLegit.config.php");
+} else {
+    require_once(dirname(__FILE__)."/inc/config.php");
+}
+
+
 
 
 
