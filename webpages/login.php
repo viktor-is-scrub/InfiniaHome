@@ -8,10 +8,12 @@ session_start();
 
 
 require_once dirname(__FILE__).'/../inc/InfiniaAutoloader.php';
+require_once dirname(__FILE__)."/../inc/lsf-functions.php";
+
 if (file_exists(dirname(__FILE__)."/../InfiniaLegit.config.php")) {
     require_once(dirname(__FILE__).'/../InfiniaLegit.config.php');
 } else {
-    require_once(dirname(__FILE__)."/../inc/config.php ")
+    require_once(dirname(__FILE__)."/../inc/config.php ");
 }
 
 
