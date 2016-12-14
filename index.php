@@ -40,7 +40,8 @@ $pgs = Array (
 
 <section id="about" data-scroll>
     <div class="ad center">
-        <h1><b id="ad">SIMPLICITY IS POWER</b></h1>
+        <h1>Welcome to InfiniaPress</h1>
+        <h2><b id="ad">SIMPLICITY IS POWER</b></h2>
         <p>Prepare to be blown away</p>
     </div>
 </section>
@@ -58,6 +59,10 @@ $pgs = Array (
         <li>
             <div class="collapsible-header center"><h1>TRACKTION</h1></div>
             <div class="collapsible-body center"><p>The timer that fixes everything</p></div>
+        </li>
+        <li>
+            <div class="collapsible-header center"><h1>SPECTRUM [Singapore Only]</h1></div>
+            <div class="collapsible-body center"><p>The ultimate MRT tracking app</p></div>
         </li>
     </ul>
 </section>
