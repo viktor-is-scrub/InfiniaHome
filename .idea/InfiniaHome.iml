@@ -27,5 +27,8 @@
         </SOURCES>
       </library>
     </orderEntry>
+    <orderEntry type="library" name="materialize" level="application" />
+    <orderEntry type="library" name="html5shiv" level="application" />
+    <orderEntry type="library" name="respond" level="application" />
   </component>
 </module>
