@@ -5,10 +5,8 @@
  * Created on 4/28/2016 at 7:51 PM
  */
 
-
-// Indent for HTML: 12 spaces (3x TAB)
-require_once(dirname(__FILE__)."/inc/header.inc.php");
 require_once(dirname(__FILE__)."/inc/InfiniaAutoloader.php");
+date_default_timezone_set("Asia/Singapore");
 
 if (file_exists(dirname(__FILE__)."/InfiniaLegit.config.php")) {
     require_once(dirname(__FILE__)."/InfiniaLegit.config.php");
@@ -29,8 +27,95 @@ $pgs = Array (
 );
 ?>
 
-<div class="se-pre-con">
-    <div class="loader">Loading</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <noscript>
+        <meta http-equiv="refresh" content="0;URL='infinia.press/webpages/noscript.php" />
+    </noscript>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Welcome to InfiniaPress!</title>
+
+    <meta name="author" content="InfiniaDev Team">
+    <meta name="description" content="InfiniaPress open-source Productivity suite">
+
+    <!-- bs CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <!-- jQ -->
+    <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
+
+    <!-- Bs JS -->
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+
+    <!-- custom CSS & JS. -->
+    <link rel="stylesheet" href="assets/css/infinia.css">
+
+    <!-- Smooth Scrolling JS from SmoothScrollJS -->
+    <script type="text/javascript" src="assets/js/smooth-scroll.min.js"></script>
+
+    <!-- Materialized CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+    <!-- Font awesome from Font Awesome -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+    <!-- Custom font -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+
+
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+</head>
+
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<nav class="navbar navbar-static-top navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">InfiniaPress</a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li class="hidden"><a data-scroll class="page-scroll" href="#page-top"></a></li>
+                <li><a data-scroll class="page-scroll" href="#about">About</a></li>
+                <li><a data-scroll class="page-scroll" href="#apps">Apps</a></li>
+                <li><a href="/webpages/signup/index.php">Sign up</a></li>
+                <li><a href="/webpages/login.php">Log in</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+<div id="loader-wrapper">
+    <div class="loader">Loading<i class="fa fa-spinner" aria-hidden="true"></i></div>
+
     <script>
         $(document).ready(function() {
             $(".se-pre-con").fadeOut("slow");
@@ -40,7 +125,8 @@ $pgs = Array (
 
 <section id="about" data-scroll>
     <div class="ad center">
-        <p id="ad">SIMPLICITY IS POWER</p>
+        <h1>Welcome to InfiniaPress</h1>
+        <h2><b id="ad">SIMPLICITY IS POWER</b></h2>
         <p>Prepare to be blown away</p>
     </div>
 </section>
@@ -58,6 +144,10 @@ $pgs = Array (
         <li>
             <div class="collapsible-header center"><b>SPECTRUM (Singapore only)</b><br></div>
             <div class="collapsible-body center"><p>All the train lines, in your pocket</p></div>
+        </li>
+        <li>
+            <div class="collapsible-header center"><h1>SPECTRUM [Singapore Only]</h1></div>
+            <div class="collapsible-body center"><p>The ultimate MRT tracking app</p></div>
         </li>
     </ul>
 </section>
@@ -78,4 +168,17 @@ $pgs = Array (
 
 
 
-<?php include(dirname(__FILE__).'/inc/footer.inc.php'); ?>
+<footer class="footer">
+    <div class="container center">
+        <p class="text-muted">
+            &copy; InfiniaTeam <?php echo date('Y') ?>.
+        </p>
+    </div>
+</footer>
+<script type="text/javascript">
+    smoothScroll.init();
+</script>
+
+</body>
+</html>
+

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1058411885">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
     <data-source source="LOCAL" name="MySQL - infinia_users@localhost" uuid="81987bf0-83a9-4ef6-a10d-8bd3225c3b74">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>

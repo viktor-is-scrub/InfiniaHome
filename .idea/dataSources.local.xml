@@ -2,10 +2,14 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="MySQL - infinia_users@localhost" uuid="81987bf0-83a9-4ef6-a10d-8bd3225c3b74">
+      <database-info product="MySQL" version="5.7.14-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
       <user-name>xiurobert</user-name>
-      <schema-pattern>infinia_users.*</schema-pattern>
-      <default-schemas>infinia_users.*</default-schemas>
+      <resolve-scope>infinia_users:*</resolve-scope>
     </data-source>
   </component>
 </project>

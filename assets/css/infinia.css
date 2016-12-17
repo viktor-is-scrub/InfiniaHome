@@ -2,10 +2,11 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  font: 100% "Myriad Pro", "PT Sans", sans-serif; }
+  font-family: "Helvetica Neue"; 
+}
 
 #ad {
-  font-size: 9000000px;
+  font-size: 100px;
   font-style: bold;
 }
 
