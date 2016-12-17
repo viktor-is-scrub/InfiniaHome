@@ -1,7 +1,7 @@
 <?php
 /**
  * Using PhpStorm.
- * (c) 2016 xiurobert and Keane Wong
+ * (c) 2016 xiurobert and Hundotte
  * Created on 4/28/2016 at 9:08 PM
  */
 
@@ -37,7 +37,7 @@ require 'InfiniaAutoloader.php';
             <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 
             <!-- custom CSS & JS. -->
-            <link rel="stylesheet" href="assets/css/scss/infinia.css">
+            <link rel="stylesheet" href="assets/css/infinia.css">
 
             <!-- Smooth Scrolling JS from SmoothScrollJS -->
             <script type="text/javascript" src="assets/js/smooth-scroll.min.js"></script>

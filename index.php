@@ -29,18 +29,18 @@ $pgs = Array (
 );
 ?>
 
-<div id="loader-wrapper">
-    <div class="loader">Loading<i class="fa fa-spinner" aria-hidden="true"></i></div>
+<div class="se-pre-con">
+    <div class="loader">Loading</div>
     <script>
-        $(window).load(function() {
-            $("#loader-wrapper").fadeOut("slow");
+        $(document).ready(function() {
+            $(".se-pre-con").fadeOut("slow");
         });
     </script>
 </div>
 
 <section id="about" data-scroll>
     <div class="ad center">
-        <h1><b id="ad">SIMPLICITY IS POWER</b></h1>
+        <p id="ad">SIMPLICITY IS POWER</p>
         <p>Prepare to be blown away</p>
     </div>
 </section>
@@ -48,16 +48,16 @@ $pgs = Array (
 <section id="apps" data-scroll>
     <ul class="collapsible" data-collapsible="accordion">
         <li>
-            <div class="collapsible-header center"><h1>PASSENGER PIGEON</h1><img src="assets/imgres/passenger_pigeon_1.png" height="250px"></div>
+            <div class="collapsible-header center"><b>PASSENGER PIGEON</b><br><img src="assets/imgres/passenger_pigeon_1.png" height="250px"></div>
             <div class="collapsible-body center"><p>An elegant chat app with file sharing capabilities</p></div>
         </li>
         <li>
-            <div class="collapsible-header center"><h1>HANSOM</h1><img src="assets/imgres/hansom_1.png" height="250px"></div>
+            <div class="collapsible-header center"><b>HANSOM</b><br><img src="assets/imgres/hansom_1.png" height="250px"></div>
             <div class="collapsible-body center"><p>A powerful note-taking application for memory</p></div>
         </li>
         <li>
-            <div class="collapsible-header center"><h1>TRACKTION</h1></div>
-            <div class="collapsible-body center"><p>The timer that fixes everything</p></div>
+            <div class="collapsible-header center"><b>SPECTRUM (Singapore only)</b><br></div>
+            <div class="collapsible-body center"><p>All the train lines, in your pocket</p></div>
         </li>
     </ul>
 </section>
