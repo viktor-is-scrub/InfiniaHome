@@ -31,6 +31,7 @@ $pgs = Array (
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <noscript>
         <meta http-equiv="refresh" content="0;URL='infinia.press/webpages/noscript.php" />
     </noscript>
@@ -44,14 +45,12 @@ $pgs = Array (
 
     <meta name="author" content="InfiniaDev Team">
     <meta name="description" content="InfiniaPress open-source Productivity suite">
-
-    <!-- bs CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-    <!-- jQ -->
+    
+    <!-- jQuery -->
     <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
 
-    <!-- Bs JS -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 
     <!-- custom CSS & JS. -->
@@ -61,18 +60,14 @@ $pgs = Array (
     <script type="text/javascript" src="assets/js/smooth-scroll.min.js"></script>
 
     <!-- Materialized CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-
-    <!-- Font awesome from Font Awesome -->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
-    <!-- Compiled and minified JavaScript -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 
+    <!-- Font Awesome from Font Awesome -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  
     <!-- Custom font -->
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
-
-
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -83,7 +78,27 @@ $pgs = Array (
 
 </head>
 
-
+<div id="loader-wrapper">
+    <div class="loader">Prepare to be blown away.</div>
+    <script>
+        $(document).ready(function() {
+            
+          $(".loader").animate({
+             opacity: 0,
+             top: "20px"
+          }, 1000, function(){
+              $(".loader").fadeOut("fast");
+              $("body").animate({
+                opacity: 1,
+                top: "0px",
+            }, 1000);
+         });
+           
+        });
+    </script>
+</div>
+  
+  
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 <nav class="navbar navbar-static-top navbar-inverse" role="navigation">
     <div class="container">
@@ -100,8 +115,9 @@ $pgs = Array (
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                 <li class="hidden"><a data-scroll class="page-scroll" href="#page-top"></a></li>
-                <li><a data-scroll class="page-scroll" href="#about">About</a></li>
-                <li><a data-scroll class="page-scroll" href="#apps">Apps</a></li>
+                <li><a data-scroll class="page-scroll" href="#about">About Infinia</a></li>
+                <li><a data-scroll class="page-scroll" href="#mission">Our Mission</a></li>
+                <li><a data-scroll class="page-scroll" href="#apps">The Apps</a></li>
                 <li><a href="/webpages/signup/index.php">Sign up</a></li>
                 <li><a href="/webpages/login.php">Log in</a></li>
             </ul>
@@ -109,44 +125,24 @@ $pgs = Array (
     </div>
 </nav>
 
-
-
-
-
-<div id="loader-wrapper">
-    <div class="loader">Loading<i class="fa fa-spinner" aria-hidden="true"></i></div>
-
-    <script>
-        $(document).ready(function() {
-            $(".se-pre-con").fadeOut("slow");
-        });
-    </script>
-</div>
-
 <section id="about" data-scroll>
-    <div class="ad center">
-        <h1>Welcome to InfiniaPress</h1>
-        <h2><b id="ad">SIMPLICITY IS POWER</b></h2>
-        <p>Prepare to be blown away</p>
-    </div>
+    <h1>Welcome to InfiniaPress</h1>
+    <b id="inform">The world's first and only open source web productivity suite.</b>
+    <p id="informini">Completely free, forever.</p>
 </section>
 
 <section id="apps" data-scroll>
-    <ul class="collapsible" data-collapsible="accordion">
+    <ul class="collapsible popout" data-collapsible="accordion">
         <li>
-            <div class="collapsible-header center"><b>PASSENGER PIGEON</b><br><img src="assets/imgres/passenger_pigeon_1.png" height="250px"></div>
+            <div class="collapsible-header center"><b>PASSENGER PIGEON</b><br /><img src="assets/imgres/passenger_pigeon_1.png" height="250px"></div>
             <div class="collapsible-body center"><p>An elegant chat app with file sharing capabilities</p></div>
         </li>
         <li>
-            <div class="collapsible-header center"><b>HANSOM</b><br><img src="assets/imgres/hansom_1.png" height="250px"></div>
+            <div class="collapsible-header center"><b>HANSOM</b><br /><img src="assets/imgres/hansom_1.png" height="250px"></div>
             <div class="collapsible-body center"><p>A powerful note-taking application for memory</p></div>
         </li>
         <li>
-            <div class="collapsible-header center"><b>SPECTRUM (Singapore only)</b><br></div>
-            <div class="collapsible-body center"><p>All the train lines, in your pocket</p></div>
-        </li>
-        <li>
-            <div class="collapsible-header center"><h1>SPECTRUM [Singapore Only]</h1></div>
+            <div class="collapsible-header center"><b>SPECTRUM [Singapore Only]</b><br /></div>
             <div class="collapsible-body center"><p>The ultimate MRT tracking app</p></div>
         </li>
     </ul>
