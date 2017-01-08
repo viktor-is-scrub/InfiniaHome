@@ -32,57 +32,83 @@ $pgs = Array (
 <html lang="en">
 <head>
     
-    <noscript>
-        <meta http-equiv="refresh" content="0;URL='infinia.press/webpages/noscript.php" />
-    </noscript>
+  <noscript>
+      <meta http-equiv="refresh" content="0;URL='infinia.press/webpages/noscript.php" />
+  </noscript>
 
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Welcome to InfiniaPress!</title>
+  <title>Welcome to InfiniaPress!</title>
 
-    <meta name="author" content="InfiniaDev Team">
-    <meta name="description" content="InfiniaPress open-source Productivity suite">
+  <meta name="author" content="InfiniaDev Team">
+  <meta name="description" content="InfiniaPress open-source Productivity suite">
     
-    <!-- jQuery -->
-    <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
+  <!-- jQuery -->
+  <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 
-    <!-- custom CSS & JS. -->
-    <link rel="stylesheet" href="assets/css/infinia.css">
+  <!-- custom CSS & JS. -->
+  <link rel="stylesheet" href="assets/css/infinia.css">
 
-    <!-- Smooth Scrolling JS from SmoothScrollJS -->
-    <script type="text/javascript" src="assets/js/smooth-scroll.min.js"></script>
+  <!-- Smooth Scrolling JS from SmoothScrollJS -->
+  <script type="text/javascript" src="assets/js/smooth-scroll.min.js"></script>
 
-    <!-- Materialized CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  <!-- Materialized CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 
-    <!-- Font Awesome from Font Awesome -->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <!-- Font Awesome from Font Awesome -->
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
   
-    <!-- Custom font -->
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+  <!-- Custom font -->
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-
-
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+    
+    
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  
+  <style>
+    html * {
+      font-family: Arial !important;
+    }
+    #missionInfo {
+      font-size: 25px;
+    }
+    #about {
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: black;
+      background: rgba(0,0,0,.5);
+      background-image: url('http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_527bf56961712_1.JPG');
+      
+      padding-top: 5%;
+    }
+    #about h1{
+      color: white;
+    }
+    #about p{
+      color: white;
+    }
+    #about b{
+      color: white;
+    }
+  </style>
 </head>
 
 <div id="loader-wrapper">
     <div class="loader">Prepare to be blown away.</div>
     <script>
         $(document).ready(function() {
-            
+          $("#bgimage").parallax();
           $(".loader").animate({
              opacity: 0,
              top: "20px"
@@ -100,7 +126,7 @@ $pgs = Array (
   
   
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-<nav class="navbar navbar-static-top navbar-inverse" role="navigation">
+<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
     <div class="container">
         <div class="navbar-header page-scroll">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -126,13 +152,22 @@ $pgs = Array (
 </nav>
 
 <section id="about" data-scroll>
-    <h1>Welcome to InfiniaPress</h1>
+    <h1 id="informhead">Welcome to InfiniaPress</h1>
     <b id="inform">The world's first and only open source web productivity suite.</b>
     <p id="informini">Completely free, forever.</p>
 </section>
+<div id="bgimage"></div>  
+<section id="mission" data-scroll>
+  <h1>
+    Our Mission 
+  </h1>
+  <p id="missionInfo">
+    We've been where you were. Amazing software, but for massive prices. So, we've created software of the same sublime quality, for free. Forever.
+  </p>
+</section>
 
 <section id="apps" data-scroll>
-    <ul class="collapsible popout" data-collapsible="accordion">
+    <ul class="collapsible popout appz" data-collapsible="accordion">
         <li>
             <div class="collapsible-header center"><b>PASSENGER PIGEON</b><br /><img src="assets/imgres/passenger_pigeon_1.png" height="250px"></div>
             <div class="collapsible-body center"><p>An elegant chat app with file sharing capabilities</p></div>
@@ -171,6 +206,7 @@ $pgs = Array (
         </p>
     </div>
 </footer>
+
 <script type="text/javascript">
     smoothScroll.init();
 </script>

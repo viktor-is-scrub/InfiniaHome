@@ -1,7 +1,9 @@
-
-#about {
-  background-image: "http://3.bp.blogspot.com/-dRD_Fy8C-hk/VYmyesE1_OI/AAAAAAAALHg/9O5wcwHin1U/s1600/1.%2BManarola.jpg";
+html {
+  font-family: "arial";
+  text-align: center;
 }
+
+
 
 #inform {
   font-size: 40px;
@@ -16,10 +18,9 @@ ul {
   border: none;
 }
 
-html {
-  background-color: black;
-  font-family: "arial";
-  text-align: center;
+
+#missionInfo {
+  font-size: 25px;
 }
 
 .loader {
@@ -38,21 +39,6 @@ nav {
   position: fixed;
 }
 
-body {
-  /* Margin bottom by footer height */
-  margin-top: 70px;
-  margin-bottom: 60px;
-}
-
-.footer {
-  position: absolute;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #f5f5f5;
-  font-size: 20px;
-}
-
 #navigation-bar {
   position: fixed;
   background: #eaeaea;
@@ -67,4 +53,9 @@ html, body {
   padding: 0;
   height 100%;
   font-family: "Helvetica Neue"; 
+}
+
+.appz {
+    position: fixed;
+    width: 75%;
 }
